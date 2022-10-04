@@ -1,0 +1,6 @@
+C:\Users\970086\source\repos\Ticketing\Ticketing\bin\Debug\Ticketing.dll
+C:\Users\970086\source\repos\Ticketing\Ticketing\bin\Debug\Ticketing.pdb
+C:\Users\970086\source\repos\Ticketing\Ticketing\obj\Debug\Ticketing.csproj.AssemblyReference.cache
+C:\Users\970086\source\repos\Ticketing\Ticketing\obj\Debug\Ticketing.csproj.CoreCompileInputs.cache
+C:\Users\970086\source\repos\Ticketing\Ticketing\obj\Debug\Ticketing.dll
+C:\Users\970086\source\repos\Ticketing\Ticketing\obj\Debug\Ticketing.pdb

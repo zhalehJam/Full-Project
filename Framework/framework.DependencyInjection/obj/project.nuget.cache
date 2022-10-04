@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xIn/lFjM528ioE+LSti8bE5UEoIAn71OuYPBtA43+T6juIhfo9MeyEE13tK607YQjbWbYwHth5ibph1BdVxYRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

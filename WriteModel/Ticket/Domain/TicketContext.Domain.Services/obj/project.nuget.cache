@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5l5DN7SvMsyG2hNcvQsjWi1APlGkxwTUhaC8WeRA7Z3SEPjPJwdaPydqwOS9+/cC2vxDKjLeMkFI6fkERto3cw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Services\\TicketContext.Domain.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
