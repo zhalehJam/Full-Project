@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ILtNVYrLBg5C+MYAZfyZm243jnct8/hLJHAoEHqL9QFQVyOJL6ISkTMr63t//9mwKLiRhxGV09YoYop31Dk26g==",
+  "dgSpecHash": "ZzeU86uJKdMztZkO7NuVpTPeeAvt5GXolV+18HEWO32GNWsg1PPlmYP7nyk67jEquUTrWsZdoIc0SWh3AW04ZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

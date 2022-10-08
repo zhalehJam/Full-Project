@@ -10,15 +10,22 @@ namespace TicketContext.Domain.Test.Centers
     public class CenterTest
     {
         private readonly Mock<ICenterIDValidationCheck> centerIDValidationCheck = new Mock<ICenterIDValidationCheck>();
+        private readonly Mock<ICenterIDDuplicationCheck> centerIDDuplicationCheck = new Mock<ICenterIDDuplicationCheck>();
+
         [TestInitialize]
         public void Setup()
         {
             centerIDValidationCheck.Setup(c => c.IsValid(1)).Returns(true);
+            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(1)).Returns(false);
+
         }
         private Center Init(string centerName = "Tabriz",
             int centerID= 1)
         {
-            return new Center(centerIDValidationCheck.Object,centerName,centerID);
+            return new Center(centerIDValidationCheck.Object,
+                              centerIDDuplicationCheck.Object,
+                              centerName,
+                              centerID);
         }
 
 
@@ -42,7 +49,7 @@ namespace TicketContext.Domain.Test.Centers
         }
 
         [TestMethod, TestCategory("Center")]
-        [ExpectedException(typeof(ZeroCenterIDException))]
+        [ExpectedException(typeof(CenterIDIsNotValidException))]
          
         [DataRow(null)]
         public void NullCenterID_Throw_nullCenterIDException(int centerID)
@@ -58,11 +65,14 @@ namespace TicketContext.Domain.Test.Centers
             Assert.AreEqual(center.CenterID, centerID);
         }
 
-        [TestMethod,TestCategory("Center")]
-        [ExpectedException(typeof(CenterIDIsnotFindInHRException))]
-        void CenterIDIsnotFindInHR_throw_CenterIDIsnotFindInHRException(int centerID)
-        {
-            Center center = Init(centerID: centerID);
-        }
+        //[TestMethod,TestCategory("Center")]
+        //[ExpectedException(typeof(CenterIDDuplicationException))]
+        //[DataRow(1)]
+        //public void CenterIDDuplication_throw_CenterIDDuplicationException(int centerID)
+        //{
+        //     Center center= Init(centerID: centerID);
+        //     Init(centerID: centerID);
+
+        //}
     }
 }

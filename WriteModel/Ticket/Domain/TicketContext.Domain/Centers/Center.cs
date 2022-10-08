@@ -8,37 +8,40 @@ namespace TicketContext.Domain.Centers
     public class Center : EntityBase, IAggregateRoot
     {
         public Center(ICenterIDValidationCheck validationCheck,
+            ICenterIDDuplicationCheck duplicationCheck,
             string centerName, int centerID)
         {
             ValidationCheck = validationCheck;
+            DuplicationCheck = duplicationCheck;
             SetCenterName(centerName);
             SetCenterID(centerID);
-
         }
-
+        protected Center() { }
         private void SetCenterID(int centerID)
         {
-            if(centerID == 0)
-                throw new ZeroCenterIDException();
             if(!ValidationCheck.IsValid(centerID))
             {
-                throw new ZeroCenterIDException();
+                throw new CenterIDIsNotValidException();
             }
+            if(DuplicationCheck.IsDuplicate(centerID))
+                throw new CenterIDDuplicationException();
+              
 
             CenterID = centerID;
         }
 
         private void SetCenterName(string centerName)
         {
-            CenterName = centerName;
             if(string.IsNullOrWhiteSpace(centerName))
             {
                 throw new NullOrWhiteCenterNameException();
             }
+            CenterName = centerName;
         }
 
         public string CenterName { get; private set; }
         public int CenterID { get; private set; }
         public readonly ICenterIDValidationCheck ValidationCheck;
+        public readonly ICenterIDDuplicationCheck DuplicationCheck;
     }
 }

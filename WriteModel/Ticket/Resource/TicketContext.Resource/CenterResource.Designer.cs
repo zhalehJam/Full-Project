@@ -61,11 +61,20 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to این کد مرکز در برنامه کارگزینی موجود نمیباشد..
+        ///   Looks up a localized string similar to کد مرکز کراری میباشد..
         /// </summary>
-        public static string CenterIDIsnotFindInHRException {
+        public static string CenterIDDuplicationException {
             get {
-                return ResourceManager.GetString("CenterIDIsnotFindInHRException", resourceCulture);
+                return ResourceManager.GetString("CenterIDDuplicationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد مرکز صحیح نمیباشد..
+        /// </summary>
+        public static string CenterIDIsNotValidException {
+            get {
+                return ResourceManager.GetString("CenterIDIsNotValidException", resourceCulture);
             }
         }
         
@@ -75,15 +84,6 @@ namespace TicketContext.Resource {
         public static string NullOrWhiteCenterNameException {
             get {
                 return ResourceManager.GetString("NullOrWhiteCenterNameException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to کد مرکز نمیتواند 0 تعریف شود..
-        /// </summary>
-        public static string ZeroCenterIDException {
-            get {
-                return ResourceManager.GetString("ZeroCenterIDException", resourceCulture);
             }
         }
     }

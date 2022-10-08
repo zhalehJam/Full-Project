@@ -19,7 +19,7 @@ namespace Framework.Persistence
                 .ValueGeneratedNever();
             builder.HasKey(c => c.Id);
 
-            builder.ToTable(typeof(TEntity).Name, typeof(TEntity).Namespace?.Split('.')[1]);
+            builder.ToTable(typeof(TEntity).Name, typeof(TEntity).Namespace?.Split('.')[0]);
         }
 
     }

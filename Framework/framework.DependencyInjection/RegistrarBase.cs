@@ -25,7 +25,7 @@ namespace framework.DependencyInjection
         {
      
             var nameSpaceSpell = typeof(TRegistrar).Namespace?.Split('.');
-            _namespace = nameSpaceSpell?[0] + "." + nameSpaceSpell?[1];
+            _namespace = nameSpaceSpell?[0];//+ "." + nameSpaceSpell?[1];
         }
        public void Register(IServiceCollection serviceCollection, IAssemblyDiscovery assemblyDiscovery)
        {

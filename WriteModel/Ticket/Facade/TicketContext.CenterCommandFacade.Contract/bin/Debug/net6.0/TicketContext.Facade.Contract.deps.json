@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TicketContext.Facade.Contract/1.0.0": {
+        "dependencies": {
+          "TicketContext.ApplicationService.Contract": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.Facade.Contract.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "Framework.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "Framework.Core.dll": {}
+        }
+      },
+      "Framework.Domain/1.0.0": {
+        "runtime": {
+          "Framework.Domain.dll": {}
+        }
+      },
+      "TicketContext.ApplicationService.Contract/1.0.0": {
+        "dependencies": {
+          "Framework.Core": "1.0.0",
+          "TicketContext.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.ApplicationService.Contract.dll": {}
+        }
+      },
+      "TicketContext.Domain/1.0.0": {
+        "dependencies": {
+          "Framework.Core": "1.0.0",
+          "Framework.Domain": "1.0.0",
+          "TicketContext.Resource": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.Domain.dll": {}
+        }
+      },
+      "TicketContext.Resource/1.0.0": {
+        "dependencies": {
+          "Framework.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.Resource.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TicketContext.Facade.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    },
+    "Framework.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Framework.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.ApplicationService.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Resource/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

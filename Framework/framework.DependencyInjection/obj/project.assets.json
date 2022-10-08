@@ -148,11 +148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
       "projectName": "framework.DependencyInjection",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\framework.DependencyInjection\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -172,14 +172,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj"
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             }
           }
         }

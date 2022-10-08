@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Framework.Persistence\Framework.Persistence.csproj" />
+    <ProjectReference Include="..\..\Domain\TicketContext.Domain\TicketContext.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

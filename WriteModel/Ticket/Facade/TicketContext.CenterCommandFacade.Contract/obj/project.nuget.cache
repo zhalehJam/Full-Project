@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FvgnWoZUI/7fbntUUOZxyEyN/jI/BlmvVG6OjudpFAj2ohP7c2mVfmZGn8mOaHdTwVugp6NDiT3VM8Oqk+eABw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

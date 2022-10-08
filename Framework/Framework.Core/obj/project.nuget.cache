@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NeIQu11vPpFKBHSVOGAwbGt6znMmwa9GL2nYggkuw5KVlVDgcV8jbMIsBgqg4DfnpE599Pu5R2A+EXGJxkvlkQ==",
+  "dgSpecHash": "5P8VbLs83Hl5Za8lD1rZcuPYcDAUE2hlsxn91rxsAr8aQ4sPkLMqV2cH6fQekgLz2/b3a9HIo9wCB/JRVy6Vjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],

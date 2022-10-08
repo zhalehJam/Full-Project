@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
       "projectName": "Framework.Core",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Core\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

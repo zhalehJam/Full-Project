@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
+    <ProjectReference Include="..\WriteModel\Persistence\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\TicketContext.ApplicationService.Contract.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService\TicketContext.ApplicationService.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Domain\TicketContext.Domain.Services\TicketContext.Domain.Services.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Domain\TicketContext.Domain.Test\TicketContext.Domain.Test.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Domain\TicketContext.Domain\TicketContext.Domain.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\TicketContext.Facade.Contract.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Facade\TicketContext.Facade\TicketContext.Facade.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\TicketContext.Infrastructure.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\Resource\TicketContext.Resource\TicketContext.Resource.csproj" />
+    <ProjectReference Include="..\WriteModel\Ticket\TicketContext.Configuration\TicketContext.Configuration.csproj" />
+  </ItemGroup>
+
+</Project>

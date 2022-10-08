@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
       "projectName": "Framework.Domain",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Domain\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
