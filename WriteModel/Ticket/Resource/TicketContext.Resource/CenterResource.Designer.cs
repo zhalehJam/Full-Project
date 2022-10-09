@@ -61,7 +61,7 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to کد مرکز کراری میباشد..
+        ///   Looks up a localized string similar to کد مرکز تکراری میباشد..
         /// </summary>
         public static string CenterIDDuplicationException {
             get {
@@ -84,6 +84,33 @@ namespace TicketContext.Resource {
         public static string NullOrWhiteCenterNameException {
             get {
                 return ResourceManager.GetString("NullOrWhiteCenterNameException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to نام واحد نمیتواند خالی یا سفید باشد..
+        /// </summary>
+        public static string NullOrWhitePartNameException {
+            get {
+                return ResourceManager.GetString("NullOrWhitePartNameException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد واحد در این مرکز تکراری میباشد..
+        /// </summary>
+        public static string PartIDIsDuplicatedException {
+            get {
+                return ResourceManager.GetString("PartIDIsDuplicatedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد واحد صحیح نمیباشد..
+        /// </summary>
+        public static string PartIDIsNotValidException {
+            get {
+                return ResourceManager.GetString("PartIDIsNotValidException", resourceCulture);
             }
         }
     }

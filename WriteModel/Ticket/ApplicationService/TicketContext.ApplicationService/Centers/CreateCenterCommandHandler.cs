@@ -5,7 +5,7 @@ using TicketContext.Domain.Centers.DomainServices;
 
 namespace TicketContext.ApplicationService.Centers
 {
-    internal class CreateCenterCommandHandler : ICommandHandler<CreateCenterCommand>
+    public class CreateCenterCommandHandler : ICommandHandler<CreateCenterCommand>
     {
         private readonly ICenterIDValidationCheck CenterIDValidationCheck;
         private readonly ICenterIDDuplicationCheck CenterIDDuplicationCheck;
@@ -21,11 +21,11 @@ namespace TicketContext.ApplicationService.Centers
         }
         public void Execute(CreateCenterCommand command)
         {
-            var cneter = new Center(CenterIDValidationCheck,
+            var center = new Center(CenterIDValidationCheck,
                                     CenterIDDuplicationCheck,
                                     command.CenterName,
                                     command.CenterID);
-            CenterRepository.Add(cneter);
+            CenterRepository.Add(center);
         }
     }
 }

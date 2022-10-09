@@ -14,5 +14,6 @@ namespace TicketContext.Domain.Centers.DomainServices
         void Delete(Center center);
         Center GetByID(Guid id);
         bool IsExist(Expression<Func<Center, bool>> expression);
+        void Update(Center center);
     }
 }

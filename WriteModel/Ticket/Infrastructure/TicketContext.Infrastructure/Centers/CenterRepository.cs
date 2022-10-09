@@ -37,9 +37,14 @@ namespace TicketContext.Infrastructure.Centers
                 return _dbContext.Set<Center>().Any(expression);
         }
 
+        public void Update(Center center)
+        {
+            base.Update(center);
+        }
+
         protected override IEnumerable<Expression<Func<Center, object>>> GetAggregateExpression()
         {
-            throw new NotImplementedException();
+            yield return n=>n.Parts;
         }
     }
 }

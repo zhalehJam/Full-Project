@@ -9,24 +9,23 @@ namespace TicketContext.Domain.Centers
     {
         public Center(ICenterIDValidationCheck validationCheck,
             ICenterIDDuplicationCheck duplicationCheck,
-            string centerName, int centerID)
+            string centerName,
+            int centerID)
         {
-            ValidationCheck = validationCheck;
-            DuplicationCheck = duplicationCheck;
+            CenterIDValidationCheck = validationCheck;
+            CenterIDDuplicationCheck = duplicationCheck;
             SetCenterName(centerName);
             SetCenterID(centerID);
         }
         protected Center() { }
         private void SetCenterID(int centerID)
         {
-            if(!ValidationCheck.IsValid(centerID))
+            if(!CenterIDValidationCheck.IsValid(centerID))
             {
                 throw new CenterIDIsNotValidException();
             }
-            if(DuplicationCheck.IsDuplicate(centerID))
+            if(CenterIDDuplicationCheck.IsDuplicate(centerID))
                 throw new CenterIDDuplicationException();
-              
-
             CenterID = centerID;
         }
 
@@ -39,9 +38,20 @@ namespace TicketContext.Domain.Centers
             CenterName = centerName;
         }
 
+        public void AddPart(Part part)
+        {
+            if(Parts.Where(n => n.PartID == part.PartID).Count() != 0)
+            {
+                throw new PartIDIsDuplicatedException();
+            }
+            Parts.Add(part);
+        }
+
         public string CenterName { get; private set; }
         public int CenterID { get; private set; }
-        public readonly ICenterIDValidationCheck ValidationCheck;
-        public readonly ICenterIDDuplicationCheck DuplicationCheck;
+        public readonly ICenterIDValidationCheck CenterIDValidationCheck;
+        public readonly ICenterIDDuplicationCheck CenterIDDuplicationCheck;
+        public ICollection<Part> Parts { get; private set; } = new HashSet<Part>();
+
     }
 }

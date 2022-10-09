@@ -15,9 +15,25 @@ namespace TicketContext.Infrastructure.Centers.Mapping
     {
         public override void Configure(EntityTypeBuilder<Center> builder)
         {
-            Initial(builder); 
-            builder.Property(x=>x.CenterID).HasColumnType(nameof(SqlDbType.Int)).IsRequired();
+            Initial(builder);
+            builder.Property(x => x.CenterID).HasColumnType(nameof(SqlDbType.Int)).IsRequired();
             builder.Property(x => x.CenterName).HasMaxLength(100).IsRequired();
+            builder.OwnsMany(n => n.Parts,
+                map =>
+                {
+                    map.Property<Guid>("Id")
+                       .HasColumnType(nameof(SqlDbType.UniqueIdentifier))
+                       .IsRequired().ValueGeneratedNever();
+                    map.Property<string>("PartName")
+                       .HasMaxLength(100)
+                       .IsRequired();
+                    map.Property<int>("PartID")
+                       .HasColumnType(nameof(SqlDbType.Int))
+                       .IsRequired();
+                    map.WithOwner().HasForeignKey("Center");
+                    map.ToTable(typeof(Part).Name, typeof(Part).Namespace?.Split(".")[0])
+                       .HasKey("Id");
+                });
         }
     }
 }

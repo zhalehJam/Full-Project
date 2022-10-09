@@ -7,5 +7,4 @@ namespace TicketContext.Domain.Centers.Exceptions
     {
         public override string Message => CenterResource.CenterIDDuplicationException;
     }
-    
 }

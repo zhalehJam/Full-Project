@@ -39,6 +39,37 @@ namespace Persistence.Migrations
 
                     b.ToTable("Center", "TicketContext");
                 });
+
+            modelBuilder.Entity("TicketContext.Domain.Centers.Center", b =>
+                {
+                    b.OwnsMany("TicketContext.Domain.Centers.Part", "Parts", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .HasColumnType("UniqueIdentifier");
+
+                            b1.Property<Guid>("Center")
+                                .HasColumnType("UniqueIdentifier");
+
+                            b1.Property<int>("PartID")
+                                .HasColumnType("Int");
+
+                            b1.Property<string>("PartName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("Center");
+
+                            b1.ToTable("Part", "TicketContext");
+
+                            b1.WithOwner()
+                                .HasForeignKey("Center");
+                        });
+
+                    b.Navigation("Parts");
+                });
 #pragma warning restore 612, 618
         }
     }

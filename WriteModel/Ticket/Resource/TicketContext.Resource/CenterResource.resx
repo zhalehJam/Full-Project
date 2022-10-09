@@ -118,12 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CenterIDDuplicationException" xml:space="preserve">
-    <value>کد مرکز کراری میباشد.</value>
+    <value>کد مرکز تکراری میباشد.</value>
   </data>
   <data name="CenterIDIsNotValidException" xml:space="preserve">
     <value>کد مرکز صحیح نمیباشد.</value>
   </data>
   <data name="NullOrWhiteCenterNameException" xml:space="preserve">
     <value>نام نمیتواند خالی یا فضای سفید باشد.</value>
+  </data>
+  <data name="NullOrWhitePartNameException" xml:space="preserve">
+    <value>نام واحد نمیتواند خالی یا سفید باشد.</value>
+  </data>
+  <data name="PartIDIsDuplicatedException" xml:space="preserve">
+    <value>کد واحد در این مرکز تکراری میباشد.</value>
+  </data>
+  <data name="PartIDIsNotValidException" xml:space="preserve">
+    <value>کد واحد صحیح نمیباشد.</value>
   </data>
 </root>

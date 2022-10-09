@@ -19,6 +19,10 @@ namespace API.Controller
         {
             CenterCommandFacade.CeateCenter(createCenterCommand);
         }
-
+        [HttpPost("AddPart")]
+        public void AddPar(AddPartCommand addPartCommand)
+        {
+            CenterCommandFacade.AddPart(addPartCommand);
+        }
     }
 }

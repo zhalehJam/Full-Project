@@ -11,6 +11,11 @@ namespace TicketContext.Facade
         {
         }
 
+        public void AddPart(AddPartCommand addPartCommand)
+        {
+            _commandBus.Dispatch(addPartCommand);
+        }
+
         public void CeateCenter(CreateCenterCommand createCenterCommand)
         {
             _commandBus.Dispatch(createCenterCommand);
