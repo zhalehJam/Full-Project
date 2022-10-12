@@ -55,7 +55,8 @@ namespace Framework.Persistence
 
         protected TAggregateRoot GetById(Guid id)
         {
-            return Set.Single(e => e.Id == id);
+            return Set.SingleOrDefault(e => e.Id == id);
+                
         }
 
 

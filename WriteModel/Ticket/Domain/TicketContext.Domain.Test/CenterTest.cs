@@ -4,7 +4,7 @@ using TicketContext.Domain.Centers;
 using TicketContext.Domain.Centers.DomainServices;
 using TicketContext.Domain.Centers.Exceptions;
 
-namespace TicketContext.Domain.Test.Centers
+namespace TicketContext.Domain.Test
 {
     [TestClass]
     public class CenterTest
@@ -17,8 +17,8 @@ namespace TicketContext.Domain.Test.Centers
         [TestInitialize]
         public void Setup()
         {
-            centerIDValidationCheck.Setup(c => c.IsValid(It.Is<int>(n=>!n.Equals(0)))).Returns(true);
-            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.Is<int>(n=>n.Equals(1)))).Returns(true);
+            centerIDValidationCheck.Setup(c => c.IsValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
+            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.Is<int>(n => n.Equals(1)))).Returns(true);
             partIDValidationChecker.Setup(c => c.ISValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
 
 
@@ -59,7 +59,7 @@ namespace TicketContext.Domain.Test.Centers
         [TestMethod, TestCategory("Center")]
         [ExpectedException(typeof(CenterIDIsNotValidException))]
 
-       // [DataRow(null)]
+        // [DataRow(null)]
         [DataRow(0)]
         public void NullCenterID_Throw_nullCenterIDException(int centerID)
         {
@@ -117,7 +117,7 @@ namespace TicketContext.Domain.Test.Centers
             Assert.AreEqual(center.Parts.Select(n => n.PartID).FirstOrDefault(), partID);
         }
 
-        [TestMethod,TestCategory("Part")]
+        [TestMethod, TestCategory("Part")]
         [ExpectedException(typeof(PartIDIsDuplicatedException))]
         [DataRow(1)]
         public void PartIDIsDuplicated_throw_PartIDIsDuplicatedException(int partID)

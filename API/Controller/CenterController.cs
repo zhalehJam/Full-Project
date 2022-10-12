@@ -4,25 +4,26 @@ using TicketContext.Facade.Contract;
 
 namespace API.Controller
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class CenterController : ControllerBase
     {
-        private readonly ICenterCommandFacade CenterCommandFacade;
+        private readonly ICenterCommandFacade _centerCommandFacade;
 
         public CenterController(ICenterCommandFacade centerCommandFacade)
         {
-            CenterCommandFacade = centerCommandFacade;
+            _centerCommandFacade = centerCommandFacade;
         }
         [HttpPost("CreateCenter")]
         public void CreateCenter(CreateCenterCommand createCenterCommand)
         {
-            CenterCommandFacade.CeateCenter(createCenterCommand);
+            _centerCommandFacade.CeateCenter(createCenterCommand);
         }
         [HttpPost("AddPart")]
         public void AddPar(AddPartCommand addPartCommand)
         {
-            CenterCommandFacade.AddPart(addPartCommand);
+            _centerCommandFacade.AddPart(addPartCommand);
         }
     }
 }

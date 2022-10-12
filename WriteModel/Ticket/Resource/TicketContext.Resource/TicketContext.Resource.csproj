@@ -16,12 +16,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>CenterResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="PersonResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PersonResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="CenterResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CenterResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PersonResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PersonResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

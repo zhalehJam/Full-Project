@@ -32,3 +32,4 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Resource\TicketContext.R
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Resource\TicketContext.Resource\obj\Debug\net6.0\refint\TicketContext.Resource.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Resource\TicketContext.Resource\obj\Debug\net6.0\TicketContext.Resource.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Resource\TicketContext.Resource\obj\Debug\net6.0\ref\TicketContext.Resource.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Resource\TicketContext.Resource\obj\Debug\net6.0\TicketContext.Resource.PersonResource.resources
