@@ -104,5 +104,14 @@ namespace TicketContext.Resource {
                 return ResourceManager.GetString("PartIDIsNotValidException", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کدپرسنلی تکراری است..
+        /// </summary>
+        public static string PersonIDIsDuplicateException {
+            get {
+                return ResourceManager.GetString("PersonIDIsDuplicateException", resourceCulture);
+            }
+        }
     }
 }

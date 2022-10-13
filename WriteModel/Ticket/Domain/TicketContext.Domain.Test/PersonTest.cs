@@ -11,6 +11,7 @@ namespace TicketContext.Domain.Test
     {
         private readonly Mock<IPersonIDValidationChecker> _personIDValidationChecker = new Mock<IPersonIDValidationChecker>();
         private readonly Mock<IPartIDIsValidChecker> _partIDIsValidChecker = new Mock<IPartIDIsValidChecker>();
+        private readonly Mock<IPersoIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersoIDDuplicateChecker>();
 
         private Guid centerId;
         private Guid partId;
@@ -18,22 +19,24 @@ namespace TicketContext.Domain.Test
         [TestInitialize]
         public void Setup()
         {
-            _personIDValidationChecker.Setup(c => c.IsValid(It.Is<int>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
             centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
             partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
+            _personIDValidationChecker.Setup(c => c.IsValid(It.Is<int>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
             _partIDIsValidChecker.Setup(c => c.Isvalid(centerId, partId)).Returns(true);
+            _persoIDDuplicateChecker.Setup(c=>c.IsDuplicate(It.Is<int>(n=>n.Equals(970086)))).Returns(true);
 
 
         }
         private Person Init(string personName = "ژاله جمالیوند",
-                            Int32 personID = 970086)
+                            Int32 personID = 970087)
         {
             Person person = new Person(personName,
                                        personID,
                                        centerId,
                                        partId,
                                        _personIDValidationChecker.Object,
-                                       _partIDIsValidChecker.Object);
+                                       _partIDIsValidChecker.Object,
+                                       _persoIDDuplicateChecker.Object);
 
             return person;
         }
@@ -103,14 +106,13 @@ namespace TicketContext.Domain.Test
             Assert.AreEqual(person.PartId,partId);
         }
 
-        //[TestMethod,TestCategory("Person")]
-        //[ExpectedException(typeof(CannotChangePersonIDException))]
-        //public void CannotChangePersonID_throw_CannotChangePersonIDException()
-        //{
-        //    Person person = Init();
-        //    person.UpdatePersonInfo(person.Name,970098,centerId,person.PartId);    
-
-        //}
+        [TestMethod, TestCategory("Person")]
+        [ExpectedException(typeof(PersonIDIsDuplicateException))]
+        [DataRow(970086)]
+        public void PersonIDIsDuplicate_throw_PersonIDIsDuplicateException(Int32 personID)
+        {
+            Person person = Init(personID:personID);
+        }
 
     }
 }

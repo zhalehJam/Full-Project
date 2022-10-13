@@ -132,4 +132,7 @@
   <data name="PartIDIsNotValidException" xml:space="preserve">
     <value>واحد انتخاب شده صحیح نمیباشد.</value>
   </data>
+  <data name="PersonIDIsDuplicateException" xml:space="preserve">
+    <value>کدپرسنلی تکراری است.</value>
+  </data>
 </root>

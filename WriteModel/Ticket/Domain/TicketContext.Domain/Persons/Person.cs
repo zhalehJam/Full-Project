@@ -17,11 +17,13 @@ namespace TicketContext.Domain.Persons
                       Guid centerId,
                       Guid partId,
                       IPersonIDValidationChecker personIDValidationChecker,
-                      IPartIDIsValidChecker partIDIsValidChecker
+                      IPartIDIsValidChecker partIDIsValidChecker,
+                      IPersoIDDuplicateChecker persoIDDuplicateChecker
             )
         {
-            PersonIDValidationChecker = personIDValidationChecker;
-            PartIDIsValidChecker = partIDIsValidChecker;
+            _personIDValidationChecker = personIDValidationChecker;
+            _partIDIsValidChecker = partIDIsValidChecker;
+            _persoIDDuplicateChecker = persoIDDuplicateChecker;
             SetName(name);
             SetPersonID(personID);
             SetPartID(centerId, partId);
@@ -29,7 +31,7 @@ namespace TicketContext.Domain.Persons
 
         private void SetPartID(Guid centerId, Guid partId)
         {
-            if(!PartIDIsValidChecker.Isvalid(centerId, partId))
+            if(!_partIDIsValidChecker.Isvalid(centerId, partId))
                 throw new PartIDIsNotValidException();
             PartId = partId;
 
@@ -44,14 +46,14 @@ namespace TicketContext.Domain.Persons
             {
                 throw new NullOrZeroPersonIDException();
             }
-            if(!PersonIDValidationChecker.IsValid(personID))
+            if(!_personIDValidationChecker.IsValid(personID))
             {
                 throw new InvalidPersonIDException();
             }
-            //if(PersonID != 0 && PersonID != personID)
-            //{
-            //    throw new CannotChangePersonIDException();
-            //}
+            if(PersonID==0 & _persoIDDuplicateChecker.IsDuplicate(personID))
+            {
+                throw new PersonIDIsDuplicateException();
+            }
 
             PersonID = personID;
         }
@@ -65,7 +67,7 @@ namespace TicketContext.Domain.Persons
 
         public void UpdatePersonInfo(string personName, Guid centerId, Guid partId,IPartIDIsValidChecker partIDIsValidChecker)
         {
-            PartIDIsValidChecker = partIDIsValidChecker;
+            _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(centerId, partId);
             //SetPersonID(personId);
@@ -76,7 +78,8 @@ namespace TicketContext.Domain.Persons
         public Guid PartId { get; private set; }
         //public Guid CenterId { get; set; }
 
-        public readonly IPersonIDValidationChecker PersonIDValidationChecker;
-        public  IPartIDIsValidChecker PartIDIsValidChecker;
+        public readonly IPersonIDValidationChecker _personIDValidationChecker;
+        public  IPartIDIsValidChecker _partIDIsValidChecker;
+        private readonly IPersoIDDuplicateChecker _persoIDDuplicateChecker;
     }
 }
