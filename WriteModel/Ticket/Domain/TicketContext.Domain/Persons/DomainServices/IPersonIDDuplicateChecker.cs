@@ -2,7 +2,7 @@
 
 namespace TicketContext.Domain.Persons.DomainServices
 {
-    public interface IPersoIDDuplicateChecker:IDomainService
+    public interface IPersonIDDuplicateChecker:IDomainService
     {
         bool IsDuplicate(Int32 personID);
     }

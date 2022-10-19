@@ -11,9 +11,19 @@ namespace TicketContext.Facade
         {
         }
 
+        public void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand)
+        {
+            _commandBus.Dispatch(addProgramSupporterCommand);
+        }
+
         public void CreateProgram(CreateProgramCommand createProgramCommand)
         {
             _commandBus.Dispatch(createProgramCommand);
+        }
+
+        public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
+        {
+            _commandBus.Dispatch(deleteProgramSupporterCommand);
         }
 
         public void UpdateProgramlink(UpdateProgramLinkCommand updateProgramLinkCommand)

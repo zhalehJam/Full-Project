@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CUzORIbTcFJLneWfgCt4RXaQOlJwepY57qqeUZit0x5Ja+F95EvqYHd8OORl2JSd+K9T7zz9aY/ZTtwvluiYUQ==",
+  "dgSpecHash": "E+WTGDqMmdK/JJg4FIFHuXtaSTDsmdeOTnlKsDvENJ6hRchowmzctLxEXYqXKQgkIVUCwBvxADdEjX5Ax6MO2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Contract\\TicketContext.Domain.Contract.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

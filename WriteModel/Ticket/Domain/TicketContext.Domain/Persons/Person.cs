@@ -18,7 +18,7 @@ namespace TicketContext.Domain.Persons
                       Guid partId,
                       IPersonIDValidationChecker personIDValidationChecker,
                       IPartIDIsValidChecker partIDIsValidChecker,
-                      IPersoIDDuplicateChecker persoIDDuplicateChecker
+                      IPersonIDDuplicateChecker persoIDDuplicateChecker
             )
         {
             _personIDValidationChecker = personIDValidationChecker;
@@ -80,6 +80,6 @@ namespace TicketContext.Domain.Persons
 
         public readonly IPersonIDValidationChecker _personIDValidationChecker;
         public  IPartIDIsValidChecker _partIDIsValidChecker;
-        private readonly IPersoIDDuplicateChecker _persoIDDuplicateChecker;
+        private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
     }
 }

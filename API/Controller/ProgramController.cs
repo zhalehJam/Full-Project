@@ -6,7 +6,7 @@ namespace API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProgramController:ControllerBase
+    public class ProgramController : ControllerBase
     {
         private readonly IProgramCommandFacade _programCommandFacade;
 
@@ -23,6 +23,17 @@ namespace API.Controller
         public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
         {
             _programCommandFacade.UpdateProgramlink(updateProgramLinkCommand);
+        }
+
+        [HttpPost("AddPrgramSupporter")]
+        public void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand)
+        {
+            _programCommandFacade.AddProgramSupporter(addProgramSupporterCommand);
+        }
+        [HttpPost("DeleteProgramSupporter")]
+        public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
+        {
+            _programCommandFacade.DeleteProgramSupporter(deleteProgramSupporterCommand);
         }
 
     }

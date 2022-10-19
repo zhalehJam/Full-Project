@@ -6,5 +6,7 @@ namespace TicketContext.Facade.Contract
     {
         void CreateProgram(CreateProgramCommand createProgramCommand);
         void UpdateProgramlink(UpdateProgramLinkCommand updateProgramLinkCommand);
+        void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand);
+        void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand);
     }
 }

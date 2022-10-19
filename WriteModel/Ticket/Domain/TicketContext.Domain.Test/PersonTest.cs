@@ -11,7 +11,7 @@ namespace TicketContext.Domain.Test
     {
         private readonly Mock<IPersonIDValidationChecker> _personIDValidationChecker = new Mock<IPersonIDValidationChecker>();
         private readonly Mock<IPartIDIsValidChecker> _partIDIsValidChecker = new Mock<IPartIDIsValidChecker>();
-        private readonly Mock<IPersoIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersoIDDuplicateChecker>();
+        private readonly Mock<IPersonIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersonIDDuplicateChecker>();
 
         private Guid centerId;
         private Guid partId;

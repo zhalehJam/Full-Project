@@ -12,9 +12,4 @@ namespace TicketContext.Domain.Programs.Exceptions
     {
         public override string Message => ProgramResource.NullOrWhiteProgramNameException;
     }
-
-    public class ProgramNameIsDupliateException:DomainException
-    {
-        public override string Message => ProgramResource.ProgramNameIsDupliateException;
-    }
 }

@@ -22,6 +22,10 @@ namespace TicketContext.Infrastructure.Programs
         {
             base.Create(program);
         }
+        public void Update(Program program)
+        {
+            base.Update(program);
+        }
 
         public bool IsExist(Expression<Func<Program, bool>> expression)
         {
@@ -30,7 +34,7 @@ namespace TicketContext.Infrastructure.Programs
 
         protected override IEnumerable<Expression<Func<Program, object>>> GetAggregateExpression()
         {
-            return null;//throw new NotImplementedException();
+            yield return n => n.ProgramSupporters;
         }
 
         Program IProgramRepository.GetById(Guid id)

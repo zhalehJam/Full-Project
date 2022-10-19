@@ -23,7 +23,8 @@ namespace TicketContext.Infrastructure.Centers.Mapping
                 {
                     map.Property<Guid>("Id")
                        .HasColumnType(nameof(SqlDbType.UniqueIdentifier))
-                       .IsRequired().ValueGeneratedNever();
+                       .IsRequired()
+                       .ValueGeneratedNever();
                     map.Property<string>("PartName")
                        .HasMaxLength(100)
                        .IsRequired();

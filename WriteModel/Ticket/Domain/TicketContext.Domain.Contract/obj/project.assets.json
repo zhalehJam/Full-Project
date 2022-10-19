@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Contract\\TicketContext.Domain.Contract.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
       "projectName": "TicketContext.Domain.Contract",
-      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Contract\\TicketContext.Domain.Contract.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Contract\\obj\\",
       "projectStyle": "PackageReference",

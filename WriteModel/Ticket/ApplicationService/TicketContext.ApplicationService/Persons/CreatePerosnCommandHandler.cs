@@ -9,12 +9,12 @@ namespace TicketContext.ApplicationService.Persons
     {
         private readonly IPersonIDValidationChecker _personIDValidationChecker;
         private readonly IPartIDIsValidChecker _partIDIsValidChecker;
-        private readonly IPersoIDDuplicateChecker _persoIDDuplicateChecker;
+        private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
         private readonly IPersonRepository _personRepository;
 
         public CreatePerosnCommandHandler(IPersonIDValidationChecker personIDValidationChecker,
                                           IPartIDIsValidChecker partIDIsValidChecker,
-                                          IPersoIDDuplicateChecker persoIDDuplicateChecker,
+                                          IPersonIDDuplicateChecker persoIDDuplicateChecker,
                                           IPersonRepository personRepository)
         {
             _personIDValidationChecker = personIDValidationChecker;

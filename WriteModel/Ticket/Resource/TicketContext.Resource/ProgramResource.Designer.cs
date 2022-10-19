@@ -61,6 +61,24 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to کد پشتیبان برنامه تکراری است..
+        /// </summary>
+        public static string DuplicateProgramSupporerIDException {
+            get {
+                return ResourceManager.GetString("DuplicateProgramSupporerIDException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to پشتیبان این برنامه نیست..
+        /// </summary>
+        public static string InvalidProgramSupporterPersonIdException {
+            get {
+                return ResourceManager.GetString("InvalidProgramSupporterPersonIdException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام برنامه نمیتواند خالی یا سفید باشد..
         /// </summary>
         public static string NullOrWhiteProgramNameException {
@@ -75,6 +93,15 @@ namespace TicketContext.Resource {
         public static string ProgramNameIsDupliateException {
             get {
                 return ResourceManager.GetString("ProgramNameIsDupliateException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کدپرسنلی پشتیبان نادرست است..
+        /// </summary>
+        public static string SupporterIdIsNotValidException {
+            get {
+                return ResourceManager.GetString("SupporterIdIsNotValidException", resourceCulture);
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TicketContext.Domain.Programs.DomainServices
 {
-    public interface IProgramNameDuplicateChecker:IDomainService
+    public interface IProgramNameDuplicateChecker : IDomainService
     {
         bool IsDuplicated(string programName);
     }

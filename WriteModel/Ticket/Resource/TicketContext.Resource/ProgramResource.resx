@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DuplicateProgramSupporerIDException" xml:space="preserve">
+    <value>کد پشتیبان برنامه تکراری است.</value>
+  </data>
+  <data name="InvalidProgramSupporterPersonIdException" xml:space="preserve">
+    <value>پشتیبان این برنامه نیست.</value>
+  </data>
   <data name="NullOrWhiteProgramNameException" xml:space="preserve">
     <value>نام برنامه نمیتواند خالی یا سفید باشد.</value>
   </data>
   <data name="ProgramNameIsDupliateException" xml:space="preserve">
     <value>نام برنامه تکراری است.</value>
+  </data>
+  <data name="SupporterIdIsNotValidException" xml:space="preserve">
+    <value>کدپرسنلی پشتیبان نادرست است.</value>
   </data>
 </root>

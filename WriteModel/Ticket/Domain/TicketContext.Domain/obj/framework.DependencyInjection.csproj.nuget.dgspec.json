@@ -1,0 +1,82 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+        "projectName": "TicketContext.Domain",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\970086\\source\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\Framework\\Framework.Core\\Framework.Core.csproj"
+              },
+              "C:\\Users\\970086\\source\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              },
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -45,7 +45,7 @@ namespace TicketContext.Domain.Centers
                 throw new PartIDIsDuplicatedException();
             }
             Parts.Add(part);
-        }
+        }        
 
         public string CenterName { get; private set; }
         public int CenterID { get; private set; }

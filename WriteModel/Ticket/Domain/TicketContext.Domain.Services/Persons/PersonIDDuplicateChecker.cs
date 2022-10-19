@@ -2,11 +2,11 @@
 
 namespace TicketContext.Domain.Services.Persons
 {
-    public class PersoIDDuplicateChecker : IPersoIDDuplicateChecker
+    public class PersonIDDuplicateChecker : IPersonIDDuplicateChecker
     {
         private readonly IPersonRepository _personRepository;
 
-        public PersoIDDuplicateChecker(IPersonRepository personRepository)
+        public PersonIDDuplicateChecker(IPersonRepository personRepository)
         {
             _personRepository = personRepository;
         }

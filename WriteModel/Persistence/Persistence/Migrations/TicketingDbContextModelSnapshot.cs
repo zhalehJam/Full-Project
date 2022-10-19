@@ -110,6 +110,33 @@ namespace Persistence.Migrations
 
                     b.Navigation("Parts");
                 });
+
+            modelBuilder.Entity("TicketContext.Domain.Programs.Program", b =>
+                {
+                    b.OwnsMany("TicketContext.Domain.Programs.ProgramSupporter", "ProgramSupporters", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("UniqueIdentifier");
+
+                            b1.Property<Guid>("Program")
+                                .HasColumnType("UniqueIdentifier");
+
+                            b1.Property<int>("SupporterPersonID")
+                                .HasColumnType("Int");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("Program");
+
+                            b1.ToTable("ProgramSupporter", "TicketContext");
+
+                            b1.WithOwner()
+                                .HasForeignKey("Program");
+                        });
+
+                    b.Navigation("ProgramSupporters");
+                });
 #pragma warning restore 612, 618
         }
     }
