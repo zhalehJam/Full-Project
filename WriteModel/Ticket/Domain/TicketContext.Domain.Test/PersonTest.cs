@@ -12,6 +12,7 @@ namespace TicketContext.Domain.Test
         private readonly Mock<IPersonIDValidationChecker> _personIDValidationChecker = new Mock<IPersonIDValidationChecker>();
         private readonly Mock<IPartIDIsValidChecker> _partIDIsValidChecker = new Mock<IPartIDIsValidChecker>();
         private readonly Mock<IPersonIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersonIDDuplicateChecker>();
+        private readonly Mock<IPersonIDUsedChecker> _personIDUsedChecker = new Mock<IPersonIDUsedChecker>();
 
         private Guid centerId;
         private Guid partId;
@@ -21,10 +22,10 @@ namespace TicketContext.Domain.Test
         {
             centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
             partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
-            _personIDValidationChecker.Setup(c => c.IsValid(It.Is<int>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
+            _personIDValidationChecker.Setup(c => c.IsValid(It.Is<Int32>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
             _partIDIsValidChecker.Setup(c => c.Isvalid(centerId, partId)).Returns(true);
-            _persoIDDuplicateChecker.Setup(c=>c.IsDuplicate(It.Is<int>(n=>n.Equals(970086)))).Returns(true);
-
+            _persoIDDuplicateChecker.Setup(c => c.IsDuplicate(It.Is<Int32>(n => n.Equals(970086)))).Returns(true);
+            _personIDUsedChecker.Setup(c => c.IsUsed(It.Is<Int32>(n => n.Equals(970087)))).Returns(true);
 
         }
         private Person Init(string personName = "ژاله جمالیوند",
@@ -36,7 +37,8 @@ namespace TicketContext.Domain.Test
                                        partId,
                                        _personIDValidationChecker.Object,
                                        _partIDIsValidChecker.Object,
-                                       _persoIDDuplicateChecker.Object);
+                                       _persoIDDuplicateChecker.Object,
+                                       _personIDUsedChecker.Object);
 
             return person;
         }
@@ -90,7 +92,7 @@ namespace TicketContext.Domain.Test
         [DataRow("c8363f00-4b86-4cd1-9a68-40818197861a", "c8363f00-4b86-4cd1-9a68-40818197861a")]
         [DataRow("dd076d63-9546-4123-85e0-e193f6c2cd22", "dd076d63-9546-4123-85e0-e193f6c2cd22")]
 
-        public void PartIDIsNotValid_throw_PartIDIsNotValidException(string centerGId,string partGId)
+        public void PartIDIsNotValid_throw_PartIDIsNotValidException(string centerGId, string partGId)
         {
             centerId = new Guid(centerGId);
             partId = new Guid(partGId);
@@ -103,7 +105,7 @@ namespace TicketContext.Domain.Test
             centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
             partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
             Person person = Init();
-            Assert.AreEqual(person.PartId,partId);
+            Assert.AreEqual(person.PartId, partId);
         }
 
         [TestMethod, TestCategory("Person")]
@@ -111,8 +113,23 @@ namespace TicketContext.Domain.Test
         [DataRow(970086)]
         public void PersonIDIsDuplicate_throw_PersonIDIsDuplicateException(Int32 personID)
         {
-            Person person = Init(personID:personID);
+            Init(personID: personID);
         }
 
+        [TestMethod, TestCategory("Person")]
+        [ExpectedException(typeof(PersonIDIsUsedException))]
+        public void PersonIDIsUsed_throw_PersonIDIsUsedException()
+        {
+            Person person = Init();
+            person.CheckPersonCanDelete();
+        }
+
+        [TestMethod, TestCategory("Person")]
+        [DataRow(970428)]
+        public void Retrive_DeletePerson(Int32 PersonID)
+        {
+            Person person = Init(personID:PersonID);
+            person.CheckPersonCanDelete();
+        }
     }
 }

@@ -7,5 +7,4 @@ namespace TicketContext.Domain.Centers.DomainServices
     {
         bool IsDuplicate(int CenerID);
     }
-    
 }

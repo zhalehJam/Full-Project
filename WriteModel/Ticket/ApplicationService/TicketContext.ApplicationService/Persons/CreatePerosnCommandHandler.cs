@@ -11,16 +11,19 @@ namespace TicketContext.ApplicationService.Persons
         private readonly IPartIDIsValidChecker _partIDIsValidChecker;
         private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
         private readonly IPersonRepository _personRepository;
+        private readonly IPersonIDUsedChecker _personIDUsedChecker;
 
         public CreatePerosnCommandHandler(IPersonIDValidationChecker personIDValidationChecker,
                                           IPartIDIsValidChecker partIDIsValidChecker,
                                           IPersonIDDuplicateChecker persoIDDuplicateChecker,
-                                          IPersonRepository personRepository)
+                                          IPersonRepository personRepository,
+                                          IPersonIDUsedChecker personIDUsedChecker)
         {
             _personIDValidationChecker = personIDValidationChecker;
             _partIDIsValidChecker = partIDIsValidChecker;
             _persoIDDuplicateChecker = persoIDDuplicateChecker;
             _personRepository = personRepository;
+            _personIDUsedChecker = personIDUsedChecker;
         }
         public void Execute(CreatePersonCommand command)
         {
@@ -30,7 +33,8 @@ namespace TicketContext.ApplicationService.Persons
                                        command.PartId,
                                        _personIDValidationChecker,
                                        _partIDIsValidChecker,
-                                       _persoIDDuplicateChecker);
+                                       _persoIDDuplicateChecker,
+                                       _personIDUsedChecker);
             _personRepository.Add(person);
         }
     }

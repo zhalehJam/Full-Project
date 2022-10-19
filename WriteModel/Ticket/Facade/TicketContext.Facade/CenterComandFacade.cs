@@ -20,5 +20,11 @@ namespace TicketContext.Facade
         {
             _commandBus.Dispatch(createCenterCommand);
         }
+
+        public void DeletePart(DeletePartCommand deletePartCommand)
+        {
+            _commandBus.Dispatch(deletePartCommand);
+
+        }
     }
 }

@@ -18,27 +18,28 @@ namespace TicketContext.Domain.Persons
                       Guid partId,
                       IPersonIDValidationChecker personIDValidationChecker,
                       IPartIDIsValidChecker partIDIsValidChecker,
-                      IPersonIDDuplicateChecker persoIDDuplicateChecker
+                      IPersonIDDuplicateChecker persoIDDuplicateChecker,
+                      IPersonIDUsedChecker personIDUsedChecker
             )
         {
             _personIDValidationChecker = personIDValidationChecker;
             _partIDIsValidChecker = partIDIsValidChecker;
             _persoIDDuplicateChecker = persoIDDuplicateChecker;
+            _personIDUsedChecker = personIDUsedChecker;
             SetName(name);
             SetPersonID(personID);
             SetPartID(centerId, partId);
         }
+
+        protected Person()
+        { }
 
         private void SetPartID(Guid centerId, Guid partId)
         {
             if(!_partIDIsValidChecker.Isvalid(centerId, partId))
                 throw new PartIDIsNotValidException();
             PartId = partId;
-
         }
-
-        protected Person()
-        { }
 
         private void SetPersonID(Int32 personID)
         {
@@ -50,7 +51,7 @@ namespace TicketContext.Domain.Persons
             {
                 throw new InvalidPersonIDException();
             }
-            if(PersonID==0 & _persoIDDuplicateChecker.IsDuplicate(personID))
+            if(PersonID == 0 & _persoIDDuplicateChecker.IsDuplicate(personID))
             {
                 throw new PersonIDIsDuplicateException();
             }
@@ -65,12 +66,17 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName, Guid centerId, Guid partId,IPartIDIsValidChecker partIDIsValidChecker)
+        public void UpdatePersonInfo(string personName, Guid centerId, Guid partId, IPartIDIsValidChecker partIDIsValidChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(centerId, partId);
             //SetPersonID(personId);
+        }
+        public void CheckPersonCanDelete()
+        {
+            if(_personIDUsedChecker.IsUsed(PersonID))
+                throw new PersonIDIsUsedException();
         }
 
         public string Name { get; private set; }
@@ -79,7 +85,8 @@ namespace TicketContext.Domain.Persons
         //public Guid CenterId { get; set; }
 
         public readonly IPersonIDValidationChecker _personIDValidationChecker;
-        public  IPartIDIsValidChecker _partIDIsValidChecker;
+        public IPartIDIsValidChecker _partIDIsValidChecker;
         private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
+        private readonly IPersonIDUsedChecker _personIDUsedChecker;
     }
 }

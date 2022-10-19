@@ -21,9 +21,15 @@ namespace TicketContext.Facade
             _commandBus.Dispatch(createPersonCommand);
         }
 
+        public void DeletePerson(DeletePersonCommand deletePersonCommand)
+        {
+            _commandBus.Dispatch(deletePersonCommand);
+        }
+
         public void UpdatePerson(UpdatePersonCommand updatePersonCommand)
         {
             _commandBus.Dispatch(updatePersonCommand);
         }
+
     }
 }

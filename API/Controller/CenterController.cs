@@ -21,9 +21,15 @@ namespace API.Controller
             _centerCommandFacade.CeateCenter(createCenterCommand);
         }
         [HttpPost("AddPart")]
-        public void AddPar(AddPartCommand addPartCommand)
+        public void AddPart(AddPartCommand addPartCommand)
         {
             _centerCommandFacade.AddPart(addPartCommand);
+        }
+
+        [HttpPost("DeletePart")]
+        public void DeletePart(DeletePartCommand deletePartCommand)
+        {
+            _centerCommandFacade.DeletePart(deletePartCommand);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace TicketContext.Infrastructure.Persons
 
         public void Delete(Person person)
         {
-            //base.Remove(person);
+            base.Remove(person);
         }
 
         public Person GetByID(Guid id)

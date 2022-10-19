@@ -7,6 +7,5 @@ namespace TicketContext.Domain.Persons.Exceptions
     {
         public override string Message => PersonResource.NullOrWhitePersonNameException;
     }
-    
 }
 

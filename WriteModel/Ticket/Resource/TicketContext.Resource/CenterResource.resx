@@ -132,7 +132,13 @@
   <data name="PartIDIsDuplicatedException" xml:space="preserve">
     <value>کد واحد در این مرکز تکراری میباشد.</value>
   </data>
+  <data name="PartIDIsNotExistException" xml:space="preserve">
+    <value>این کد واحد وجود ندارد.</value>
+  </data>
   <data name="PartIDIsNotValidException" xml:space="preserve">
     <value>کد واحد صحیح نمیباشد.</value>
+  </data>
+  <data name="PartIDIsUsedException" xml:space="preserve">
+    <value>کد واحد استفاده شده است.</value>
   </data>
 </root>

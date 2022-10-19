@@ -26,5 +26,11 @@ namespace API.Controller
         {
             _personCommandFacade.UpdatePerson(updatePersonCommand);
         }
+
+        [HttpPost("DeletePerson")]
+        public void DeletePerson(DeletePersonCommand deletePersonCommand)
+        {
+            _personCommandFacade.DeletePerson(deletePersonCommand);
+        }
     }
 }

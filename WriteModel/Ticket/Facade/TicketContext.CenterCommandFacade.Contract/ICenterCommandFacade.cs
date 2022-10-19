@@ -6,5 +6,6 @@ namespace TicketContext.Facade.Contract
     {
         void CeateCenter(CreateCenterCommand createCenterCommand);
         void AddPart(AddPartCommand addPartCommand);
+        void DeletePart(DeletePartCommand deletePartCommand);
     }
 }

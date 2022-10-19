@@ -12,15 +12,16 @@ namespace TicketContext.Domain.Test
         private readonly Mock<ICenterIDValidationCheck> centerIDValidationCheck = new Mock<ICenterIDValidationCheck>();
         private readonly Mock<ICenterIDDuplicationCheck> centerIDDuplicationCheck = new Mock<ICenterIDDuplicationCheck>();
         private readonly Mock<IPartIDValidaionCheker> partIDValidationChecker = new Mock<IPartIDValidaionCheker>();
-
-
+        private readonly Mock<IPartIDUsedChecker> partIDUsedChecker = new Mock<IPartIDUsedChecker>();
+        private Guid usedGuid;
         [TestInitialize]
         public void Setup()
         {
+             usedGuid = new Guid("fe8ff0f8-5e56-4402-8e38-991ea0283985");
             centerIDValidationCheck.Setup(c => c.IsValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
             centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.Is<int>(n => n.Equals(1)))).Returns(true);
             partIDValidationChecker.Setup(c => c.ISValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
-
+            partIDUsedChecker.Setup(c => c.IsUsed(It.Is<Guid>(n => n.Equals(usedGuid)))).Returns(true);
 
         }
         private Center Init(string centerName = "Tabriz",
@@ -29,6 +30,7 @@ namespace TicketContext.Domain.Test
         {
             Center center = new Center(centerIDValidationCheck.Object,
                               centerIDDuplicationCheck.Object,
+                              partIDUsedChecker.Object,
                               centerName,
                               centerID);
             Part part = new Part(partName, partID, partIDValidationChecker.Object);
@@ -125,6 +127,37 @@ namespace TicketContext.Domain.Test
             Center center = Init();
             Part part = new Part(center.Parts.FirstOrDefault().PartName, center.Parts.FirstOrDefault().PartID, partIDValidationChecker.Object);
             center.AddPart(part);
+        }
+
+        [TestMethod, TestCategory("Part")]
+        [ExpectedException(typeof(PartIDIsNotExistException))]
+        public void PartIDIsNotExist_throw_PartIDIsNotExistException()
+        {
+            Center center = Init();
+            int partID = center.Parts.Select(n => n.PartID).FirstOrDefault();
+            center.DeletePart(partID);
+            center.DeletePart(partID);
+        }
+
+        [TestMethod, TestCategory("Part")]
+        [ExpectedException(typeof(PartIDIsUsedException))]
+        public void PartIDIsUsedExist_throw_PartIDIsUsedExistException()
+        {
+            Center center = Init();
+            Part part = new Part("WareHouse", 5, partIDValidationChecker.Object);
+            
+            center.AddPart(part);
+            partIDUsedChecker.Setup(c => c.IsUsed(It.Is<Guid>(n => n.Equals(part.Id)))).Returns(true);
+
+            center.DeletePart(part.PartID);
+        }
+
+        [TestMethod, TestCategory("Part")] 
+        public void Retrive_DeletePartID()
+        {
+            Center center = Init();
+            int partID = center.Parts.Select(n => n.PartID).FirstOrDefault();
+            center.DeletePart(partID); 
         }
 
     }

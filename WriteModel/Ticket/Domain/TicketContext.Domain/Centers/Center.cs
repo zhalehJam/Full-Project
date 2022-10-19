@@ -8,12 +8,14 @@ namespace TicketContext.Domain.Centers
     public class Center : EntityBase, IAggregateRoot
     {
         public Center(ICenterIDValidationCheck validationCheck,
-            ICenterIDDuplicationCheck duplicationCheck,
-            string centerName,
-            int centerID)
+                      ICenterIDDuplicationCheck duplicationCheck,
+                      IPartIDUsedChecker partIDUsedChecker,
+                      string centerName,
+                      int centerID)
         {
             CenterIDValidationCheck = validationCheck;
             CenterIDDuplicationCheck = duplicationCheck;
+            _partIDUsedChecker = partIDUsedChecker;
             SetCenterName(centerName);
             SetCenterID(centerID);
         }
@@ -45,12 +47,27 @@ namespace TicketContext.Domain.Centers
                 throw new PartIDIsDuplicatedException();
             }
             Parts.Add(part);
-        }        
+        }
+        public void DeletePart(int partID)
+        {
+            var selectedpart = Parts.Where(n => n.PartID == partID).FirstOrDefault();
+            if(selectedpart == null)
+            {
+                throw new PartIDIsNotExistException();
+            }
+            if(_partIDUsedChecker.IsUsed(selectedpart.Id))
+            {
+                throw new PartIDIsUsedException();
+            }
+            Parts.Remove(selectedpart);
+        }
 
         public string CenterName { get; private set; }
         public int CenterID { get; private set; }
         public readonly ICenterIDValidationCheck CenterIDValidationCheck;
         public readonly ICenterIDDuplicationCheck CenterIDDuplicationCheck;
+        private readonly IPartIDUsedChecker _partIDUsedChecker;
+
         public ICollection<Part> Parts { get; private set; } = new HashSet<Part>();
 
     }

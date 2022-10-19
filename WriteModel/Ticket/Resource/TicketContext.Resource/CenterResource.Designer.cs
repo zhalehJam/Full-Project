@@ -106,11 +106,29 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to این کد واحد وجود ندارد..
+        /// </summary>
+        public static string PartIDIsNotExistException {
+            get {
+                return ResourceManager.GetString("PartIDIsNotExistException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کد واحد صحیح نمیباشد..
         /// </summary>
         public static string PartIDIsNotValidException {
             get {
                 return ResourceManager.GetString("PartIDIsNotValidException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد واحد استفاده شده است..
+        /// </summary>
+        public static string PartIDIsUsedException {
+            get {
+                return ResourceManager.GetString("PartIDIsUsedException", resourceCulture);
             }
         }
     }

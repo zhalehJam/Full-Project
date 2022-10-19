@@ -113,5 +113,14 @@ namespace TicketContext.Resource {
                 return ResourceManager.GetString("PersonIDIsDuplicateException", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کدپرسنلی استفاده شده است..
+        /// </summary>
+        public static string PersonIDIsUsedException {
+            get {
+                return ResourceManager.GetString("PersonIDIsUsedException", resourceCulture);
+            }
+        }
     }
 }

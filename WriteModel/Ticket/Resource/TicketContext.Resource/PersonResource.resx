@@ -135,4 +135,7 @@
   <data name="PersonIDIsDuplicateException" xml:space="preserve">
     <value>کدپرسنلی تکراری است.</value>
   </data>
+  <data name="PersonIDIsUsedException" xml:space="preserve">
+    <value>کدپرسنلی استفاده شده است.</value>
+  </data>
 </root>
