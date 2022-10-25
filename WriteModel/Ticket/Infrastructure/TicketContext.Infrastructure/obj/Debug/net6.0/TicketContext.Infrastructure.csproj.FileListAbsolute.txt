@@ -21,3 +21,5 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketCon
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\obj\Debug\net6.0\refint\TicketContext.Infrastructure.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\obj\Debug\net6.0\TicketContext.Infrastructure.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\obj\Debug\net6.0\ref\TicketContext.Infrastructure.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Infrastructure\TicketContext.Infrastructure\bin\Debug\net6.0\TicketContext.Contract.pdb

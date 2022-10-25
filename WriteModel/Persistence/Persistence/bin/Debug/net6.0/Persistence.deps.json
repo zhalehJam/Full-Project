@@ -520,10 +520,16 @@
           "Framework.Persistence.dll": {}
         }
       },
+      "TicketContext.Contract/1.0.0": {
+        "runtime": {
+          "TicketContext.Contract.dll": {}
+        }
+      },
       "TicketContext.Domain/1.0.0": {
         "dependencies": {
           "Framework.Core": "1.0.0",
           "Framework.Domain": "1.0.0",
+          "TicketContext.Contract": "1.0.0",
           "TicketContext.Resource": "1.0.0"
         },
         "runtime": {
@@ -872,6 +878,11 @@
       "sha512": ""
     },
     "Framework.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

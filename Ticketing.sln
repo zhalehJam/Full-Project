@@ -49,13 +49,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "WriteModel\P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facade", "Facade", "{6DD9DC20-BDC3-4C23-AD6A-832F60C4D22E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Facade", "WriteModel\Ticket\Facade\TicketContext.Facade\TicketContext.Facade.csproj", "{8ABCFD7C-9D86-4DD8-8DE4-E19F9B67EE15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.Facade", "WriteModel\Ticket\Facade\TicketContext.Facade\TicketContext.Facade.csproj", "{8ABCFD7C-9D86-4DD8-8DE4-E19F9B67EE15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Facade.Contract", "WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\TicketContext.Facade.Contract.csproj", "{5DC89911-30A5-49E1-BA3A-999FD1300061}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.Facade.Contract", "WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\TicketContext.Facade.Contract.csproj", "{5DC89911-30A5-49E1-BA3A-999FD1300061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{E5BEDB5C-0A30-4214-BE2A-CCB76AC88D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{E5BEDB5C-0A30-4214-BE2A-CCB76AC88D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Configuration", "WriteModel\Ticket\TicketContext.Configuration\TicketContext.Configuration.csproj", "{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.Configuration", "WriteModel\Ticket\TicketContext.Configuration\TicketContext.Configuration.csproj", "{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{32F0F3E1-4C50-4FFD-B43E-D27AA33AE34B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TicketContext", "TicketContext", "{6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Contract", "Contract\TicketContext.Contract\TicketContext.Contract.csproj", "{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +145,10 @@ Global
 		{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +178,8 @@ Global
 		{8ABCFD7C-9D86-4DD8-8DE4-E19F9B67EE15} = {6DD9DC20-BDC3-4C23-AD6A-832F60C4D22E}
 		{5DC89911-30A5-49E1-BA3A-999FD1300061} = {6DD9DC20-BDC3-4C23-AD6A-832F60C4D22E}
 		{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178} = {3D974060-1222-4BEA-ACAB-1E67BDD59271}
+		{6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C} = {32F0F3E1-4C50-4FFD-B43E-D27AA33AE34B}
+		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F} = {6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A3EAE68-FEC1-4675-B297-B05334E0070D}

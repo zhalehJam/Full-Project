@@ -31,6 +31,10 @@ namespace TicketContext.Infrastructure.Persons
         {
             return base.GetById(id);
         }
+        public Person GetByPersonID(Expression<Func<Person, bool>> expression)
+        {
+             return _dbContext.Set<Person>().Where(expression).Select(n=>n).FirstOrDefault();
+        }
 
         public bool IsExist(Expression<Func<Person, bool>> expression)
         {
@@ -44,3 +48,4 @@ namespace TicketContext.Infrastructure.Persons
         }
     }
 }
+    

@@ -19,18 +19,18 @@ namespace API.Controller
         {
             _programCommandFacade.CreateProgram(createProgramCommand);
         }
-        [HttpPost("UpdateProgramLink")]
+        [HttpPut("UpdateProgramLink")]
         public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
         {
             _programCommandFacade.UpdateProgramlink(updateProgramLinkCommand);
         }
 
-        [HttpPost("AddPrgramSupporter")]
+        [HttpPut("AddPrgramSupporter")]
         public void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand)
         {
             _programCommandFacade.AddProgramSupporter(addProgramSupporterCommand);
         }
-        [HttpPost("DeleteProgramSupporter")]
+        [HttpDelete("DeleteProgramSupporter")]
         public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
         {
             _programCommandFacade.DeleteProgramSupporter(deleteProgramSupporterCommand);

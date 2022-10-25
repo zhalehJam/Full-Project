@@ -27,3 +27,5 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\obj\Deb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\obj\Debug\net6.0\Persistence.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\obj\Debug\net6.0\ref\Persistence.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Persistence\Persistence\bin\Debug\net6.0\TicketContext.Contract.pdb

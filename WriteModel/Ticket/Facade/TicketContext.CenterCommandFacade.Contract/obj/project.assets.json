@@ -52,12 +52,23 @@
           "bin/placeholder/TicketContext.ApplicationService.Contract.dll": {}
         }
       },
+      "TicketContext.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        }
+      },
       "TicketContext.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "Framework.Domain": "1.0.0",
+          "TicketContext.Contract": "1.0.0",
           "TicketContext.Resource": "1.0.0"
         },
         "compile": {
@@ -117,6 +128,11 @@
       "type": "project",
       "path": "../../ApplicationService/TicketContext.ApplicationService.Contract/TicketContext.ApplicationService.Contract.csproj",
       "msbuildProject": "../../ApplicationService/TicketContext.ApplicationService.Contract/TicketContext.ApplicationService.Contract.csproj"
+    },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "path": "../../../../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
+      "msbuildProject": "../../../../Contract/TicketContext.Contract/TicketContext.Contract.csproj"
     },
     "TicketContext.Domain/1.0.0": {
       "type": "project",

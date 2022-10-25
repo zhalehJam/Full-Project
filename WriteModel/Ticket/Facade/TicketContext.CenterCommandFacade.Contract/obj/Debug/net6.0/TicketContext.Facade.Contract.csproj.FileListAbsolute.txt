@@ -21,3 +21,5 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.Cen
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\obj\Debug\net6.0\refint\TicketContext.Facade.Contract.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\obj\Debug\net6.0\TicketContext.Facade.Contract.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\obj\Debug\net6.0\ref\TicketContext.Facade.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Facade\TicketContext.CenterCommandFacade.Contract\bin\Debug\net6.0\TicketContext.Contract.pdb

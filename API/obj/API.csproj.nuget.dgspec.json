@@ -118,14 +118,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
-        "projectName": "Framework.ApplicationService",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectName": "TicketContext.Contract",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -144,11 +144,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -282,80 +278,6 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
-        "projectName": "framework.DependencyInjection",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj"
-              },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
-              },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.0, )"
             }
@@ -972,6 +894,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              },
               "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
                 "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
@@ -1271,10 +1196,10 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
-        "projectName": "TicketContext.Configuration",
+        "projectName": "TicketContext.Domain.Contract",
         "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1293,11 +1218,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

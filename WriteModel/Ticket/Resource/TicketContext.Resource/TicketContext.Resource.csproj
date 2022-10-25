@@ -26,6 +26,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ProgramResource.resx</DependentUpon>
     </Compile>
+    <Compile Update="TicketResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TicketResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +45,10 @@
     <EmbeddedResource Update="ProgramResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ProgramResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TicketResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TicketResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

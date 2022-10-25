@@ -10,6 +10,7 @@
         "dependencies": {
           "Framework.Core": "1.0.0",
           "Framework.Domain": "1.0.0",
+          "TicketContext.Contract": "1.0.0",
           "TicketContext.Resource": "1.0.0"
         },
         "runtime": {
@@ -35,6 +36,11 @@
       "Framework.Domain/1.0.0": {
         "runtime": {
           "Framework.Domain.dll": {}
+        }
+      },
+      "TicketContext.Contract/1.0.0": {
+        "runtime": {
+          "TicketContext.Contract.dll": {}
         }
       },
       "TicketContext.Resource/1.0.0": {
@@ -66,6 +72,11 @@
       "sha512": ""
     },
     "Framework.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -182,3 +182,5 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.pdb

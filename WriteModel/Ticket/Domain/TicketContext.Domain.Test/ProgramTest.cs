@@ -1,14 +1,5 @@
-﻿using Microsoft.VisualStudio.TestPlatform.TestHost;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicketContext.Domain.Centers;
-using TicketContext.Domain.Centers.Exceptions;
-using TicketContext.Domain.Persons.DomainServices;
 using TicketContext.Domain.Programs;
 using TicketContext.Domain.Programs.DomainServices;
 using TicketContext.Domain.Programs.Exceptions;

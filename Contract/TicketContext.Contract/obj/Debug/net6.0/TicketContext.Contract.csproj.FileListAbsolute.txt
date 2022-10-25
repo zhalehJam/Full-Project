@@ -1,0 +1,12 @@
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\bin\Debug\net6.0\TicketContext.Contract.deps.json
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\bin\Debug\net6.0\TicketContext.Contract.pdb
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.csproj.AssemblyReference.cache
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.AssemblyInfoInputs.cache
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.AssemblyInfo.cs
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.csproj.CoreCompileInputs.cache
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\refint\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\TicketContext.Contract.pdb
+C:\Users\970086\source\repos\Tiketing\Contract\TicketContext.Contract\obj\Debug\net6.0\ref\TicketContext.Contract.dll

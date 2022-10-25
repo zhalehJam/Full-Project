@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Tickets\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Contract\TicketContext.Contract\TicketContext.Contract.csproj" />
     <ProjectReference Include="..\..\..\..\Framework\Framework.Core\Framework.Core.csproj" />
     <ProjectReference Include="..\..\..\..\Framework\Framework.Domain\Framework.Domain.csproj" />
     <ProjectReference Include="..\..\Resource\TicketContext.Resource\TicketContext.Resource.csproj" />

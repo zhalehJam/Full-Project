@@ -38,6 +38,16 @@
           "bin/placeholder/Framework.Domain.dll": {}
         }
       },
+      "TicketContext.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        }
+      },
       "TicketContext.Resource/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -84,6 +94,11 @@
       "path": "../../../../Framework/Framework.Domain/Framework.Domain.csproj",
       "msbuildProject": "../../../../Framework/Framework.Domain/Framework.Domain.csproj"
     },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "path": "../../../../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
+      "msbuildProject": "../../../../Contract/TicketContext.Contract/TicketContext.Contract.csproj"
+    },
     "TicketContext.Resource/1.0.0": {
       "type": "project",
       "path": "../../Resource/TicketContext.Resource/TicketContext.Resource.csproj",
@@ -94,6 +109,7 @@
     "net6.0": [
       "Framework.Core >= 1.0.0",
       "Framework.Domain >= 1.0.0",
+      "TicketContext.Contract >= 1.0.0",
       "TicketContext.Resource >= 1.0.0"
     ]
   },
@@ -128,6 +144,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+            },
             "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
               "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             },

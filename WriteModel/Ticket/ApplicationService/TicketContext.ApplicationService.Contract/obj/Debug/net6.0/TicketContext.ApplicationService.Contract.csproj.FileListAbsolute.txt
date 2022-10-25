@@ -19,3 +19,5 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\Ticke
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\obj\Debug\net6.0\refint\TicketContext.ApplicationService.Contract.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\obj\Debug\net6.0\TicketContext.ApplicationService.Contract.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\obj\Debug\net6.0\ref\TicketContext.ApplicationService.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\bin\Debug\net6.0\TicketContext.Contract.pdb

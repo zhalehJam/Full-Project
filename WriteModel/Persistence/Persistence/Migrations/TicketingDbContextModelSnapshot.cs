@@ -80,6 +80,48 @@ namespace Persistence.Migrations
                     b.ToTable("Program", "TicketContext");
                 });
 
+            modelBuilder.Entity("TicketContext.Domain.Tickets.Ticket", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("UniqueIdentifier");
+
+                    b.Property<string>("ErrorDiscription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ErrorType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersonID")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("PersonPartId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProgramId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("SolutionDiscription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SupporterPersonID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketCondition")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("TicketTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ticket", "TicketContext");
+                });
+
             modelBuilder.Entity("TicketContext.Domain.Centers.Center", b =>
                 {
                     b.OwnsMany("TicketContext.Domain.Centers.Part", "Parts", b1 =>
@@ -116,7 +158,6 @@ namespace Persistence.Migrations
                     b.OwnsMany("TicketContext.Domain.Programs.ProgramSupporter", "ProgramSupporters", b1 =>
                         {
                             b1.Property<Guid>("Id")
-                                .ValueGeneratedOnAdd()
                                 .HasColumnType("UniqueIdentifier");
 
                             b1.Property<Guid>("Program")

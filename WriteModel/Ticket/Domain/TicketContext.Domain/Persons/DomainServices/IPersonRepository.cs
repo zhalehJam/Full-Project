@@ -8,6 +8,7 @@ namespace TicketContext.Domain.Persons.DomainServices
         void Add(Person person);
         void Delete(Person person);
         Person GetByID(Guid id);
+        Person GetByPersonID(Expression<Func<Person, bool>> expression);
         bool IsExist(Expression<Func<Person, bool>> expression);
         void Update(Person person);
     }
