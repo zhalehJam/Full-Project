@@ -22,7 +22,7 @@ namespace TicketContext.Domain.Test
             _personIDIsValidChecker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(true);
             _personInfo.Setup(n => n.GetpersonInfo(It.IsAny<int>())).Returns(new Guid());
             _programIDValidationChecker.Setup(n => n.IsValid(It.IsAny<Guid>())).Returns(true);
-            _supporterPersonIDvalidationCheker.Setup(n=>n.IsValid(It.IsAny<int>())).Returns(true);  
+            _supporterPersonIDvalidationCheker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(true);
 
         }
         private Ticket Init(int supporterPersonID = 4010019,
@@ -33,7 +33,7 @@ namespace TicketContext.Domain.Test
                             string errorDiscription = "description",
                             string solutionDiscription = "Solutiondescription",
                             DateTime ticketTime = new DateTime(),
-                            TicketCondition ticketCondition = TicketCondition.Finish)
+                            TicketCondition ticketCondition = TicketCondition.OnGoing)
         {
             Ticket ticket = new Ticket(_personIDIsValidChecker.Object,
                                        _personInfo.Object,
@@ -50,6 +50,33 @@ namespace TicketContext.Domain.Test
                                        ticketCondition);
             return ticket;
         }
+
+        private Ticket Update(Ticket ticket,
+            int supporterPersonID = 4010019,
+                            int personID = 970086,
+                            Guid programId = new Guid(),
+                            TicketType type = TicketType.Supporting,
+                            ErrorType errorType = ErrorType.UserError,
+                            string errorDiscription = "description",
+                            string solutionDiscription = "Solutiondescription",
+                            DateTime ticketTime = new DateTime(),
+                            TicketCondition ticketCondition = TicketCondition.OnGoing)
+        { 
+            ticket.UpdateTicketInfo(_personIDIsValidChecker.Object,
+                                    _personInfo.Object,
+                                    _programIDValidationChecker.Object,
+                                    supporterPersonID,
+                                    personID,
+                                    programId,
+                                    type,
+                                    errorType,
+                                    errorDiscription,
+                                    solutionDiscription,
+                                    ticketTime,
+                                    ticketCondition);
+            return ticket;
+        }
+
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(NullOrZiroPersonIDException))]
         [DataRow(null)]
@@ -75,7 +102,7 @@ namespace TicketContext.Domain.Test
             Init();
         }
 
-        [TestMethod,TestCategory("Ticket")]
+        [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(InvalidSupporterPersonIDException))]
         [DataRow(null)]
         [DataRow("")]
@@ -122,7 +149,7 @@ namespace TicketContext.Domain.Test
         public void InvalidTicketType_throw_InvalidTicketTypeExcption()
         {
             TicketType ticketType = new TicketType();
-            Init(type:ticketType);
+            Init(type: ticketType);
         }
 
         [TestMethod, TestCategory("Ticket")]
@@ -130,7 +157,7 @@ namespace TicketContext.Domain.Test
         public void InvalidTicketCondition_throw_InvalidTicketConditionExcption()
         {
             TicketCondition ticketCondition = new TicketCondition();
-            Init(ticketCondition:ticketCondition);
+            Init(ticketCondition: ticketCondition);
         }
 
         [TestMethod, TestCategory("Ticket")]
@@ -138,7 +165,7 @@ namespace TicketContext.Domain.Test
         public void InvalidErrorType_throw_InvalidErrorTypeExcption()
         {
             ErrorType errorType = new ErrorType();
-            Init(errorType:errorType);
+            Init(errorType: errorType);
         }
 
         [TestMethod, TestCategory("Ticket")]
@@ -170,7 +197,7 @@ namespace TicketContext.Domain.Test
         public void TicketType_Retrive()
         {
             TicketType ticketType = (TicketType)1;
-            Ticket ticket = Init(type:ticketType);
+            Ticket ticket = Init(type: ticketType);
             Assert.AreEqual(ticket.Type, ticketType);
         }
 
@@ -186,7 +213,7 @@ namespace TicketContext.Domain.Test
         public void TicketErrorDescription_Retrive()
         {
             string description = "Describe";
-            Ticket ticket = Init(errorDiscription:description);
+            Ticket ticket = Init(errorDiscription: description);
             Assert.AreEqual(ticket.ErrorDiscription, description);
         }
 
@@ -213,5 +240,31 @@ namespace TicketContext.Domain.Test
             Ticket ticket = Init(ticketCondition: ticketCondition);
             Assert.AreEqual(ticket.TicketCondition, ticketCondition);
         }
+
+        //[TestMethod,TestCategory("Ticket Update")]
+        //[ExpectedException (typeof(InvalidTicketIDException))]
+        //public void InvalidTicketID_throw_InvalidTicketIDException()
+        //{
+        //    Init();
+        //}
+        [TestMethod, TestCategory("Ticket Update")]
+        [ExpectedException(typeof(TheCompetedTicketCannotUpdateEception))]
+        public void TheCompetedTicketCannotUpdate_throw_TheCompetedTicketCannotUpdateEception()
+        {
+            Ticket ticket = Init(ticketCondition:TicketCondition.Finish);
+            Update(ticket,ticketCondition:TicketCondition.Finish);
+            
+        }
+
+        [TestMethod, TestCategory("Ticket Update")]
+        [ExpectedException(typeof(TicketDidNotCeateByCurrentSupporerException))]
+        public void TicketDidNotCeateByCurrentSupporer_Throw_TicketDidNotCeateByCurrentSupporerException()
+        {
+            Ticket ticket = Init();
+            Update(ticket,supporterPersonID: ticket.SupporterPersonID + 1);
+        }
+
+
     }
+
 }

@@ -15,5 +15,10 @@ namespace TicketContext.Facade
         {
          _commandBus.Dispatch(createTicketCommand);
         }
+
+        public void UpdateTicket(UpdateTicketCommand updateTicketCommand)
+        {
+            _commandBus.Dispatch(updateTicketCommand);
+        }
     }
 }

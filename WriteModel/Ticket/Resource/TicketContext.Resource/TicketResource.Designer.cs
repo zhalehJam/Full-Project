@@ -115,6 +115,15 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تیکت مورد وجود ندارد..
+        /// </summary>
+        public static string InvalidTicketIDException {
+            get {
+                return ResourceManager.GetString("InvalidTicketIDException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نوع تیکت اشتباه است..
         /// </summary>
         public static string InvalidTicketTypeExcption {
@@ -142,11 +151,29 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تیکت تمام شده نمیتوند ویرایش شود..
+        /// </summary>
+        public static string TheCompetedTicketCannotUpdateEception {
+            get {
+                return ResourceManager.GetString("TheCompetedTicketCannotUpdateEception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تاریخ تیکت اشتباه است..
         /// </summary>
         public static string TicketDateTieIsNotValidException {
             get {
                 return ResourceManager.GetString("TicketDateTieIsNotValidException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تیکت توسط ویرایش کننده ایجاد نشده است..
+        /// </summary>
+        public static string TicketDidNotCeateByCurrentSupporerException {
+            get {
+                return ResourceManager.GetString("TicketDidNotCeateByCurrentSupporerException", resourceCulture);
             }
         }
     }

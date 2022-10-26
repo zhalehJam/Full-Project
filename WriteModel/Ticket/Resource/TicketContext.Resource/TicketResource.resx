@@ -135,6 +135,9 @@
   <data name="InvalidTicketConditionExcption" xml:space="preserve">
     <value>این وضعیت تیکت تعریف نشده است.</value>
   </data>
+  <data name="InvalidTicketIDException" xml:space="preserve">
+    <value>تیکت مورد وجود ندارد.</value>
+  </data>
   <data name="InvalidTicketTypeExcption" xml:space="preserve">
     <value>نوع تیکت اشتباه است.</value>
   </data>
@@ -144,7 +147,13 @@
   <data name="SolutionDisctionIsnullOrEmptyException" xml:space="preserve">
     <value>شرح راه حل نیمتواند خالی یا سید باشد.</value>
   </data>
+  <data name="TheCompetedTicketCannotUpdateEception" xml:space="preserve">
+    <value>تیکت تمام شده نمیتوند ویرایش شود.</value>
+  </data>
   <data name="TicketDateTieIsNotValidException" xml:space="preserve">
     <value>تاریخ تیکت اشتباه است.</value>
+  </data>
+  <data name="TicketDidNotCeateByCurrentSupporerException" xml:space="preserve">
+    <value>تیکت توسط ویرایش کننده ایجاد نشده است.</value>
   </data>
 </root>

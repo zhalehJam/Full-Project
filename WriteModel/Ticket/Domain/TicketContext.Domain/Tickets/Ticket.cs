@@ -13,10 +13,10 @@ namespace TicketContext.Domain.Tickets
 {
     public class Ticket : EntityBase, IAggregateRoot
     {
-        private readonly IPersonIDIsValidChecker _personIDIsValidChecker;
-        private readonly IPersonInfo _personInfo;
-        private readonly IProgramIDValidationChecker _programIDIsValidChecker;
-        private readonly ISupporterPersonIDIsValidChecker _supporterPersonIDIsValidChecker;
+        private   IPersonIDIsValidChecker _personIDIsValidChecker;
+        private   IPersonInfo _personInfo;
+        private   IProgramIDValidationChecker _programIDIsValidChecker;
+        private   ISupporterPersonIDIsValidChecker _supporterPersonIDIsValidChecker;
 
         public int PersonID { get; private set; }
         public Guid PersonPartId { get; private set; }
@@ -128,5 +128,42 @@ namespace TicketContext.Domain.Tickets
             PersonID = personID;
         }
 
+        public void UpdateTicketInfo(IPersonIDIsValidChecker personIDIsValidChecker,
+                                     IPersonInfo personInfo,
+                                     IProgramIDValidationChecker programIDIsValidChecker,
+                                     int supporterThatEditPersonID,
+                                     int personID,
+                                     Guid programId,
+                                     TicketType type,
+                                     ErrorType errorType,
+                                     string errorDiscription,
+                                     string solutionDiscription,
+                                     DateTime ticketTime,
+                                     TicketCondition ticketCondition)
+        {
+            CheckTicketCanUpdate(supporterThatEditPersonID);
+
+            _personIDIsValidChecker = personIDIsValidChecker;
+            _personInfo = personInfo;
+            _programIDIsValidChecker = programIDIsValidChecker;
+            SetTicketType(type);
+            SetErrorType(errorType);
+            SetTicketCondition(ticketCondition);
+            SetErrorDiscription(errorDiscription);
+            SetSolutionDescription(solutionDiscription);
+            SetTicketDateTime(ticketTime);
+            SetProgramId(programId);
+            SetPersonInfo(personID);
+
+        }
+
+        private void CheckTicketCanUpdate(int supporterThatEditPersonID)
+        {
+
+            if(TicketCondition.Equals(TicketCondition.Finish))
+                throw new TheCompetedTicketCannotUpdateEception();
+            if(SupporterPersonID != supporterThatEditPersonID)
+                throw new TicketDidNotCeateByCurrentSupporerException();
+        }
     }
 }

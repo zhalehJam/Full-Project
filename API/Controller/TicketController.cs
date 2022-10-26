@@ -15,9 +15,15 @@ namespace API.Controller
             _ticketCommandFacade = ticketCommandFacade;
         }
         [HttpPost]
-        public void Ticket(CreateTicketCommand createTicketCommand)
+        public void CreateTicket(CreateTicketCommand createTicketCommand)
         {
             _ticketCommandFacade.CreateTicket(createTicketCommand);
+        }
+
+        [HttpPut]
+        public void UpdateTicket(UpdateTicketCommand updateTicketCommand)
+        {
+            _ticketCommandFacade.UpdateTicket(updateTicketCommand);
         }
     }
 }

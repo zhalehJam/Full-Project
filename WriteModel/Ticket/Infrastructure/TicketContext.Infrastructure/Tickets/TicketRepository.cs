@@ -21,17 +21,17 @@ namespace TicketContext.Infrastructure.Tickets
 
         public void Add(Ticket ticket)
         {
-            _dbContext.Add(ticket);
+            base.Create(ticket);
         }
 
         public void Delete(Ticket ticket)
         {
-            _dbContext.Remove(ticket);
+            base.Remove(ticket);
         }
 
-        public Center GetByID(Guid id)
+        public Ticket GetByID(Guid id)
         {
-            throw new NotImplementedException();
+            return base.GetById(id);
         }
 
         public bool IsExist(Expression<Func<Ticket, bool>> expression)

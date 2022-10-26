@@ -8,7 +8,7 @@ namespace TicketContext.Domain.Tickets.DomainServices
     {
         void Add(Ticket ticket);
         void Delete(Ticket ticket);
-        Center GetByID(Guid id);
+        Ticket GetByID(Guid id);
         bool IsExist(Expression<Func<Ticket, bool>> expression);
         void Update(Ticket ticket);
     }
