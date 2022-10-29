@@ -10,6 +10,7 @@ using Framework.Core.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.SignalR;
 using Persistence;
+using ReadModel.Context.Model;
 
 namespace API
 {
@@ -24,12 +25,17 @@ namespace API
             var registrars = assemblyDiscovery.DiscoverInstances<IRegistrar>("Ticket").ToList();
             foreach(var registrar in registrars)
             {
-                registrar.Register(services, assemblyDiscovery); ;
+                registrar.Register(services, assemblyDiscovery);
             }
             services.AddDbContext<IDbContext, TicketingDbContext>(op =>
             {
                 op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123; ");
 
+            });
+            services.AddDbContext<TicketingContext>(op =>
+            {
+                op.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123; ");
             });
             services.AddSwaggerGen();
 

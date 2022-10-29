@@ -1,0 +1,12 @@
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\bin\Debug\net6.0\ReadModel.Context.deps.json
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\bin\Debug\net6.0\ReadModel.Context.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\bin\Debug\net6.0\ReadModel.Context.pdb
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.csproj.AssemblyReference.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.AssemblyInfoInputs.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.AssemblyInfo.cs
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.csproj.CoreCompileInputs.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\refint\ReadModel.Context.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ReadModel.Context.pdb
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Context\obj\Debug\net6.0\ref\ReadModel.Context.dll

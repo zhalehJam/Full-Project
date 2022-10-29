@@ -35,6 +35,7 @@ namespace TicketContext.Domain.Test
                             DateTime ticketTime = new DateTime(),
                             TicketCondition ticketCondition = TicketCondition.OnGoing)
         {
+            
             Ticket ticket = new Ticket(_personIDIsValidChecker.Object,
                                        _personInfo.Object,
                                        _programIDValidationChecker.Object,
@@ -55,13 +56,14 @@ namespace TicketContext.Domain.Test
             int supporterPersonID = 4010019,
                             int personID = 970086,
                             Guid programId = new Guid(),
-                            TicketType type = TicketType.Supporting,
-                            ErrorType errorType = ErrorType.UserError,
-                            string errorDiscription = "description",
-                            string solutionDiscription = "Solutiondescription",
+                            TicketType type = TicketType.Developing,
+                            ErrorType errorType = ErrorType.SystemError,
+                            string errorDiscription = "description2",
+                            string solutionDiscription = "Solutiondescription2",
                             DateTime ticketTime = new DateTime(),
-                            TicketCondition ticketCondition = TicketCondition.OnGoing)
-        { 
+                            TicketCondition ticketCondition = TicketCondition.Finish)
+        {
+            ticketTime = DateTime.Now;
             ticket.UpdateTicketInfo(_personIDIsValidChecker.Object,
                                     _personInfo.Object,
                                     _programIDValidationChecker.Object,
@@ -264,6 +266,13 @@ namespace TicketContext.Domain.Test
             Update(ticket,supporterPersonID: ticket.SupporterPersonID + 1);
         }
 
+        [TestMethod,TestCategory("Ticket Update")]
+        public void TicketUpdate_retrive()
+        {
+            Ticket ticket = Init();
+            Ticket ticket1= Update(ticket); 
+            Assert.AreEqual(ticket,ticket1);
+        }
 
     }
 

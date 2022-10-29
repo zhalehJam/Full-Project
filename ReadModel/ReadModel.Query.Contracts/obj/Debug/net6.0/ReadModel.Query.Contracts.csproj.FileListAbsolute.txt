@@ -1,0 +1,15 @@
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\ReadModel.Query.Contracts.deps.json
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\ReadModel.Query.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\ReadModel.Query.Contracts.pdb
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\Framework.Core.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\Framework.Core.pdb
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.csproj.AssemblyReference.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.AssemblyInfoInputs.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.AssemblyInfo.cs
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.csproj.CopyComplete
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\refint\ReadModel.Query.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ReadModel.Query.Contracts.pdb
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ref\ReadModel.Query.Contracts.dll

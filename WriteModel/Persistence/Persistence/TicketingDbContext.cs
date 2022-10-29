@@ -11,7 +11,7 @@ namespace Persistence
 {
     public class TicketingDbContext : DbContextBase
     {
-        public TicketingDbContext(DbContextOptions options) : base(options)
+        public TicketingDbContext(DbContextOptions<TicketingDbContext> options) : base(options)
         {
         }
 

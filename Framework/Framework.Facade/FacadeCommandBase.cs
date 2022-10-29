@@ -6,7 +6,7 @@ using Framework.Core.Facade;
 
 namespace Framework.Facade
 {
-  public abstract class FacadeCommandBase: ICommandFacade
+    public abstract partial class FacadeCommandBase: ICommandFacade
     {
         protected readonly ICommandBus _commandBus;
 
@@ -14,8 +14,6 @@ namespace Framework.Facade
         {
             _commandBus = commandBus;
         }
-
-
 
     }
 }

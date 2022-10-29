@@ -17,6 +17,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
+    <ProjectReference Include="..\ReadModel\ReadModel.Context\TicketContext.ReadModel.Context.csproj" />
+    <ProjectReference Include="..\ReadModel\ReadModel.Query.Contracts\TicketContext.ReadModel.Query.Contracts.csproj" />
+    <ProjectReference Include="..\ReadModel\ReadModel.Query.Facade\TicketContext.ReadModel.Query.Facade.csproj" />
     <ProjectReference Include="..\WriteModel\Persistence\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\TicketContext.ApplicationService.Contract.csproj" />
     <ProjectReference Include="..\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService\TicketContext.ApplicationService.csproj" />

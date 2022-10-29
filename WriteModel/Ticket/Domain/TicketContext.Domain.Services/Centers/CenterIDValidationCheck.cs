@@ -9,8 +9,8 @@ namespace TicketContext.Domain.Services
         {
             bool isValid = true;
             // TODO check HR Data
-            if(CenerID == 0 || CenerID > 25)
-                isValid = false;
+            //if(CenerID == 0 || CenerID > 25)
+            //    isValid = false;
             return isValid;
         }
     }

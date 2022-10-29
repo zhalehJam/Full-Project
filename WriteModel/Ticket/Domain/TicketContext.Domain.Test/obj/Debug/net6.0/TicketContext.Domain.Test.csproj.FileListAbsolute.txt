@@ -207,11 +207,13 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Dom
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\Framework.Core.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\Framework.Domain.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Contract.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Domain.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Resource.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Domain.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\Framework.Core.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\Framework.Domain.pdb
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Contract.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Resource.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\obj\Debug\net6.0\TicketContext.Domain.Test.csproj.AssemblyReference.cache
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\obj\Debug\net6.0\TicketContext.Domain.Test.GeneratedMSBuildEditorConfig.editorconfig
@@ -224,5 +226,3 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Dom
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\obj\Debug\net6.0\TicketContext.Domain.Test.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\obj\Debug\net6.0\TicketContext.Domain.Test.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\obj\Debug\net6.0\ref\TicketContext.Domain.Test.dll
-C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Contract.dll
-C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\bin\Debug\net6.0\TicketContext.Contract.pdb

@@ -141,14 +141,21 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Persistence.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ApplicationService.Contract.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ApplicationService.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Configuration.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Domain.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Domain.Services.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Domain.Test.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Facade.Contract.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Facade.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Infrastructure.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Context.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Query.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Query.Facade.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Resource.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.AssemblyHelper.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Context.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Query.Contracts.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ReadModel.Query.Facade.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Persistence.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ApplicationService.Contract.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.ApplicationService.pdb
@@ -166,6 +173,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\framework.DependencyI
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Domain.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Facade.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Persistence.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
@@ -182,5 +190,4 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Contract.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\PagedList.dll

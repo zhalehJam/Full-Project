@@ -63,6 +63,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TicketContext", "TicketCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Contract", "Contract\TicketContext.Contract\TicketContext.Contract.csproj", "{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadModel", "ReadModel", "{69434057-E4CA-4430-8F16-DA5DD3BB8CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Context", "ReadModel\ReadModel.Context\TicketContext.ReadModel.Context.csproj", "{8FA2650B-F94D-49B7-8666-30AAFA3096EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Query.Contracts", "ReadModel\ReadModel.Query.Contracts\TicketContext.ReadModel.Query.Contracts.csproj", "{63C222BB-CA50-48E4-B374-9C0403F75D56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Query.Facade", "ReadModel\ReadModel.Query.Facade\TicketContext.ReadModel.Query.Facade.csproj", "{057FD828-F659-48E4-A877-CAD419386050}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +157,18 @@ Global
 		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA2650B-F94D-49B7-8666-30AAFA3096EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA2650B-F94D-49B7-8666-30AAFA3096EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA2650B-F94D-49B7-8666-30AAFA3096EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA2650B-F94D-49B7-8666-30AAFA3096EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C222BB-CA50-48E4-B374-9C0403F75D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C222BB-CA50-48E4-B374-9C0403F75D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C222BB-CA50-48E4-B374-9C0403F75D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C222BB-CA50-48E4-B374-9C0403F75D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{057FD828-F659-48E4-A877-CAD419386050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057FD828-F659-48E4-A877-CAD419386050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057FD828-F659-48E4-A877-CAD419386050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057FD828-F659-48E4-A877-CAD419386050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,6 +200,9 @@ Global
 		{9F2C6CCA-A1BD-445E-BBC8-44ECA1045178} = {3D974060-1222-4BEA-ACAB-1E67BDD59271}
 		{6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C} = {32F0F3E1-4C50-4FFD-B43E-D27AA33AE34B}
 		{911E06FB-8CD0-4D0B-BE65-5520A8477B2F} = {6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C}
+		{8FA2650B-F94D-49B7-8666-30AAFA3096EB} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
+		{63C222BB-CA50-48E4-B374-9C0403F75D56} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
+		{057FD828-F659-48E4-A877-CAD419386050} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A3EAE68-FEC1-4675-B297-B05334E0070D}

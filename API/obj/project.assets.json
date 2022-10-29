@@ -990,6 +990,19 @@
           }
         }
       },
+      "PagedList/1.17.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/PagedList.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/PagedList.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2614,6 +2627,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Framework.ApplicationService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Framework.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Framework.ApplicationService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Framework.ApplicationService.dll": {}
+        }
+      },
       "Framework.AssemblyHelper/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2638,6 +2664,22 @@
         },
         "runtime": {
           "bin/placeholder/Framework.Core.dll": {}
+        }
+      },
+      "framework.DependencyInjection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Framework.ApplicationService": "1.0.0",
+          "Framework.AssemblyHelper": "1.0.0",
+          "Framework.Core": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/framework.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/framework.DependencyInjection.dll": {}
         }
       },
       "Framework.Domain/1.0.0": {
@@ -2725,6 +2767,19 @@
           "bin/placeholder/TicketContext.ApplicationService.Contract.dll": {}
         }
       },
+      "TicketContext.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "framework.DependencyInjection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketContext.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Configuration.dll": {}
+        }
+      },
       "TicketContext.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2749,16 +2804,6 @@
         },
         "runtime": {
           "bin/placeholder/TicketContext.Domain.dll": {}
-        }
-      },
-      "TicketContext.Domain.Contract/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/TicketContext.Domain.Contract.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TicketContext.Domain.Contract.dll": {}
         }
       },
       "TicketContext.Domain.Services/1.0.0": {
@@ -2831,6 +2876,48 @@
         },
         "runtime": {
           "bin/placeholder/TicketContext.Infrastructure.dll": {}
+        }
+      },
+      "TicketContext.ReadModel.Context/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
+        },
+        "compile": {
+          "bin/placeholder/TicketContext.ReadModel.Context.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.ReadModel.Context.dll": {}
+        }
+      },
+      "TicketContext.ReadModel.Query.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Framework.Core": "1.0.0",
+          "PagedList": "1.17.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketContext.ReadModel.Query.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.ReadModel.Query.Contracts.dll": {}
+        }
+      },
+      "TicketContext.ReadModel.Query.Facade/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "TicketContext.ReadModel.Context": "1.0.0",
+          "TicketContext.ReadModel.Query.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketContext.ReadModel.Query.Facade.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.ReadModel.Query.Facade.dll": {}
         }
       },
       "TicketContext.Resource/1.0.0": {
@@ -4875,6 +4962,19 @@
         "lib/netstandard2.0/NuGet.Frameworks.xml",
         "nuget.frameworks.5.11.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "PagedList/1.17.0": {
+      "sha512": "Ou6F3WKXh49hOo0TxWM+SkIGuKllYPuPPvnSYOlQ1sTrtuEyuDUhYbSJd5Sdb06i/sWUJZTjiUecEs3Ht/Hx3g==",
+      "type": "package",
+      "path": "pagedlist/1.17.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/PagedList.dll",
+        "lib/net40/PagedList.xml",
+        "pagedlist.1.17.0.nupkg.sha512",
+        "pagedlist.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8857,6 +8957,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Framework.ApplicationService/1.0.0": {
+      "type": "project",
+      "path": "../Framework/Framework.ApplicationService/Framework.ApplicationService.csproj",
+      "msbuildProject": "../Framework/Framework.ApplicationService/Framework.ApplicationService.csproj"
+    },
     "Framework.AssemblyHelper/1.0.0": {
       "type": "project",
       "path": "../Framework/Framework.AssemblyHelper/Framework.AssemblyHelper.csproj",
@@ -8866,6 +8971,11 @@
       "type": "project",
       "path": "../Framework/Framework.Core/Framework.Core.csproj",
       "msbuildProject": "../Framework/Framework.Core/Framework.Core.csproj"
+    },
+    "framework.DependencyInjection/1.0.0": {
+      "type": "project",
+      "path": "../Framework/framework.DependencyInjection/framework.DependencyInjection.csproj",
+      "msbuildProject": "../Framework/framework.DependencyInjection/framework.DependencyInjection.csproj"
     },
     "Framework.Domain/1.0.0": {
       "type": "project",
@@ -8897,6 +9007,11 @@
       "path": "../WriteModel/Ticket/ApplicationService/TicketContext.ApplicationService.Contract/TicketContext.ApplicationService.Contract.csproj",
       "msbuildProject": "../WriteModel/Ticket/ApplicationService/TicketContext.ApplicationService.Contract/TicketContext.ApplicationService.Contract.csproj"
     },
+    "TicketContext.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../WriteModel/Ticket/TicketContext.Configuration/TicketContext.Configuration.csproj",
+      "msbuildProject": "../WriteModel/Ticket/TicketContext.Configuration/TicketContext.Configuration.csproj"
+    },
     "TicketContext.Contract/1.0.0": {
       "type": "project",
       "path": "../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
@@ -8906,11 +9021,6 @@
       "type": "project",
       "path": "../WriteModel/Ticket/Domain/TicketContext.Domain/TicketContext.Domain.csproj",
       "msbuildProject": "../WriteModel/Ticket/Domain/TicketContext.Domain/TicketContext.Domain.csproj"
-    },
-    "TicketContext.Domain.Contract/1.0.0": {
-      "type": "project",
-      "path": "../WriteModel/Ticket/TicketContext.Configuration/TicketContext.Configuration.csproj",
-      "msbuildProject": "../WriteModel/Ticket/TicketContext.Configuration/TicketContext.Configuration.csproj"
     },
     "TicketContext.Domain.Services/1.0.0": {
       "type": "project",
@@ -8937,6 +9047,21 @@
       "path": "../WriteModel/Ticket/Infrastructure/TicketContext.Infrastructure/TicketContext.Infrastructure.csproj",
       "msbuildProject": "../WriteModel/Ticket/Infrastructure/TicketContext.Infrastructure/TicketContext.Infrastructure.csproj"
     },
+    "TicketContext.ReadModel.Context/1.0.0": {
+      "type": "project",
+      "path": "../ReadModel/ReadModel.Context/TicketContext.ReadModel.Context.csproj",
+      "msbuildProject": "../ReadModel/ReadModel.Context/TicketContext.ReadModel.Context.csproj"
+    },
+    "TicketContext.ReadModel.Query.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../ReadModel/ReadModel.Query.Contracts/TicketContext.ReadModel.Query.Contracts.csproj",
+      "msbuildProject": "../ReadModel/ReadModel.Query.Contracts/TicketContext.ReadModel.Query.Contracts.csproj"
+    },
+    "TicketContext.ReadModel.Query.Facade/1.0.0": {
+      "type": "project",
+      "path": "../ReadModel/ReadModel.Query.Facade/TicketContext.ReadModel.Query.Facade.csproj",
+      "msbuildProject": "../ReadModel/ReadModel.Query.Facade/TicketContext.ReadModel.Query.Facade.csproj"
+    },
     "TicketContext.Resource/1.0.0": {
       "type": "project",
       "path": "../WriteModel/Ticket/Resource/TicketContext.Resource/TicketContext.Resource.csproj",
@@ -8952,13 +9077,16 @@
       "Swashbuckle.AspNetCore >= 6.4.0",
       "TicketContext.ApplicationService >= 1.0.0",
       "TicketContext.ApplicationService.Contract >= 1.0.0",
+      "TicketContext.Configuration >= 1.0.0",
       "TicketContext.Domain >= 1.0.0",
-      "TicketContext.Domain.Contract >= 1.0.0",
       "TicketContext.Domain.Services >= 1.0.0",
       "TicketContext.Domain.Test >= 1.0.0",
       "TicketContext.Facade >= 1.0.0",
       "TicketContext.Facade.Contract >= 1.0.0",
       "TicketContext.Infrastructure >= 1.0.0",
+      "TicketContext.ReadModel.Context >= 1.0.0",
+      "TicketContext.ReadModel.Query.Contracts >= 1.0.0",
+      "TicketContext.ReadModel.Query.Facade >= 1.0.0",
       "TicketContext.Resource >= 1.0.0"
     ]
   },
@@ -8995,6 +9123,15 @@
           "projectReferences": {
             "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
               "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
+            },
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj"
+            },
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj"
+            },
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj"
             },
             "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Persistence\\Persistence\\Persistence.csproj": {
               "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Persistence\\Persistence\\Persistence.csproj"
@@ -9079,5 +9216,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
