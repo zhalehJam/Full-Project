@@ -17,6 +17,7 @@ namespace ReadModel.Context.Model
         { }
         public virtual DbSet<Center> Centers { get; set; } = null!;
         public virtual DbSet<Part> Parts { get; set; } = null!;
+        public virtual DbSet<Person> Persons { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
@@ -34,8 +35,7 @@ namespace ReadModel.Context.Model
                 entity.Property(n => n.Id).ValueGeneratedNever();
                 entity.Property(n => n.CenterName);
                 entity.Property(n => n.CenterID);
-            }
-            );
+            });
 
             modelBuilder.Entity<Part>((Action<Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Part>>)(n =>
             {
@@ -48,6 +48,14 @@ namespace ReadModel.Context.Model
                   .HasForeignKey((System.Linq.Expressions.Expression<Func<Part, object?>>)(d => d.Center));
             }));
 
+            modelBuilder.Entity<Person>(entity =>
+            {
+                entity.ToTable("Person", "TicketContext");
+                entity.Property(n => n.Id).ValueGeneratedNever();
+                entity.Property(n => n.PersonID);
+                entity.Property(n => n. Name);
+                entity.Property(n => n.PartId);
+            });
             //modelBuilder.HasSequence
             OnModelCreatingPartial(modelBuilder);
         }

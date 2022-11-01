@@ -51,6 +51,7 @@ namespace ReadModel.Query.Facade.Centers
                 {
                     CenterName = n.CenterName,
                     Center = n.Id,
+                    CenterID=n.CenterID,
                     parts = n.Parts.Select(p => new PartDto()
                     {
                         Center = p.Center,
@@ -75,6 +76,7 @@ namespace ReadModel.Query.Facade.Centers
             {
                 CenterName = n.CenterName,
                 Center = n.Id,
+                CenterID=n.CenterID,
                 parts = n.Parts.Select(p => new PartDto()
                 {
                     Center = p.Center,

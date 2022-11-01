@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReadModel.Query.Contracts.Centers;
 using TicketContext.ApplicationService.Contract.Persons;
 using TicketContext.Facade.Contract;
+using TicketContext.ReadModel.Query.Contracts.Centers.DataContracts;
 
 namespace API.Controller
 {
@@ -9,10 +11,12 @@ namespace API.Controller
     public class PersonController:ControllerBase
     {
         private readonly IPersonCommandFacade _personCommandFacade;
+        private readonly IPersonQueryFacade _personQueryFacade;
 
-        public PersonController(IPersonCommandFacade personCommandFacade)
+        public PersonController(IPersonCommandFacade personCommandFacade,IPersonQueryFacade personQueryFacade)
         {
             _personCommandFacade = personCommandFacade;
+            _personQueryFacade = personQueryFacade;
         }
         
         [HttpPost("CreatePerson")]
@@ -21,16 +25,28 @@ namespace API.Controller
             _personCommandFacade.CreatePerson(createPersonCommand);
         }
 
-        [HttpPost("UpdatePerson")]
+        [HttpPut("UpdatePerson")]
         public void UpdatePerson(UpdatePersonCommand updatePersonCommand)
         {
             _personCommandFacade.UpdatePerson(updatePersonCommand);
         }
 
-        [HttpPost("DeletePerson")]
+        [HttpDelete("DeletePerson")]
         public void DeletePerson(DeletePersonCommand deletePersonCommand)
         {
             _personCommandFacade.DeletePerson(deletePersonCommand);
+        }
+
+        [HttpGet("GetAllPersons")]
+        public IList<PersonDto> GetAllPersons()
+        {
+           return _personQueryFacade.GetAllPersons();
+        }
+
+        [HttpGet("GetPersonById")]
+        public PersonDto GetPersonById(Guid Id)
+        {
+            return _personQueryFacade.GetPersonById(Id);
         }
     }
 }

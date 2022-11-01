@@ -12,6 +12,6 @@ namespace TicketContext.ReadModel.Query.Contracts.Centers.DataContracts
         public Guid Center { get; set; }
         public string? PartName { get; set; }
         public int PartID { get; set; }
-
     }
+
 }
