@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ReadModel.Query.Contracts.Centers;
 using TicketContext.ApplicationService.Contract.Persons;
 using TicketContext.Facade.Contract;
-using TicketContext.ReadModel.Query.Contracts.Centers.DataContracts;
+using TicketContext.ReadModel.Query.Contracts.Persons;
+using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
 
 namespace API.Controller
 {

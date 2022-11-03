@@ -9,7 +9,8 @@
       "TicketContext.ReadModel.Query.Contracts/1.0.0": {
         "dependencies": {
           "Framework.Core": "1.0.0",
-          "PagedList": "1.17.0"
+          "PagedList": "1.17.0",
+          "TicketContext.Contract": "1.0.0"
         },
         "runtime": {
           "TicketContext.ReadModel.Query.Contracts.dll": {}
@@ -38,6 +39,11 @@
         "runtime": {
           "Framework.Core.dll": {}
         }
+      },
+      "TicketContext.Contract/1.0.0": {
+        "runtime": {
+          "TicketContext.Contract.dll": {}
+        }
       }
     }
   },
@@ -62,6 +68,11 @@
       "hashPath": "pagedlist.1.17.0.nupkg.sha512"
     },
     "Framework.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

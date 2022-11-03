@@ -668,7 +668,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -737,6 +741,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              },
               "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
                 "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               }

@@ -473,10 +473,16 @@
           "Framework.Core.dll": {}
         }
       },
+      "TicketContext.Contract/1.0.0": {
+        "runtime": {
+          "TicketContext.Contract.dll": {}
+        }
+      },
       "TicketContext.ReadModel.Context/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
+          "TicketContext.Contract": "1.0.0"
         },
         "runtime": {
           "TicketContext.ReadModel.Context.dll": {}
@@ -485,7 +491,8 @@
       "TicketContext.ReadModel.Query.Contracts/1.0.0": {
         "dependencies": {
           "Framework.Core": "1.0.0",
-          "PagedList": "1.17.0"
+          "PagedList": "1.17.0",
+          "TicketContext.Contract": "1.0.0"
         },
         "runtime": {
           "TicketContext.ReadModel.Query.Contracts.dll": {}
@@ -787,6 +794,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Framework.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Contract/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

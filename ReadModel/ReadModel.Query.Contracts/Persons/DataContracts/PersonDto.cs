@@ -1,4 +1,4 @@
-﻿namespace TicketContext.ReadModel.Query.Contracts.Centers.DataContracts
+﻿namespace TicketContext.ReadModel.Query.Contracts.Persons.DataContracts
 {
     public class PersonDto
     {
@@ -9,5 +9,4 @@
         public string? PartName { get; set; }
         public string? CenterName { get; set; }
     }
-
 }

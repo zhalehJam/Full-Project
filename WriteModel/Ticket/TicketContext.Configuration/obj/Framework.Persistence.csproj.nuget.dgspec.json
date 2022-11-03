@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {}
+    "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
         "projectName": "TicketContext.Configuration",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\TicketContext.Configuration\\obj\\",
         "projectStyle": "PackageReference",
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj"
               }
             }
           }

@@ -764,12 +764,23 @@
           "bin/placeholder/Framework.Core.dll": {}
         }
       },
+      "TicketContext.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        }
+      },
       "TicketContext.ReadModel.Context/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
+          "TicketContext.Contract": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TicketContext.ReadModel.Context.dll": {}
@@ -783,7 +794,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
-          "PagedList": "1.17.0"
+          "PagedList": "1.17.0",
+          "TicketContext.Contract": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TicketContext.ReadModel.Query.Contracts.dll": {}
@@ -1974,6 +1986,11 @@
       "type": "project",
       "path": "../../Framework/Framework.Core/Framework.Core.csproj",
       "msbuildProject": "../../Framework/Framework.Core/Framework.Core.csproj"
+    },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "path": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
+      "msbuildProject": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj"
     },
     "TicketContext.ReadModel.Context/1.0.0": {
       "type": "project",

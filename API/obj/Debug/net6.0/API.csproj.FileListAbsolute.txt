@@ -43,6 +43,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.VisualStudi
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\NuGet.Frameworks.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\PagedList.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -190,4 +191,3 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\PagedList.dll

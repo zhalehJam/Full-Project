@@ -13,3 +13,5 @@ C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\De
 C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\refint\TicketContext.ReadModel.Query.Contracts.dll
 C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\TicketContext.ReadModel.Query.Contracts.pdb
 C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\obj\Debug\net6.0\ref\TicketContext.ReadModel.Query.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\ReadModel\ReadModel.Query.Contracts\bin\Debug\net6.0\TicketContext.Contract.pdb

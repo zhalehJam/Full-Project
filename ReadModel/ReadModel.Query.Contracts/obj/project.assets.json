@@ -40,6 +40,16 @@
         "runtime": {
           "bin/placeholder/Framework.Core.dll": {}
         }
+      },
+      "TicketContext.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        }
       }
     }
   },
@@ -81,12 +91,18 @@
       "type": "project",
       "path": "../../Framework/Framework.Core/Framework.Core.csproj",
       "msbuildProject": "../../Framework/Framework.Core/Framework.Core.csproj"
+    },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "path": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
+      "msbuildProject": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Framework.Core >= 1.0.0",
-      "PagedList >= 1.17.0"
+      "PagedList >= 1.17.0",
+      "TicketContext.Contract >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -120,6 +136,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+            },
             "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
               "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             }

@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using ReadModel.Context.Model;
-using ReadModel.Query.Contracts.Centers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicketContext.ReadModel.Query.Contracts.Centers.DataContracts;
+using TicketContext.ReadModel.Query.Contracts.Persons;
+using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
 
 namespace TicketContext.ReadModel.Query.Facade.Persons
 {

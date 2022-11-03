@@ -737,6 +737,16 @@
             "rid": "win"
           }
         }
+      },
+      "TicketContext.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketContext.Contract.dll": {}
+        }
       }
     }
   },
@@ -1902,12 +1912,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "path": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj",
+      "msbuildProject": "../../Contract/TicketContext.Contract/TicketContext.Contract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.9",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
+      "TicketContext.Contract >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1940,7 +1956,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

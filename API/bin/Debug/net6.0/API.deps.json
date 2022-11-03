@@ -1699,7 +1699,8 @@
       "TicketContext.ReadModel.Context/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
+          "TicketContext.Contract": "1.0.0"
         },
         "runtime": {
           "TicketContext.ReadModel.Context.dll": {}
@@ -1708,7 +1709,8 @@
       "TicketContext.ReadModel.Query.Contracts/1.0.0": {
         "dependencies": {
           "Framework.Core": "1.0.0",
-          "PagedList": "1.17.0"
+          "PagedList": "1.17.0",
+          "TicketContext.Contract": "1.0.0"
         },
         "runtime": {
           "TicketContext.ReadModel.Query.Contracts.dll": {}
