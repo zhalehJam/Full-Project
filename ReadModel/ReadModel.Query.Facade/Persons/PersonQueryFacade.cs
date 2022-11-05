@@ -12,13 +12,11 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 {
     public class PersonQueryFacade : IPersonQueryFacade
     {
-        private readonly TicketingContext _ticketContext;
-        private readonly IConfiguration _configuration;
+        private readonly TicketingContext _ticketContext; 
 
-        public PersonQueryFacade(TicketingContext ticketContext, IConfiguration configuration)
+        public PersonQueryFacade(TicketingContext ticketContext )
         {
-            _ticketContext = ticketContext;
-            _configuration = configuration;
+            _ticketContext = ticketContext; 
         }
         public List<PersonDto> GetAllPersons()
         {

@@ -14,13 +14,11 @@ namespace ReadModel.Query.Facade.Centers
 {
     public class CenterQueryFacade : ICenterQueryFacade
     {
-        private readonly TicketingContext _ticketContext;
-        private readonly IConfiguration _configuration;
+        private readonly TicketingContext _ticketContext; 
 
-        public CenterQueryFacade(TicketingContext ticketContext, IConfiguration configuration)
+        public CenterQueryFacade(TicketingContext ticketContext )
         {
-            _ticketContext = ticketContext;
-            _configuration = configuration;
+            _ticketContext = ticketContext; 
         }
 
         public List<CenterDto> GetCenters(string centerName = null)

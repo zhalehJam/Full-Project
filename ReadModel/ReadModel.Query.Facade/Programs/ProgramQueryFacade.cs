@@ -12,13 +12,11 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
 {
     internal class ProgramQueryFacade : IProgramQueryFacade
     {
-        private readonly TicketingContext _ticketContext;
-        private readonly IConfiguration _configuration;
+        private readonly TicketingContext _ticketContext; 
 
-        public ProgramQueryFacade(TicketingContext ticketContext, IConfiguration configuration)
+        public ProgramQueryFacade(TicketingContext ticketContext )
         {
-            _ticketContext = ticketContext;
-            _configuration = configuration;
+            _ticketContext = ticketContext; 
         }
         public List<ProgramDto> GetAllPrograms()
         {
