@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using PagedList;
 using ReadModel.Context.Model;
 using ReadModel.Query.Contracts.Centers;
 using ReadModel.Query.Contracts.Centers.DataContracts;
@@ -14,11 +15,11 @@ namespace ReadModel.Query.Facade.Centers
 {
     public class CenterQueryFacade : ICenterQueryFacade
     {
-        private readonly TicketingContext _ticketContext; 
+        private readonly TicketingContext _ticketContext;
 
-        public CenterQueryFacade(TicketingContext ticketContext )
+        public CenterQueryFacade(TicketingContext ticketContext)
         {
-            _ticketContext = ticketContext; 
+            _ticketContext = ticketContext;
         }
 
         public List<CenterDto> GetCenters(string centerName = null)
@@ -32,7 +33,7 @@ namespace ReadModel.Query.Facade.Centers
                     .Select(n => new CenterDto()
                     {
                         CenterName = n.CenterName,
-                        Center = n.Id,
+                        Id = n.Id,
                         parts = n.Parts.Select(p => new PartDto()
                         {
                             Center = p.Center,
@@ -48,8 +49,8 @@ namespace ReadModel.Query.Facade.Centers
                 centerDtos = _ticketContext.Centers.Select(n => new CenterDto()
                 {
                     CenterName = n.CenterName,
-                    Center = n.Id,
-                    CenterID=n.CenterID,
+                    Id = n.Id,
+                    CenterID = n.CenterID,
                     parts = n.Parts.Select(p => new PartDto()
                     {
                         Center = p.Center,
@@ -70,11 +71,14 @@ namespace ReadModel.Query.Facade.Centers
                 result = result.Where(n => n.CenterName.Contains(centerQueryParameter.CenterName));
             if(centerQueryParameter.CenterID != null && centerQueryParameter.CenterID != 0)
                 result = result.Where(n => n.CenterID == centerQueryParameter.CenterID);
+            if(centerQueryParameter.Id != null)
+                result = result.Where(n => n.Id == centerQueryParameter.Id);
+
             var centerDtos = result.Select(n => new CenterDto()
             {
                 CenterName = n.CenterName,
-                Center = n.Id,
-                CenterID=n.CenterID,
+                Id = n.Id,
+                CenterID = n.CenterID,
                 parts = n.Parts.Select(p => new PartDto()
                 {
                     Center = p.Center,
@@ -86,7 +90,7 @@ namespace ReadModel.Query.Facade.Centers
 
             if(!string.IsNullOrWhiteSpace(centerQueryParameter.PartName))
             {
-                centerDtos = centerDtos.Where(n => n.parts.Where(q => q.PartName.Contains(centerQueryParameter.PartName)).ToList().Count() != 0)
+                centerDtos = centerDtos.Where(n => n.parts.Where(q => q.PartName.Contains(centerQueryParameter.PartName)).ToList().Count != 0)
                     .ToList()
                     .Select(n => new CenterDto()
                     {
@@ -98,7 +102,8 @@ namespace ReadModel.Query.Facade.Centers
             }
             if(centerQueryParameter.PartID != 0 && centerQueryParameter.PartID != null)
             {
-                centerDtos = centerDtos.Where(n => n.parts.Where(q => q.PartID == centerQueryParameter.PartID).ToList().Count() != 0)
+                centerDtos = centerDtos.Where(n => n.parts.Where(q => q.PartID == centerQueryParameter.PartID)
+                                                          .ToList().Count != 0)
                     .ToList()
                     .Select(n => new CenterDto()
                     {
@@ -109,6 +114,14 @@ namespace ReadModel.Query.Facade.Centers
                     .ToList();
             }
             return centerDtos;
+        }
+
+        public PagedList<CenterDto> GetCentersByPage(PageParametr centerQueryParameter)
+        {
+            PagedList<CenterDto> centerDtos = new PagedList<CenterDto>(GetCenters(), centerQueryParameter.PageNumber, centerQueryParameter.PageSize);
+
+            return centerDtos;
+            //throw new NotImplementedException();
         }
     }
 }

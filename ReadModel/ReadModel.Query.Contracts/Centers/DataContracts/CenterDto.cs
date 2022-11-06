@@ -13,7 +13,7 @@ namespace ReadModel.Query.Contracts.Centers.DataContracts
         {
 
         }
-        public Guid Center { get; set; }
+        public Guid Id { get; set; }
         public string CenterName { get; set; }
         public int CenterID { get; set; }
         public IList<PartDto> parts { get; set; }

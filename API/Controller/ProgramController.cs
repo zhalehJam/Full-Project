@@ -19,23 +19,23 @@ namespace API.Controller
             _programQueryFacade = programQueryFacade;
         }
         [HttpPost("CreateProgram")]
-        public void CreatePrgram(CreateProgramCommand createProgramCommand)
+        public void CreatePrgram([FromQuery] CreateProgramCommand createProgramCommand)
         {
             _programCommandFacade.CreateProgram(createProgramCommand);
         }
         [HttpPut("UpdateProgramLink")]
-        public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
+        public void UpdateProgramLink([FromQuery] UpdateProgramLinkCommand updateProgramLinkCommand)
         {
             _programCommandFacade.UpdateProgramlink(updateProgramLinkCommand);
         }
 
         [HttpPut("AddPrgramSupporter")]
-        public void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand)
+        public void AddProgramSupporter([FromQuery] AddProgramSupporterCommand addProgramSupporterCommand)
         {
             _programCommandFacade.AddProgramSupporter(addProgramSupporterCommand);
         }
         [HttpDelete("DeleteProgramSupporter")]
-        public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
+        public void DeleteProgramSupporter([FromQuery] DeleteProgramSupporterCommand deleteProgramSupporterCommand)
         {
             _programCommandFacade.DeleteProgramSupporter(deleteProgramSupporterCommand);
         }
@@ -47,7 +47,7 @@ namespace API.Controller
         }
 
         [HttpGet("GetProgramById")]
-        public ProgramDto GetProgramById(Guid Id)
+        public ProgramDto GetProgramById([FromQuery] Guid Id)
         {
             return _programQueryFacade.GetProgramById(Id);
         }

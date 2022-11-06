@@ -14,6 +14,6 @@ namespace ReadModel.Query.Contracts.Centers
     {
         List<CenterDto> GetCenters(string centerName = null);
         List<CenterDto> GetCentersByfilter(CenterQueryParameter centerQueryParameter=null);
-        //Task<PagedList<CenterDto>> GetCenters(CenterQueryParameter centerQueryParameter);
+        PagedList<CenterDto> GetCentersByPage(PageParametr centerQueryParameter);
     }
 }

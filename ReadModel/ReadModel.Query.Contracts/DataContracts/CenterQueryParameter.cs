@@ -7,7 +7,7 @@ using TicketContext.ReadModel.Query.Contracts.DataContracts.Shared;
 
 namespace TicketContext.ReadModel.Query.Contracts.DataContracts
 {
-    public class CenterQueryParameter//:PaginationQueryParameters
+    public class CenterQueryParameter:PaginationQueryParameters
     {
         public Guid Id { get; set; }
         public string? CenterName { get; set ; }

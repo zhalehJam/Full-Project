@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PagedList;
 using TicketContext.ApplicationService.Contract.Persons;
 using TicketContext.Facade.Contract;
+using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Persons;
 using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
 
@@ -20,19 +22,19 @@ namespace API.Controller
         }
         
         [HttpPost("CreatePerson")]
-        public void CreatePerson(CreatePersonCommand createPersonCommand)
+        public void CreatePerson([FromQuery] CreatePersonCommand createPersonCommand)
         {
             _personCommandFacade.CreatePerson(createPersonCommand);
         }
 
         [HttpPut("UpdatePerson")]
-        public void UpdatePerson(UpdatePersonCommand updatePersonCommand)
+        public void UpdatePerson([FromQuery] UpdatePersonCommand updatePersonCommand)
         {
             _personCommandFacade.UpdatePerson(updatePersonCommand);
         }
 
         [HttpDelete("DeletePerson")]
-        public void DeletePerson(DeletePersonCommand deletePersonCommand)
+        public void DeletePerson([FromQuery] DeletePersonCommand deletePersonCommand)
         {
             _personCommandFacade.DeletePerson(deletePersonCommand);
         }
@@ -44,9 +46,15 @@ namespace API.Controller
         }
 
         [HttpGet("GetPersonById")]
-        public PersonDto GetPersonById(Guid Id)
+        public PersonDto GetPersonById([FromQuery] Guid Id)
         {
             return _personQueryFacade.GetPersonById(Id);
+        }
+
+        [HttpGet("GetAllPersonsByPage")]
+        public PagedList<PersonDto> GetAllPersonsByPage([FromQuery]PageParametr pageParametr)
+        {
+            return _personQueryFacade.GetAllPersonsByPage(pageParametr);
         }
     }
 }

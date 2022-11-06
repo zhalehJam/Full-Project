@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PagedList;
 using ReadModel.Query.Contracts.Centers;
 using ReadModel.Query.Contracts.Centers.DataContracts;
 using TicketContext.ApplicationService.Contract.Centers;
@@ -22,18 +23,18 @@ namespace API.Controller
             _centerQueryFacade = centerQueryFacade;
         }
         [HttpPost("CreateCenter")]
-        public void CreateCenter(CreateCenterCommand createCenterCommand)
+        public void CreateCenter([FromQuery] CreateCenterCommand createCenterCommand)
         {
             _centerCommandFacade.CeateCenter(createCenterCommand);
         }
         [HttpPut("AddPart")]
-        public void AddPart(AddPartCommand addPartCommand)
+        public void AddPart([FromQuery] AddPartCommand addPartCommand)
         {
             _centerCommandFacade.AddPart(addPartCommand);
         }
 
         [HttpDelete("DeletePart")]
-        public void DeletePart(DeletePartCommand deletePartCommand)
+        public void DeletePart([FromQuery] DeletePartCommand deletePartCommand)
         {
             _centerCommandFacade.DeletePart(deletePartCommand);
         }
@@ -44,7 +45,7 @@ namespace API.Controller
             return _centerQueryFacade.GetCenters();
         }
         [HttpGet("GetCenterByName")]
-        public IList<CenterDto> GetCencterByName(string centerName)
+        public IList<CenterDto> GetCencterByName([FromQuery] string centerName)
         {
             return _centerQueryFacade.GetCenters(centerName:centerName);
         }
@@ -52,6 +53,13 @@ namespace API.Controller
         public IList<CenterDto> GetCencterByOtherFilters([FromQuery] CenterQueryParameter parameters)
         {
             return _centerQueryFacade.GetCentersByfilter(centerQueryParameter: parameters);
+        }
+
+        [HttpGet("GetCentersByPage")]
+
+        public PagedList<CenterDto> GetCentersByPage([FromQuery] PageParametr parameters)
+        {
+            return _centerQueryFacade.GetCentersByPage(centerQueryParameter:parameters);
         }
     }
 }
