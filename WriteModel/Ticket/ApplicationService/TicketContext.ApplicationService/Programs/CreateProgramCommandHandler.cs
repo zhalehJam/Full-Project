@@ -14,18 +14,22 @@ namespace TicketContext.ApplicationService.Programs
     {
         private readonly IProgramRepository _programRepository;
         private readonly IProgramNameDuplicateChecker _programNameDuplicateChecker;
+        private readonly IProgramHasTicketChecker _programHasTicketChecker;
 
         public CreateProgramCommandHandler(IProgramRepository programRepository,
-                                           IProgramNameDuplicateChecker programNameDuplicateChecker)
+                                           IProgramNameDuplicateChecker programNameDuplicateChecker,
+                                           IProgramHasTicketChecker programHasTicketChecker)
         {
             _programRepository = programRepository;
             _programNameDuplicateChecker = programNameDuplicateChecker;
+            _programHasTicketChecker = programHasTicketChecker;
         }
         public void Execute(CreateProgramCommand command)
         {
             Program program = new Program(command.ProgramName,
                                           command.ProgramLink,
-                                          _programNameDuplicateChecker);
+                                          _programNameDuplicateChecker,
+                                          _programHasTicketChecker);
 
             _programRepository.Add(program);
         }

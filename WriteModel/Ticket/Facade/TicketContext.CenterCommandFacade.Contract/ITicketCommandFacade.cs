@@ -6,5 +6,6 @@ namespace TicketContext.Facade.Contract
     {
         void CreateTicket(CreateTicketCommand createTicketCommand);
         void UpdateTicket(UpdateTicketCommand updateTicketCommand);
+        void DeleteTicket(DeleteTicketCommand deleteTicketCommand);
     }
 }

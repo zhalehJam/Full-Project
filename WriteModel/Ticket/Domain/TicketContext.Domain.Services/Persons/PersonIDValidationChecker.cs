@@ -9,7 +9,7 @@ namespace TicketContext.Domain.Services.Persons
 {
     public class PersonIDValidationChecker : IPersonIDValidationChecker
     {
-        public bool IsValid(Int32 personID)
+        public bool IsValid(int personID)
         {
             bool isValid = true;
             if(personID.ToString().Length>7)

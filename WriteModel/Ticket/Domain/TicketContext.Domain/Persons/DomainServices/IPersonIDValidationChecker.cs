@@ -9,6 +9,6 @@ namespace TicketContext.Domain.Persons.DomainServices
 {
     public interface IPersonIDValidationChecker:IDomainService
     {
-        bool IsValid(Int32 personID);
+        bool IsValid(int personID);
     }
 }

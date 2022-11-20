@@ -11,16 +11,9 @@ namespace TicketContext.Domain.Services.Persons
         {
             _centerRepository = centerRepository;
         }
-        public bool Isvalid(Guid centerId, Guid partId)
+        public bool Isvalid(  Guid partId)
         {
-            bool isValid = false;
-            var center = _centerRepository.GetByID(centerId);
-            if(center != null)
-            {
-                if(center.Parts.Where(n => n.Id == partId).Count() != 0)
-                    isValid = true;
-            }
-            return isValid;
+            return _centerRepository.IsExist(c => c.Parts.Any(s => s.Id == partId));
         }
     }
 }

@@ -1,10 +1,5 @@
 ﻿using Framework.Core.Domain;
 using Framework.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicketContext.Contract.Tickets;
 using TicketContext.Domain.Tickets.DomainServices;
 using TicketContext.Domain.Tickets.Exceptions;
@@ -13,10 +8,10 @@ namespace TicketContext.Domain.Tickets
 {
     public class Ticket : EntityBase, IAggregateRoot
     {
-        private   IPersonIDIsValidChecker _personIDIsValidChecker;
-        private   IPersonInfo _personInfo;
-        private   IProgramIDValidationChecker _programIDIsValidChecker;
-        private   ISupporterPersonIDIsValidChecker _supporterPersonIDIsValidChecker;
+        private IPersonIDIsValidChecker _personIDIsValidChecker;
+        private IPersonInfo _personInfo;
+        private IProgramIDValidationChecker _programIDIsValidChecker;
+        private ISupporterPersonIDIsValidChecker _supporterPersonIDIsValidChecker;
 
         public int PersonID { get; private set; }
         public Guid PersonPartId { get; private set; }
@@ -164,6 +159,13 @@ namespace TicketContext.Domain.Tickets
                 throw new TheCompetedTicketCannotUpdateEception();
             if(SupporterPersonID != supporterThatEditPersonID)
                 throw new TicketDidNotCeateByCurrentSupporerException();
+        }
+
+        public bool CheckTicketCanDelete(int supporterPersonID)
+        {
+            if(SupporterPersonID != supporterPersonID)
+                throw new TicketCannotDeletetException();
+            return true;
         }
     }
 }

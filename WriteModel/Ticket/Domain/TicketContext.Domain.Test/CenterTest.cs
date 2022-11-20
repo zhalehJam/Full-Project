@@ -13,15 +13,17 @@ namespace TicketContext.Domain.Test
         private readonly Mock<ICenterIDDuplicationCheck> centerIDDuplicationCheck = new Mock<ICenterIDDuplicationCheck>();
         private readonly Mock<IPartIDValidaionCheker> partIDValidationChecker = new Mock<IPartIDValidaionCheker>();
         private readonly Mock<IPartIDUsedChecker> partIDUsedChecker = new Mock<IPartIDUsedChecker>();
+        private readonly Mock<ICenterIsUsedCheker> centerIsUsedChecker = new Mock<ICenterIsUsedCheker>();
         private Guid usedGuid;
         [TestInitialize]
         public void Setup()
         {
-             usedGuid = new Guid("fe8ff0f8-5e56-4402-8e38-991ea0283985");
-            centerIDValidationCheck.Setup(c => c.IsValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
-            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.Is<int>(n => n.Equals(1)))).Returns(true);
+            usedGuid = new Guid("fe8ff0f8-5e56-4402-8e38-991ea0283985");
+            centerIDValidationCheck.Setup(c => c.IsValid(It.IsAny<int>())).Returns(true);
+            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.IsAny<int>())).Returns(false);
             partIDValidationChecker.Setup(c => c.ISValid(It.Is<int>(n => !n.Equals(0)))).Returns(true);
             partIDUsedChecker.Setup(c => c.IsUsed(It.Is<Guid>(n => n.Equals(usedGuid)))).Returns(true);
+            centerIsUsedChecker.Setup(n => n.IsUsed(It.IsAny<Guid>())).Returns(false);
 
         }
         private Center Init(string centerName = "Tabriz",
@@ -65,6 +67,7 @@ namespace TicketContext.Domain.Test
         [DataRow(0)]
         public void NullCenterID_Throw_nullCenterIDException(int centerID)
         {
+            centerIDValidationCheck.Setup(c => c.IsValid(It.IsAny<int>())).Returns(false);
             Init(centerID: centerID);
         }
 
@@ -81,6 +84,8 @@ namespace TicketContext.Domain.Test
         [DataRow(1)]
         public void CenterIDDuplication_throw_CenterIDDuplicationException(int centerID)
         {
+            centerIDDuplicationCheck.Setup(c => c.IsDuplicate(It.IsAny<int>())).Returns(true);
+
             Init(centerID: centerID);
         }
 
@@ -135,8 +140,8 @@ namespace TicketContext.Domain.Test
         {
             Center center = Init();
             int partID = center.Parts.Select(n => n.PartID).FirstOrDefault();
-            center.DeletePart(partID);
-            center.DeletePart(partID);
+            center.DeletePart(partIDUsedChecker.Object, partID);
+            center.DeletePart(partIDUsedChecker.Object, partID);
         }
 
         [TestMethod, TestCategory("Part")]
@@ -145,20 +150,35 @@ namespace TicketContext.Domain.Test
         {
             Center center = Init();
             Part part = new Part("WareHouse", 5, partIDValidationChecker.Object);
-            
+
             center.AddPart(part);
             partIDUsedChecker.Setup(c => c.IsUsed(It.Is<Guid>(n => n.Equals(part.Id)))).Returns(true);
 
-            center.DeletePart(part.PartID);
+            center.DeletePart(partIDUsedChecker.Object, part.PartID);
         }
 
-        [TestMethod, TestCategory("Part")] 
+        [TestMethod, TestCategory("Part")]
         public void Retrive_DeletePartID()
         {
             Center center = Init();
             int partID = center.Parts.Select(n => n.PartID).FirstOrDefault();
-            center.DeletePart(partID); 
+            center.DeletePart(partIDUsedChecker.Object, partID);
         }
 
+        [TestMethod, TestCategory("DeleteCenter")]
+        [ExpectedException(typeof(CenterIsUsedException))]
+        public void CenterIsUsed_throw_CenterIsUsedException()
+        {
+            centerIsUsedChecker.Setup(n => n.IsUsed(It.IsAny<Guid>())).Returns(true);
+            Center center = Init();
+            center.CanDeleteCenter(centerIsUsedChecker.Object);
+        }
+
+        [TestMethod, TestCategory("DeleteCenter")]
+        public void CenterDelete_retruve()
+        { 
+            Center center = Init();
+            center.CanDeleteCenter(centerIsUsedChecker.Object);
+        }
     }
 }

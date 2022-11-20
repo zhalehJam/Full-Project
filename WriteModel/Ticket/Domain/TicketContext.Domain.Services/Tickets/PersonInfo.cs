@@ -14,8 +14,7 @@ namespace TicketContext.Domain.Services.Tickets
         }
         public Guid GetpersonInfo(int personID)
         {
-            Guid personPartID = _personRepository.GetByPersonID(n => n.PersonID == personID).PartId;
-            return personPartID;
+            return _personRepository.GetByPersonID(n => n.PersonID == personID).PartId;
         }
     }
 }

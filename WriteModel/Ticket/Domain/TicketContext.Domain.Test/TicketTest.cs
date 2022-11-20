@@ -35,7 +35,7 @@ namespace TicketContext.Domain.Test
                             DateTime ticketTime = new DateTime(),
                             TicketCondition ticketCondition = TicketCondition.OnGoing)
         {
-            
+
             Ticket ticket = new Ticket(_personIDIsValidChecker.Object,
                                        _personInfo.Object,
                                        _programIDValidationChecker.Object,
@@ -253,9 +253,9 @@ namespace TicketContext.Domain.Test
         [ExpectedException(typeof(TheCompetedTicketCannotUpdateEception))]
         public void TheCompetedTicketCannotUpdate_throw_TheCompetedTicketCannotUpdateEception()
         {
-            Ticket ticket = Init(ticketCondition:TicketCondition.Finish);
-            Update(ticket,ticketCondition:TicketCondition.Finish);
-            
+            Ticket ticket = Init(ticketCondition: TicketCondition.Finish);
+            Update(ticket, ticketCondition: TicketCondition.Finish);
+
         }
 
         [TestMethod, TestCategory("Ticket Update")]
@@ -263,15 +263,30 @@ namespace TicketContext.Domain.Test
         public void TicketDidNotCeateByCurrentSupporer_Throw_TicketDidNotCeateByCurrentSupporerException()
         {
             Ticket ticket = Init();
-            Update(ticket,supporterPersonID: ticket.SupporterPersonID + 1);
+            Update(ticket, supporterPersonID: ticket.SupporterPersonID + 1);
         }
 
-        [TestMethod,TestCategory("Ticket Update")]
+        [TestMethod, TestCategory("Ticket Update")]
         public void TicketUpdate_retrive()
         {
             Ticket ticket = Init();
-            Ticket ticket1= Update(ticket); 
-            Assert.AreEqual(ticket,ticket1);
+            Ticket ticket1 = Update(ticket);
+            Assert.AreEqual(ticket, ticket1);
+        }
+
+        [TestMethod, TestCategory("Delete Ticket")]
+        [ExpectedException(typeof(TicketCannotDeletetException))]
+        public void TicketCannotDeletet_Throw_TicketCannotDeletetException()
+        {
+            Ticket ticket = Init();
+            ticket.CheckTicketCanDelete(ticket.SupporterPersonID + 1);
+        }
+
+        [TestMethod, TestCategory("Delete Ticket")]
+        public void DeleteTicket_Retrive()
+        {
+            Ticket ticket = Init();
+            ticket.CheckTicketCanDelete(ticket.SupporterPersonID);
         }
 
     }

@@ -150,10 +150,16 @@
   <data name="TheCompetedTicketCannotUpdateEception" xml:space="preserve">
     <value>تیکت تمام شده نمیتوند ویرایش شود.</value>
   </data>
+  <data name="TicketCannotDeletetException" xml:space="preserve">
+    <value>امکان حذف این تیمت وجود ندارد.</value>
+  </data>
   <data name="TicketDateTieIsNotValidException" xml:space="preserve">
     <value>تاریخ تیکت اشتباه است.</value>
   </data>
   <data name="TicketDidNotCeateByCurrentSupporerException" xml:space="preserve">
     <value>تیکت توسط ویرایش کننده ایجاد نشده است.</value>
+  </data>
+  <data name="TicketDoesNotExistException" xml:space="preserve">
+    <value>این تیکت وجود ندارد.</value>
   </data>
 </root>

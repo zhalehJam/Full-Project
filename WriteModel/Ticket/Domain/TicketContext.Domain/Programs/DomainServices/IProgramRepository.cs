@@ -9,5 +9,6 @@ namespace TicketContext.Domain.Programs.DomainServices
         Program GetById(Guid id);
         bool IsExist(Expression<Func<Program, bool>> expression);
         void Update(Program program);
+        void Delete(Program program);
     }
 }

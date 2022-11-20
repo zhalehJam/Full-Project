@@ -1,11 +1,5 @@
 ﻿using Framework.Core.Domain;
 using Framework.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TicketContext.Domain.Centers;
 using TicketContext.Domain.Programs.DomainServices;
 using TicketContext.Domain.Programs.Exceptions;
 
@@ -14,12 +8,15 @@ namespace TicketContext.Domain.Programs
     public class Program : EntityBase, IAggregateRoot
     {
         private readonly IProgramNameDuplicateChecker _programNameDuplicateChecker;
+        private   IProgramHasTicketChecker _programHasTicketChecker;
 
         public Program(string programName,
                        string programLink,
-                       IProgramNameDuplicateChecker programNameDuplicateChecker)
+                       IProgramNameDuplicateChecker programNameDuplicateChecker,
+                       IProgramHasTicketChecker programHasTicketChecker)
         {
             _programNameDuplicateChecker = programNameDuplicateChecker;
+            _programHasTicketChecker = programHasTicketChecker;
             SetProgramName(programName);
             ProgramLink = programLink;
         }
@@ -40,22 +37,24 @@ namespace TicketContext.Domain.Programs
 
         public void AddProgramSupporter(ProgramSupporter supporterPerson)
         {
-            ProgramSupporterDuplicateChecker(supporterPerson);
-            ProgramSupporters.Add(supporterPerson);
-        }
-
-        private void ProgramSupporterDuplicateChecker(ProgramSupporter supporterPerson)
-        {
             if(ProgramSupporters.Any(n => n.SupporterPersonID == supporterPerson.SupporterPersonID))
                 throw new DuplicateProgramSupporerIDException();
+            ProgramSupporters.Add(supporterPerson);
         }
 
         public void DeleteProgramSupporter(Int32 programSupporterID)
         {
             var programSupporter = ProgramSupporters.Where(n => n.SupporterPersonID == programSupporterID).Select(n => n).FirstOrDefault();
-            if(programSupporter==null)
+            if(programSupporter == null)
                 throw new InvalidProgramSupporterPersonIdException();
             ProgramSupporters.Remove(programSupporter);
+        }
+
+        public void CanDeleteProgram(IProgramHasTicketChecker programHasTicketChecker)
+        {
+            _programHasTicketChecker = programHasTicketChecker;
+            if(_programHasTicketChecker.HasTicket(Id))
+                throw new CannotDeleteProgramException();
         }
 
         public void UpdateProgramLink(string Link)

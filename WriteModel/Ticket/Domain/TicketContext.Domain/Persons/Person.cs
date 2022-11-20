@@ -14,7 +14,7 @@ namespace TicketContext.Domain.Persons
     {
         public Person(string name,
                       Int32 personID,
-                      Guid centerId,
+                      //Guid centerId,
                       Guid partId,
                       IPersonIDValidationChecker personIDValidationChecker,
                       IPartIDIsValidChecker partIDIsValidChecker,
@@ -28,15 +28,15 @@ namespace TicketContext.Domain.Persons
             _personIDUsedChecker = personIDUsedChecker;
             SetName(name);
             SetPersonID(personID);
-            SetPartID(centerId, partId);
+            SetPartID(partId);
         }
 
         protected Person()
         { }
 
-        private void SetPartID(Guid centerId, Guid partId)
+        private void SetPartID(Guid partId)
         {
-            if(!_partIDIsValidChecker.Isvalid(centerId, partId))
+            if(!_partIDIsValidChecker.Isvalid(partId))
                 throw new PartIDIsNotValidException();
             PartId = partId;
         }
@@ -66,15 +66,16 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName, Guid centerId, Guid partId, IPartIDIsValidChecker partIDIsValidChecker)
+        public void UpdatePersonInfo(string personName,  Guid partId, IPartIDIsValidChecker partIDIsValidChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
-            SetPartID(centerId, partId);
+            SetPartID(partId);
             //SetPersonID(personId);
         }
-        public void CheckPersonCanDelete()
-        {
+        public void CheckPersonCanDelete(IPersonIDUsedChecker personIDUsedChecker)
+        {           
+            _personIDUsedChecker = personIDUsedChecker;
             if(_personIDUsedChecker.IsUsed(PersonID))
                 throw new PersonIDIsUsedException();
         }
@@ -87,6 +88,6 @@ namespace TicketContext.Domain.Persons
         public readonly IPersonIDValidationChecker _personIDValidationChecker;
         public IPartIDIsValidChecker _partIDIsValidChecker;
         private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
-        private readonly IPersonIDUsedChecker _personIDUsedChecker;
+        private  IPersonIDUsedChecker _personIDUsedChecker;
     }
 }

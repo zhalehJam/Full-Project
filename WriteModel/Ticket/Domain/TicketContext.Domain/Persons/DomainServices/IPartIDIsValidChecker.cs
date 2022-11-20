@@ -4,7 +4,7 @@ namespace TicketContext.Domain.Persons.DomainServices
 {
     public interface IPartIDIsValidChecker:IDomainService
     {
-        bool Isvalid(Guid centerId,Guid partId);
+        bool Isvalid( Guid partId);
     }
     
 }

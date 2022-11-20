@@ -29,7 +29,7 @@ namespace TicketContext.ApplicationService.Persons
         {
             Person person = new Person(command.Name,
                                        command.PersonID,
-                                       command.CenterId,
+                                       //command.CenterId,
                                        command.PartId,
                                        _personIDValidationChecker,
                                        _partIDIsValidChecker,

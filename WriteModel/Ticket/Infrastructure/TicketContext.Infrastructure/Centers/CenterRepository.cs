@@ -24,7 +24,7 @@ namespace TicketContext.Infrastructure.Centers
 
         public void Delete(Center center)
         {
-            //throw new NotImplementedException();
+            base.Remove(center);
         }
 
         public Center GetByID(Guid ID)
@@ -33,8 +33,8 @@ namespace TicketContext.Infrastructure.Centers
         }
 
         public bool IsExist(Expression<Func<Center, bool>> expression)
-        { 
-                return _dbContext.Set<Center>().Any(expression);
+        {
+            return _dbContext.Set<Center>().Any(expression);
         }
 
         public void Update(Center center)
@@ -44,7 +44,7 @@ namespace TicketContext.Infrastructure.Centers
 
         protected override IEnumerable<Expression<Func<Center, object>>> GetAggregateExpression()
         {
-            yield return n=>n.Parts;
+            yield return n => n.Parts;
         }
     }
 }

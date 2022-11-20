@@ -23,18 +23,18 @@ namespace API.Controller
             _centerQueryFacade = centerQueryFacade;
         }
         [HttpPost("CreateCenter")]
-        public void CreateCenter([FromQuery] CreateCenterCommand createCenterCommand)
+        public void CreateCenter(CreateCenterCommand createCenterCommand)
         {
             _centerCommandFacade.CeateCenter(createCenterCommand);
         }
         [HttpPut("AddPart")]
-        public void AddPart([FromQuery] AddPartCommand addPartCommand)
+        public void AddPart(AddPartCommand addPartCommand)
         {
             _centerCommandFacade.AddPart(addPartCommand);
         }
 
-        [HttpDelete("DeletePart")]
-        public void DeletePart([FromQuery] DeletePartCommand deletePartCommand)
+        [HttpPut("DeletePart")]
+        public void DeletePart(DeletePartCommand deletePartCommand)
         {
             _centerCommandFacade.DeletePart(deletePartCommand);
         }
@@ -47,7 +47,7 @@ namespace API.Controller
         [HttpGet("GetCenterByName")]
         public IList<CenterDto> GetCencterByName([FromQuery] string centerName)
         {
-            return _centerQueryFacade.GetCenters(centerName:centerName);
+            return _centerQueryFacade.GetCenters(centerName: centerName);
         }
         [HttpGet("GetCenterByOtherFilters")]
         public IList<CenterDto> GetCencterByOtherFilters([FromQuery] CenterQueryParameter parameters)
@@ -56,10 +56,22 @@ namespace API.Controller
         }
 
         [HttpGet("GetCentersByPage")]
-
         public PagedList<CenterDto> GetCentersByPage([FromQuery] PageParametr parameters)
         {
-            return _centerQueryFacade.GetCentersByPage(centerQueryParameter:parameters);
+            return _centerQueryFacade.GetCentersByPage(centerQueryParameter: parameters);
         }
+
+        [HttpDelete]
+        public void DeletCenter(DeleteCenterCommand deleteCenterCommand)
+        {
+            _centerCommandFacade.DeleteCenter(deleteCenterCommand);
+        }
+
+        [HttpPut("EditCenterName")]
+        public void EditCenter(EditCenterCommand editCenterCommand)
+        {
+            _centerCommandFacade.EditCenter(editCenterCommand);
+        }
+
     }
 }

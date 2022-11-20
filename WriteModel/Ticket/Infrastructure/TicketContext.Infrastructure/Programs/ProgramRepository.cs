@@ -41,5 +41,10 @@ namespace TicketContext.Infrastructure.Programs
         {
             return base.GetById(id);
         }
+
+        public void Delete(Program program)
+        {
+            base.Remove(program);
+        }
     }
 }

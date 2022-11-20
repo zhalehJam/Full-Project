@@ -56,7 +56,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
                 TicketConditionid = Convert.ToInt16(n.TicketCondition),
                 TicketConditionTypeName = n.TicketCondition.ToString(),
                 SupporterPersonID = n.SupporterPersonID,
-                SupporterPersonName = _ticketContext.Persons.Where(m => m.PersonID == n.PersonID)
+                SupporterPersonName = _ticketContext.Persons.Where(m => m.PersonID == n.SupporterPersonID)
                                                           .Select(m => m.Name)
                                                           .FirstOrDefault()
 
@@ -106,7 +106,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
                 TicketConditionid = Convert.ToInt16(n.TicketCondition),
                 TicketConditionTypeName = n.TicketCondition.ToString(),
                 SupporterPersonID = n.SupporterPersonID,
-                SupporterPersonName = _ticketContext.Persons.Where(m => m.PersonID == n.PersonID)
+                SupporterPersonName = _ticketContext.Persons.Where(m => m.PersonID == n.SupporterPersonID)
                                                             .Select(m => m.Name)
                                                             .FirstOrDefault()
 

@@ -12,10 +12,7 @@ namespace TicketContext.Domain.Services.Persons
         }
         public bool IsDuplicate(int personID)
         {
-            bool isduplicate = false;
-            if(_personRepository.IsExist(n => n.PersonID == personID))
-                isduplicate = true;
-            return isduplicate;
+            return _personRepository.IsExist(n => n.PersonID == personID);
         }
     }
 }

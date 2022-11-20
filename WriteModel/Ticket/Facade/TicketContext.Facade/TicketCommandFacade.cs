@@ -13,7 +13,12 @@ namespace TicketContext.Facade
 
         public void CreateTicket(CreateTicketCommand createTicketCommand)
         {
-         _commandBus.Dispatch(createTicketCommand);
+            _commandBus.Dispatch(createTicketCommand);
+        }
+
+        public void DeleteTicket(DeleteTicketCommand deleteTicketCommand)
+        {
+            _commandBus.Dispatch(deleteTicketCommand);
         }
 
         public void UpdateTicket(UpdateTicketCommand updateTicketCommand)

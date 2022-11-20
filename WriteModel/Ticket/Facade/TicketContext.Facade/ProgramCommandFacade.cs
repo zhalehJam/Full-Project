@@ -21,6 +21,11 @@ namespace TicketContext.Facade
             _commandBus.Dispatch(createProgramCommand);
         }
 
+        public void DeleteProgram(DeleteProgramCommand deleteProgramCommand)
+        {
+            _commandBus.Dispatch(deleteProgramCommand);
+        }
+
         public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
         {
             _commandBus.Dispatch(deleteProgramSupporterCommand);

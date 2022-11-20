@@ -79,6 +79,15 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to این مرکز در سیستم استفاده شده است..
+        /// </summary>
+        public static string CenterIsUsedException {
+            get {
+                return ResourceManager.GetString("CenterIsUsedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام نمیتواند خالی یا فضای سفید باشد..
         /// </summary>
         public static string NullOrWhiteCenterNameException {

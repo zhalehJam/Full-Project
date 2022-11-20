@@ -12,20 +12,22 @@ namespace TicketContext.Domain.Test
     {
         private readonly Mock<IProgramNameDuplicateChecker> _programNameDuplicateChecker = new Mock<IProgramNameDuplicateChecker>();
         private readonly Mock<IValidSupporterPersonIDChecker> _validSupporterPersonIDChecker = new Mock<IValidSupporterPersonIDChecker>();
-
+        private readonly Mock<IProgramHasTicketChecker> _programHasTicketChecker = new Mock<IProgramHasTicketChecker>();
 
         [TestInitialize]
         public void Setup()
         {
             _programNameDuplicateChecker.Setup(c => c.IsDuplicated(It.Is<string>(n => n.Equals("Ticketing")))).Returns(true);
-            _validSupporterPersonIDChecker.Setup(n => n.Isvalid(It.Is<Int32>(n => (n.Equals(970086)||n.Equals(970428))))).Returns(true);
+            _validSupporterPersonIDChecker.Setup(n => n.Isvalid(It.Is<Int32>(n => (n.Equals(970086) || n.Equals(970428))))).Returns(true);
+            _programHasTicketChecker.Setup(n => n.HasTicket(It.IsAny<Guid>())).Returns(false);
 
         }
         private Program Init(string programName = "Sale&Accounting", string link = "")
         {
             Program program = new Program(programName,
                                           link,
-                                          _programNameDuplicateChecker.Object);
+                                          _programNameDuplicateChecker.Object,
+                                          _programHasTicketChecker.Object);
             return program;
         }
 
@@ -77,12 +79,12 @@ namespace TicketContext.Domain.Test
             program.AddProgramSupporter(programSupporter);
         }
 
-        [TestMethod,TestCategory("ProgramSupporters")]
+        [TestMethod, TestCategory("ProgramSupporters")]
         [ExpectedException(typeof(DuplicateProgramSupporerIDException))]
         [DataRow(970086)]
         public void DuplicateProgramSupporerID_throw_DuplicateProgramSupporerIDException(Int32 supporterID)
         {
-           Program program= Init();
+            Program program = Init();
             ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIDChecker.Object);
             program.AddProgramSupporter(programSupporter);
             program.AddProgramSupporter(programSupporter);
@@ -99,7 +101,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("ProgramSupporters")]
-        [DataRow(970086,970428)]
+        [DataRow(970086, 970428)]
         public void Retrive_ProgramtwoSupporter(Int32 supporterID1, Int32 supporterID2)
         {
             Program program = Init();
@@ -109,7 +111,7 @@ namespace TicketContext.Domain.Test
             program.AddProgramSupporter(programSupporter1);
             program.AddProgramSupporter(programSupporter2);
 
-            Assert.IsTrue(program.ProgramSupporters.Any(n =>n.SupporterPersonID == supporterID1)
+            Assert.IsTrue(program.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID1)
                        && program.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID2));
         }
 
@@ -147,8 +149,25 @@ namespace TicketContext.Domain.Test
             program2.AddProgramSupporter(programSupporter);
 
 
-            Assert.IsTrue(program1.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID) 
+            Assert.IsTrue(program1.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID)
                        && program2.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID));
+        }
+
+        [TestMethod, TestCategory("DeleteProgram")]
+        [ExpectedException(typeof(CannotDeleteProgramException))]
+        public void CannotDeleteProgram_throw_CannotDeleteProgramException()
+        {
+            _programHasTicketChecker.Setup(n => n.HasTicket(It.IsAny<Guid>())).Returns(true);
+            Program program = Init();
+            program.CanDeleteProgram(_programHasTicketChecker.Object);
+        }
+
+        [TestMethod, TestCategory("DeleteProgram")]
+        public void DeleteProgram_Retrive()
+        {
+            Program program = Init();
+            program.CanDeleteProgram(_programHasTicketChecker.Object);
+            Assert.IsTrue(true);
         }
     }
 }

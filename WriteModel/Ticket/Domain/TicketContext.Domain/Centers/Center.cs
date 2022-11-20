@@ -29,6 +29,7 @@ namespace TicketContext.Domain.Centers
             if(CenterIDDuplicationCheck.IsDuplicate(centerID))
                 throw new CenterIDDuplicationException();
             CenterID = centerID;
+
         }
 
         private void SetCenterName(string centerName)
@@ -48,8 +49,9 @@ namespace TicketContext.Domain.Centers
             }
             Parts.Add(part);
         }
-        public void DeletePart(int partID)
+        public void DeletePart(IPartIDUsedChecker partIDUsedChecker, int partID)
         {
+            _partIDUsedChecker = partIDUsedChecker;
             var selectedpart = Parts.Where(n => n.PartID == partID).FirstOrDefault();
             if(selectedpart == null)
             {
@@ -62,11 +64,25 @@ namespace TicketContext.Domain.Centers
             Parts.Remove(selectedpart);
         }
 
+        public void CanDeleteCenter(ICenterIsUsedCheker centerIsUsedCheker)
+        {
+            _centerIsUsedCheker = centerIsUsedCheker;
+            if(_centerIsUsedCheker.IsUsed(Id))
+            {
+                throw new CenterIsUsedException();
+            }
+        }
+
+        public void UpdateCenterName(string name)
+        {
+            SetCenterName(name);
+        }
         public string CenterName { get; private set; }
         public int CenterID { get; private set; }
         public readonly ICenterIDValidationCheck CenterIDValidationCheck;
         public readonly ICenterIDDuplicationCheck CenterIDDuplicationCheck;
-        private readonly IPartIDUsedChecker _partIDUsedChecker;
+        public ICenterIsUsedCheker _centerIsUsedCheker;
+        private IPartIDUsedChecker _partIDUsedChecker;
 
         public ICollection<Part> Parts { get; private set; } = new HashSet<Part>();
 

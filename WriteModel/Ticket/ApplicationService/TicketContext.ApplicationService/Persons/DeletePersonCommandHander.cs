@@ -19,7 +19,7 @@ namespace TicketContext.ApplicationService.Persons
         public void Execute(DeletePersonCommand command)
         {
             Person person = _personRepository.GetByID(command.Id);
-            person.CheckPersonCanDelete();
+            person.CheckPersonCanDelete(_personIDUsedChecker);
             _personRepository.Delete(person);
 
         }

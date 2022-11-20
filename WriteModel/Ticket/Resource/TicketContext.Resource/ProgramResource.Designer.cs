@@ -61,6 +61,15 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to امکان حذف برنامه وجود ندارد..
+        /// </summary>
+        public static string CannotDeleteProgramException {
+            get {
+                return ResourceManager.GetString("CannotDeleteProgramException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to کد پشتیبان برنامه تکراری است..
         /// </summary>
         public static string DuplicateProgramSupporerIDException {

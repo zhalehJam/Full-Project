@@ -8,5 +8,6 @@ namespace TicketContext.Facade.Contract
         void UpdateProgramlink(UpdateProgramLinkCommand updateProgramLinkCommand);
         void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand);
         void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand);
+        void DeleteProgram(DeleteProgramCommand deleteProgramCommand);
     }
 }

@@ -123,6 +123,9 @@
   <data name="CenterIDIsNotValidException" xml:space="preserve">
     <value>کد مرکز صحیح نمیباشد.</value>
   </data>
+  <data name="CenterIsUsedException" xml:space="preserve">
+    <value>این مرکز در سیستم استفاده شده است.</value>
+  </data>
   <data name="NullOrWhiteCenterNameException" xml:space="preserve">
     <value>نام نمیتواند خالی یا فضای سفید باشد.</value>
   </data>

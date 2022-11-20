@@ -22,19 +22,19 @@ namespace API.Controller
         }
         
         [HttpPost("CreatePerson")]
-        public void CreatePerson([FromQuery] CreatePersonCommand createPersonCommand)
+        public void CreatePerson( CreatePersonCommand createPersonCommand)
         {
             _personCommandFacade.CreatePerson(createPersonCommand);
         }
 
         [HttpPut("UpdatePerson")]
-        public void UpdatePerson([FromQuery] UpdatePersonCommand updatePersonCommand)
+        public void UpdatePerson( UpdatePersonCommand updatePersonCommand)
         {
             _personCommandFacade.UpdatePerson(updatePersonCommand);
         }
 
         [HttpDelete("DeletePerson")]
-        public void DeletePerson([FromQuery] DeletePersonCommand deletePersonCommand)
+        public void DeletePerson(  DeletePersonCommand deletePersonCommand)
         {
             _personCommandFacade.DeletePerson(deletePersonCommand);
         }
@@ -46,7 +46,7 @@ namespace API.Controller
         }
 
         [HttpGet("GetPersonById")]
-        public PersonDto GetPersonById([FromQuery] Guid Id)
+        public PersonDto GetPersonById( Guid Id)
         {
             return _personQueryFacade.GetPersonById(Id);
         }

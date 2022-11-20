@@ -21,15 +21,20 @@ namespace API.Controller
             _ticketQueryFacade = ticketQueryFacade;
         }
         [HttpPost]
-        public void CreateTicket([FromQuery] CreateTicketCommand createTicketCommand)
+        public void CreateTicket(CreateTicketCommand createTicketCommand)
         {
             _ticketCommandFacade.CreateTicket(createTicketCommand);
         }
 
         [HttpPut]
-        public void UpdateTicket([FromQuery] UpdateTicketCommand updateTicketCommand)
+        public void UpdateTicket(UpdateTicketCommand updateTicketCommand)
         {
             _ticketCommandFacade.UpdateTicket(updateTicketCommand);
+        }
+        [HttpDelete]
+        public void DeleteTicket(DeleteTicketCommand deleteTicketCommand)
+        {
+            _ticketCommandFacade.DeleteTicket(deleteTicketCommand);
         }
 
         [HttpGet("GetAllTickets")]

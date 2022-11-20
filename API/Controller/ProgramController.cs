@@ -18,26 +18,31 @@ namespace API.Controller
             _programCommandFacade = programCommandFacade;
             _programQueryFacade = programQueryFacade;
         }
-        [HttpPost("CreateProgram")]
-        public void CreatePrgram([FromQuery] CreateProgramCommand createProgramCommand)
+        [HttpPost]
+        public void CreatePrgram(CreateProgramCommand createProgramCommand)
         {
             _programCommandFacade.CreateProgram(createProgramCommand);
         }
         [HttpPut("UpdateProgramLink")]
-        public void UpdateProgramLink([FromQuery] UpdateProgramLinkCommand updateProgramLinkCommand)
+        public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
         {
             _programCommandFacade.UpdateProgramlink(updateProgramLinkCommand);
         }
 
         [HttpPut("AddPrgramSupporter")]
-        public void AddProgramSupporter([FromQuery] AddProgramSupporterCommand addProgramSupporterCommand)
+        public void AddProgramSupporter(AddProgramSupporterCommand addProgramSupporterCommand)
         {
             _programCommandFacade.AddProgramSupporter(addProgramSupporterCommand);
         }
-        [HttpDelete("DeleteProgramSupporter")]
-        public void DeleteProgramSupporter([FromQuery] DeleteProgramSupporterCommand deleteProgramSupporterCommand)
+        [HttpPut("DeleteProgramSupporter")]
+        public void DeleteProgramSupporter(DeleteProgramSupporterCommand deleteProgramSupporterCommand)
         {
             _programCommandFacade.DeleteProgramSupporter(deleteProgramSupporterCommand);
+        }
+        [HttpDelete]
+        public void DeleteProgram(DeleteProgramCommand deleteProgramCommand)
+        {
+            _programCommandFacade.DeleteProgram(deleteProgramCommand);
         }
 
         [HttpGet("GetAllPrograms")]

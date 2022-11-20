@@ -160,6 +160,15 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to امکان حذف این تیمت وجود ندارد..
+        /// </summary>
+        public static string TicketCannotDeletetException {
+            get {
+                return ResourceManager.GetString("TicketCannotDeletetException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تاریخ تیکت اشتباه است..
         /// </summary>
         public static string TicketDateTieIsNotValidException {
@@ -174,6 +183,15 @@ namespace TicketContext.Resource {
         public static string TicketDidNotCeateByCurrentSupporerException {
             get {
                 return ResourceManager.GetString("TicketDidNotCeateByCurrentSupporerException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to این تیکت وجود ندارد..
+        /// </summary>
+        public static string TicketDoesNotExistException {
+            get {
+                return ResourceManager.GetString("TicketDoesNotExistException", resourceCulture);
             }
         }
     }

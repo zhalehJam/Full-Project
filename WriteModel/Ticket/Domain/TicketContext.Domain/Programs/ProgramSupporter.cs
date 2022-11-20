@@ -13,16 +13,16 @@ namespace TicketContext.Domain.Programs
     {
         private readonly IValidSupporterPersonIDChecker _validSuporterPersonIDChecker;
 
-        public ProgramSupporter(Int32 supporterPersonID,
+        public ProgramSupporter(int supporterPersonID,
                                 IValidSupporterPersonIDChecker validSuporerPersonIDChecker)
         {
 
             _validSuporterPersonIDChecker = validSuporerPersonIDChecker;
             SetSupporterPersonID(supporterPersonID);
         }
-        protected ProgramSupporter(Int32 supporterPersonID)
+        protected ProgramSupporter()
         {
-            SupporterPersonID = supporterPersonID;
+
         }
 
         private void SetSupporterPersonID(int personID)
@@ -32,6 +32,6 @@ namespace TicketContext.Domain.Programs
             SupporterPersonID = personID;
         }
 
-        public Int32 SupporterPersonID { get; private set; }
+        public int SupporterPersonID { get; private set; }
     }
 }

@@ -23,7 +23,7 @@ namespace TicketContext.Domain.Test
             centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
             partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
             _personIDValidationChecker.Setup(c => c.IsValid(It.Is<Int32>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
-            _partIDIsValidChecker.Setup(c => c.Isvalid(centerId, partId)).Returns(true);
+            _partIDIsValidChecker.Setup(c => c.Isvalid(partId)).Returns(true);
             _persoIDDuplicateChecker.Setup(c => c.IsDuplicate(It.Is<Int32>(n => n.Equals(970086)))).Returns(true);
             _personIDUsedChecker.Setup(c => c.IsUsed(It.Is<Int32>(n => n.Equals(970087)))).Returns(true);
 
@@ -33,7 +33,7 @@ namespace TicketContext.Domain.Test
         {
             Person person = new Person(personName,
                                        personID,
-                                       centerId,
+                                       // centerId,
                                        partId,
                                        _personIDValidationChecker.Object,
                                        _partIDIsValidChecker.Object,
@@ -89,7 +89,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Person")]
         [ExpectedException(typeof(PartIDIsNotValidException))]
-        [DataRow("c8363f00-4b86-4cd1-9a68-40818197861a", "c8363f00-4b86-4cd1-9a68-40818197861a")]
+        //[DataRow("c8363f00-4b86-4cd1-9a68-40818197861a", "c8363f00-4b86-4cd1-9a68-40818197861a")]
         [DataRow("dd076d63-9546-4123-85e0-e193f6c2cd22", "dd076d63-9546-4123-85e0-e193f6c2cd22")]
 
         public void PartIDIsNotValid_throw_PartIDIsNotValidException(string centerGId, string partGId)
@@ -120,16 +120,19 @@ namespace TicketContext.Domain.Test
         [ExpectedException(typeof(PersonIDIsUsedException))]
         public void PersonIDIsUsed_throw_PersonIDIsUsedException()
         {
+            _personIDUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(true);
+
             Person person = Init();
-            person.CheckPersonCanDelete();
+            person.CheckPersonCanDelete(_personIDUsedChecker.Object);
         }
 
         [TestMethod, TestCategory("Person")]
         [DataRow(970428)]
         public void Retrive_DeletePerson(Int32 PersonID)
         {
-            Person person = Init(personID:PersonID);
-            person.CheckPersonCanDelete();
+            _personIDUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(false);
+            Person person = Init(personID: PersonID);
+            person.CheckPersonCanDelete(_personIDUsedChecker.Object);
         }
     }
 }
