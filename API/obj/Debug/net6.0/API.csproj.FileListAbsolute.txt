@@ -191,3 +191,8 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Scrutor.dll

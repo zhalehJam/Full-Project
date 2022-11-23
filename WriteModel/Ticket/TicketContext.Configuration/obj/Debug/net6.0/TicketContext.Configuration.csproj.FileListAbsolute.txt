@@ -19,3 +19,13 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configurat
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\obj\Debug\net6.0\refint\TicketContext.Configuration.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\obj\Debug\net6.0\TicketContext.Configuration.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\obj\Debug\net6.0\ref\TicketContext.Configuration.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\Framework.Domain.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.ApplicationService.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Domain.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Resource.dll
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\Framework.Domain.pdb
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.ApplicationService.Contract.pdb
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Contract.pdb
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Domain.pdb
+C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\TicketContext.Configuration\bin\Debug\net6.0\TicketContext.Resource.pdb

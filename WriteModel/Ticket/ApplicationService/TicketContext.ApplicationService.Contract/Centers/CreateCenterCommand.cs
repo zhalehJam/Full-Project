@@ -1,4 +1,5 @@
 ﻿using Framework.Core.ApplicationService;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace TicketContext.ApplicationService.Contract.Centers
 {
-    public class CreateCenterCommand : Command
+    //public record CreateCenterCommand(string CenterName, int CenterID) : IRequest<Guid>;
+    public class CreateCenterCommand : Command, IRequest<Guid>
     {
         public string? CenterName { get; set; }
         public int CenterID { get; set; }

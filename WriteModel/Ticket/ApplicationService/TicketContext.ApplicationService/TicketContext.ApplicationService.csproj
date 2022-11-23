@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Domain\TicketContext.Domain\TicketContext.Domain.csproj" />
     <ProjectReference Include="..\TicketContext.ApplicationService.Contract\TicketContext.ApplicationService.Contract.csproj" />
   </ItemGroup>

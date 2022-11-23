@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 using Framework.Core.ApplicationService;
 using Framework.Core.DependencyInjection;
 
 namespace Framework.ApplicationService
 {
-   public class CommandBus:ICommandBus
+    public class CommandBus:ICommandBus
     {
         private readonly IDIContainer _diContainer;
 

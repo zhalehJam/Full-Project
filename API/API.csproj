@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -32,5 +33,7 @@
     <ProjectReference Include="..\WriteModel\Ticket\Resource\TicketContext.Resource\TicketContext.Resource.csproj" />
     <ProjectReference Include="..\WriteModel\Ticket\TicketContext.Configuration\TicketContext.Configuration.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "26cJWpEWweSj2zbRsTVpFxRWdrhRWP2kGAUQR3SoZ+nNQQVZ0WXAAtSAXM2nuYcWsz+Ix7o2yMdMkFDH7HV1Eg==",
+  "dgSpecHash": "CDhVjQP0tHatHKi3iVkuDt/EREER3BWY832kh7h+3Rfn+fj75PFzznR4nGVGp/AtjUuZIBYVoP9iOBX0YUBv4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

@@ -10,7 +10,7 @@ using TicketContext.ReadModel.Query.Contracts.Programs.DataContracts;
 
 namespace TicketContext.ReadModel.Query.Facade.Programs
 {
-    internal class ProgramQueryFacade : IProgramQueryFacade
+    public class ProgramQueryFacade : IProgramQueryFacade
     {
         private readonly TicketingContext _ticketContext; 
 

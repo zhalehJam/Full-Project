@@ -1,4 +1,4 @@
-﻿using framework.DependencyInjection;
+﻿using Framework.DependencyInjection;
 
 namespace TicketContext.Configuration
 {

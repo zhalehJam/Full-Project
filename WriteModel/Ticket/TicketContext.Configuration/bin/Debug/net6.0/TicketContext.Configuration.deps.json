@@ -8,15 +8,46 @@
     ".NETCoreApp,Version=v6.0": {
       "TicketContext.Configuration/1.0.0": {
         "dependencies": {
-          "framework.DependencyInjection": "1.0.0"
+          "Framework.DependencyInjection": "1.0.0"
         },
         "runtime": {
           "TicketContext.Configuration.dll": {}
         }
       },
+      "MediatR/11.1.0": {
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.1.0.0"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/11.0.0": {
+        "dependencies": {
+          "MediatR": "11.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.0.0"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/5.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "runtime": {
           "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {
@@ -25,17 +56,59 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/6.0.0": {
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Scrutor/4.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyModel": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Scrutor.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {},
+      "System.Memory/4.5.4": {},
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Text.Json/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
         }
       },
       "Framework.ApplicationService/1.0.0": {
         "dependencies": {
-          "Framework.Core": "1.0.0"
+          "Framework.Core": "1.0.0",
+          "MediatR": "11.1.0"
         },
         "runtime": {
           "Framework.ApplicationService.dll": {}
@@ -51,21 +124,64 @@
       },
       "Framework.Core/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "MediatR": "11.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
         },
         "runtime": {
           "Framework.Core.dll": {}
         }
       },
-      "framework.DependencyInjection/1.0.0": {
+      "Framework.DependencyInjection/1.0.0": {
         "dependencies": {
           "Framework.ApplicationService": "1.0.0",
           "Framework.AssemblyHelper": "1.0.0",
           "Framework.Core": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "5.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.0",
+          "Scrutor": "4.2.0",
+          "TicketContext.ApplicationService.Contract": "1.0.0"
         },
         "runtime": {
           "framework.DependencyInjection.dll": {}
+        }
+      },
+      "Framework.Domain/1.0.0": {
+        "runtime": {
+          "Framework.Domain.dll": {}
+        }
+      },
+      "TicketContext.ApplicationService.Contract/1.0.0": {
+        "dependencies": {
+          "Framework.Core": "1.0.0",
+          "MediatR": "11.1.0",
+          "TicketContext.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.ApplicationService.Contract.dll": {}
+        }
+      },
+      "TicketContext.Contract/1.0.0": {
+        "runtime": {
+          "TicketContext.Contract.dll": {}
+        }
+      },
+      "TicketContext.Domain/1.0.0": {
+        "dependencies": {
+          "Framework.Core": "1.0.0",
+          "Framework.Domain": "1.0.0",
+          "TicketContext.Contract": "1.0.0",
+          "TicketContext.Resource": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.Domain.dll": {}
+        }
+      },
+      "TicketContext.Resource/1.0.0": {
+        "dependencies": {
+          "Framework.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketContext.Resource.dll": {}
         }
       }
     }
@@ -76,6 +192,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "MediatR/11.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YIbtrLOyeCuIv8vIuHL/mMdls5xmgS36pIOJDxKZuu55nxA2MI2Z+E/Uk0z+F/LE11AGmpjplOM0NZ91m5LQBA==",
+      "path": "mediatr/11.1.0",
+      "hashPath": "mediatr.11.1.0.nupkg.sha512"
+    },
+    "MediatR.Contracts/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "path": "mediatr.contracts/1.0.1",
+      "hashPath": "mediatr.contracts.1.0.1.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/11.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jfD2NBYvP+HiUil2DWfM4bn+bCLp4H2xvoc9aorcnn2Jpgz7Ey8RyYMpgqeF3bs6CP6t8pzb6WkF5NFF/1RLHA==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/11.0.0",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyInjection/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -83,12 +220,61 @@
       "path": "microsoft.extensions.dependencyinjection/5.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+      "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyModel/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TD5QHg98m3+QhgEV1YVoNMl5KtBw/4rjfxLHO0e/YV9bPUBDKntApP4xdrVtGgCeQZHVfC2EXIGsdpRNrr87Pg==",
+      "path": "microsoft.extensions.dependencymodel/6.0.0",
+      "hashPath": "microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512"
+    },
+    "Scrutor/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3A4HE/jetg7hySwrAPJY1G0mc6qo1StlF4y5JuIZOp17ULp0STnFWhIjBL+Qa/2z60y+SQ3xz3qMd9cSGS0qMg==",
+      "path": "scrutor/4.2.0",
+      "hashPath": "scrutor.4.2.0.nupkg.sha512"
+    },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+      "path": "system.text.json/6.0.0",
+      "hashPath": "system.text.json.6.0.0.nupkg.sha512"
     },
     "Framework.ApplicationService/1.0.0": {
       "type": "project",
@@ -105,7 +291,32 @@
       "serviceable": false,
       "sha512": ""
     },
-    "framework.DependencyInjection/1.0.0": {
+    "Framework.DependencyInjection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Framework.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.ApplicationService.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketContext.Resource/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

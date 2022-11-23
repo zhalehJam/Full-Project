@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using TicketContext.ReadModel.Query.Contracts.Centers.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 
-namespace ReadModel.Query.Facade.Centers
+namespace TicketContext.ReadModel.Query.Facade.Centers
 {
     public class CenterQueryFacade : ICenterQueryFacade
     {

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "k8v5QqvuT0ggkMdRCD8KlHDtBrkF4THTPcLKsKVGkw7Oonr6gwQksu41qCte9R6wQeOsgX9R5St9X7BB7drDlg==",
+  "dgSpecHash": "5UB/d7cJlV8LROGH16PJJy8vg5cl5rYunR7WTm2yYtuVx7vN8bo9DYKtN79kz/SLWIO6zf8z4dZNRS5Kx0tksw==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512"
   ],

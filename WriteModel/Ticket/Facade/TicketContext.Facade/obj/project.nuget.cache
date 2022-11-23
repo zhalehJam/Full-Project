@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FVacQHqQIHyPrHZlMF8xtsW4NC6Eh2tJ68E90g7te/mO5VUs2kn7ahlR2vjSF0Obwm76F1A5Ck3uE/2Uulg4aA==",
+  "dgSpecHash": "IcUJPfV9S6wuburaEPiNsZZX8H8xBOnsKfYeSwxw6xeWSlsFe2HkEb4Mau8SvshVea1ndk1mWyLqqB6G/CJZ5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []

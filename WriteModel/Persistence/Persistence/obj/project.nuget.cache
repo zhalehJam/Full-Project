@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KFW0t61uTgSZAMdqHPjnh1CFWio1REJ+eTvkniS6wulWWYbI+eSiLusUW5wdJkB2WxeC5jA2hoREVS1hjlV51A==",
+  "dgSpecHash": "NTW0jCl6Kbilar/4oGOdCkFDEzjm02PUAWdZVc2rwUFu4k8KgjauHN4saSh24tTWTU69KtN2am4z+hGnHxhCLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Persistence\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

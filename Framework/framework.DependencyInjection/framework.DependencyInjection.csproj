@@ -5,10 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Scrutor" Version="4.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\WriteModel\Ticket\ApplicationService\TicketContext.ApplicationService.Contract\TicketContext.ApplicationService.Contract.csproj" />
     <ProjectReference Include="..\Framework.ApplicationService\Framework.ApplicationService.csproj" />
     <ProjectReference Include="..\Framework.AssemblyHelper\Framework.AssemblyHelper.csproj" />
     <ProjectReference Include="..\Framework.Core\Framework.Core.csproj" />

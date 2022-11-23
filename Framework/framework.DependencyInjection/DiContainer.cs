@@ -2,13 +2,13 @@
 using Framework.Core.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace framework.DependencyInjection
+namespace Framework.DependencyInjection
 {
-   public class DiContainer:IDIContainer
+   public class DIContainer:IDIContainer
     {
         private readonly IServiceProvider _serviceProvider;
 
-        public DiContainer(IServiceProvider serviceProvider)
+        public DIContainer(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
         }

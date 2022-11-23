@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DIF1RqaOApRxoU8zlKJvraStrWDY1I0CBLAOdeFwY/Y7/BCjjijFcPgvvXlgjD3AXBvhMI/cAGGvr9f6n3RP4Q==",
+  "dgSpecHash": "wxHpOJ+K0EDEEpJh13V9GZ55/9syrzYo5xm177rCk9r0FJGIiP42ccLpaGPwFeDWY4yzUuyR/RfZZmt6yuElrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Test\\TicketContext.Domain.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",

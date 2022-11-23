@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "v3W6TEs3NvatPLe0FEJPCPZRe1gAlqZlOxJ2FUU5lEaLfSP0fen76ruvFZGtez8TMhbehyOkQw4STI1DpB+XMA==",
+  "dgSpecHash": "pbtmlzLDWlpZhxnzNdHaiHhVcqxMQZ97goLhuBwXKyY32KiEA9f/3YzvMhMKXw7ASoJD91v9hQSH78UcRI8XGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",

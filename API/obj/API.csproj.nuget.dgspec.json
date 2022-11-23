@@ -89,6 +89,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.9, )"
@@ -227,6 +231,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -348,6 +358,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -373,12 +387,12 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
-        "projectName": "framework.DependencyInjection",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
+        "projectName": "Framework.DependencyInjection",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\obj\\",
         "projectStyle": "PackageReference",
@@ -408,6 +422,9 @@
               },
               "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
                 "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              },
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj"
               }
             }
           }
@@ -422,9 +439,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Scrutor": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             }
           },
           "imports": [
@@ -989,6 +1014,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -1054,6 +1085,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -1572,8 +1609,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\framework.DependencyInjection\\framework.DependencyInjection.csproj"
+              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj"
               }
             }
           }

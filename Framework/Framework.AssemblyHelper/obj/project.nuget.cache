@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "hVX8JUNc+hAr/TwL10OXKok/oArFJ5KI0g2kpX0l7QeKyMWfs02+MDY6CoJ28cIZGixGqbfIfzrTpgwVsKecrw==",
+  "dgSpecHash": "w2K2d6lG5K9lBaLDdy5eDT4H2TSRah6OxPrPJbM8or/54AYHnDl6oM8XoG32GEY6MgplMMSXqyMrQ3QciB408w==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []

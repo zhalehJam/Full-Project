@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using PagedList;
 using ReadModel.Query.Contracts.Centers;
 using ReadModel.Query.Contracts.Centers.DataContracts;
+using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Centers;
 using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
@@ -15,17 +17,23 @@ namespace API.Controller
     {
         private readonly ICenterCommandFacade _centerCommandFacade;
         private readonly ICenterQueryFacade _centerQueryFacade;
+       
 
         public CenterController(ICenterCommandFacade centerCommandFacade,
-            ICenterQueryFacade centerQueryFacade)
+                                ICenterQueryFacade centerQueryFacade )
         {
             _centerCommandFacade = centerCommandFacade;
-            _centerQueryFacade = centerQueryFacade;
+            _centerQueryFacade = centerQueryFacade; 
         }
         [HttpPost("CreateCenter")]
-        public void CreateCenter(CreateCenterCommand createCenterCommand)
+        public async Task<Guid> CreateCenter(CreateCenterCommand createCenterCommand)
         {
-            _centerCommandFacade.CeateCenter(createCenterCommand);
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+            if(User.IsInRole("TMS_User"))
+            {
+                var t= int.Parse(claimsIdentity.FindFirst("TMSCenterID").Value);
+            }
+            return await _centerCommandFacade.CreateCenter(createCenterCommand);
         }
         [HttpPut("AddPart")]
         public void AddPart(AddPartCommand addPartCommand)

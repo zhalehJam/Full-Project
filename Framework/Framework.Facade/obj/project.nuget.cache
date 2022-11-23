@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WjhXEwjDAm47N9JGvgXux3qNsY+FdFPH0YAQATjBeDSG3HlLFkhkc1UrRPhEFugF6in0Gfq2EfvMpdI5wW30mQ==",
+  "dgSpecHash": "L4jG14Ev6g+CNvHKKK719ki4Ww6nA20wNCuj2hbJ1N2vXARxDW6ikUZNKwg6m6IgesfMcrHgLg+3VK5fBy6rpA==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Facade\\Framework.Facade.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []

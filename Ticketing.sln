@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.AssemblyHelper", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Core", "Framework\Framework.Core\Framework.Core.csproj", "{2076F214-3325-4BCE-84C5-02C0A5DFF830}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "framework.DependencyInjection", "Framework\framework.DependencyInjection\framework.DependencyInjection.csproj", "{F3DE6C0D-2867-4F35-9DC1-372F8AC2D533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.DependencyInjection", "Framework\framework.DependencyInjection\Framework.DependencyInjection.csproj", "{F3DE6C0D-2867-4F35-9DC1-372F8AC2D533}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Domain", "Framework\Framework.Domain\Framework.Domain.csproj", "{2F23180A-709F-410F-B1D2-BA3A5CB0CC5F}"
 EndProject
@@ -61,15 +61,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TicketContext", "TicketContext", "{6E2878F3-ACDA-4A9C-AEE9-3D11ED95DD1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.Contract", "Contract\TicketContext.Contract\TicketContext.Contract.csproj", "{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.Contract", "Contract\TicketContext.Contract\TicketContext.Contract.csproj", "{911E06FB-8CD0-4D0B-BE65-5520A8477B2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadModel", "ReadModel", "{69434057-E4CA-4430-8F16-DA5DD3BB8CB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Context", "ReadModel\ReadModel.Context\TicketContext.ReadModel.Context.csproj", "{8FA2650B-F94D-49B7-8666-30AAFA3096EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Context", "ReadModel\ReadModel.Context\TicketContext.ReadModel.Context.csproj", "{8FA2650B-F94D-49B7-8666-30AAFA3096EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Query.Contracts", "ReadModel\ReadModel.Query.Contracts\TicketContext.ReadModel.Query.Contracts.csproj", "{63C222BB-CA50-48E4-B374-9C0403F75D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Query.Contracts", "ReadModel\ReadModel.Query.Contracts\TicketContext.ReadModel.Query.Contracts.csproj", "{63C222BB-CA50-48E4-B374-9C0403F75D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketContext.ReadModel.Query.Facade", "ReadModel\ReadModel.Query.Facade\TicketContext.ReadModel.Query.Facade.csproj", "{057FD828-F659-48E4-A877-CAD419386050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Query.Facade", "ReadModel\ReadModel.Query.Facade\TicketContext.ReadModel.Query.Facade.csproj", "{057FD828-F659-48E4-A877-CAD419386050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
