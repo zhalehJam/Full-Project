@@ -16,8 +16,7 @@ namespace API
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
+        public IConfiguration Configuration { get; } 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public Startup(IConfiguration configuration)
@@ -35,15 +34,25 @@ namespace API
             }
             services.AddDbContext<IDbContext, TicketingDbContext>(op =>
             {
-                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123; ");
+                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123qaz!@#; ");
 
             });
             services.AddDbContext<TicketingContext>(op =>
             {
                 op.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123; ");
+                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123qaz!@#; ");
             });
             services.AddSwaggerGen();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                builder => builder
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .SetIsOriginAllowed((host) => true)
+                    .AllowAnyHeader());
+            });
+
 
         }
 
@@ -58,10 +67,10 @@ namespace API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Online Shop API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Online  API V1");
                 c.RoutePrefix = string.Empty;
             });
-
+            app.UseCors("CorsPolicy");
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

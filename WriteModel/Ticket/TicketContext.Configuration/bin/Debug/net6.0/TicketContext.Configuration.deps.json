@@ -142,7 +142,7 @@
           "TicketContext.ApplicationService.Contract": "1.0.0"
         },
         "runtime": {
-          "framework.DependencyInjection.dll": {}
+          "Framework.DependencyInjection.dll": {}
         }
       },
       "Framework.Domain/1.0.0": {
