@@ -255,11 +255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
       "projectName": "TicketContext.Facade",
-      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
+      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -280,11 +280,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
+            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
+              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
             },
-            "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
+            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CowHJSuZdcG8n0FdCdCZKEbm4NDYev2toionyJEC780eHoYkaE9qnbKSqlfOaEbSZO0CK7YFskjO/ILNA7Trlg==",
+  "dgSpecHash": "kQ9leuxrY8Du6mkkQq6BfKDkGfbSBLooCmwhOO168vPJXkk63KFBy/7NO7LLBC48WgalAywpBFfFbjeQZ0JWEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
+  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

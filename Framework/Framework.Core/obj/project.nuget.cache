@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MANwjc9Erh5qa9+meny/VU9D/EUWbgcku+8ZSoP0eoPEhvtoup+nmvjCBff+BZlMmuAAkRGPu1aV3QMCnb9V3Q==",
+  "dgSpecHash": "KcH48A8QD1F6eUqE7ByZeEjmcHsOdCuizfg7b/WW/MPfaMXudVGfvjDt93aPqIrDDLsq4tyo2NlJO7w1+pkdSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

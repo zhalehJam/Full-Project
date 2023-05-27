@@ -130,11 +130,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
       "projectName": "Framework.ApplicationService",
-      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
+      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.ApplicationService\\obj\\",
+      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.ApplicationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -155,8 +155,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             }
           }
         }

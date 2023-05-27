@@ -748,11 +748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
       "projectName": "Framework.Persistence",
-      "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -773,11 +773,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             },
-            "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
             }
           }
         }

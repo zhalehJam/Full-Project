@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {}
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "projectName": "TicketContext.Contract",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "projectName": "Framework.Core",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
         "projectName": "Framework.Domain",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -191,14 +191,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
         "projectName": "Framework.Persistence",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -219,11 +219,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               }
             }
           }
@@ -267,14 +267,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
         "projectName": "TicketContext.Domain",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -295,17 +295,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
               }
             }
           }
@@ -339,14 +339,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
         "projectName": "TicketContext.Infrastructure",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -367,11 +367,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
               }
             }
           }
@@ -405,14 +405,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
         "projectName": "TicketContext.Resource",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
+        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -433,8 +433,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Tiketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R1K+ncbElkckb3O5NdHU1teN06qfFz8eD/hwMb4p1s6btqxhMEFRL62O+N43JyRbPCbF+pWhy5ENvcByRwqOCA==",
+  "dgSpecHash": "SLeh6CinFCJDOpi9Y+H7fS+ntAAR2b/LlCUkutdXhwMQbgvU90clqR52apD9++T5lvhiET7984MN+asAtDlMlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
+  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

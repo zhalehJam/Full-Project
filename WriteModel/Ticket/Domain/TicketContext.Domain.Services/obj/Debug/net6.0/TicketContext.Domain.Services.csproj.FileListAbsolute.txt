@@ -42,3 +42,5 @@ C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Dom
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Services\obj\Debug\net6.0\refint\TicketContext.Domain.Services.dll
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Services\obj\Debug\net6.0\TicketContext.Domain.Services.pdb
 C:\Users\970086\source\repos\Tiketing\WriteModel\Ticket\Domain\TicketContext.Domain.Services\obj\Debug\net6.0\ref\TicketContext.Domain.Services.dll
+C:\Users\970086\Source\Repos\Ticketing\WriteModel\Ticket\Domain\TicketContext.Domain.Services\bin\Debug\net6.0\TicketContext.Contract.dll
+C:\Users\970086\Source\Repos\Ticketing\WriteModel\Ticket\Domain\TicketContext.Domain.Services\bin\Debug\net6.0\TicketContext.Contract.pdb
