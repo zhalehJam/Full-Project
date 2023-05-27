@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PagedList;
+using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Persons;
 using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
@@ -10,6 +12,7 @@ namespace API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PersonController:ControllerBase
     {
         private readonly IPersonCommandFacade _personCommandFacade;
@@ -42,7 +45,9 @@ namespace API.Controller
         [HttpGet("GetAllPersons")]
         public IList<PersonDto> GetAllPersons()
         {
-           return _personQueryFacade.GetAllPersons();
+
+            var identity = User.Identity as ClaimsIdentity;
+            return _personQueryFacade.GetAllPersons();
         }
 
         [HttpGet("GetPersonById")]

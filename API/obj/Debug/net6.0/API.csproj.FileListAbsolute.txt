@@ -201,3 +201,7 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityServer4.AccessTokenValidation.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
