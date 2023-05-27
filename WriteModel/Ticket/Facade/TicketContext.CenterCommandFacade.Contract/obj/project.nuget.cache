@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "z3bJx7wVjGEsJ+XHaYjABIaxR2tjqhTtP20brl7zXc8CngPVgveZVgUcTv8WLTbG6dzrHYSSWJ5QYxC4iCgjMw==",
+  "dgSpecHash": "9PoQhgqTqVKVAEc386NEQ6mrgpjCBMVLDxepDJZgoG2/wVnkYRFECnbvCRdf8bzIodS/pySWkYVQ1G8Xe6LYbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Tiketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
   "expectedPackageFiles": [

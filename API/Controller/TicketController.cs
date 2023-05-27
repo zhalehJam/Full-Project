@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PagedList;
+using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Tickets;
 using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
@@ -10,6 +12,8 @@ namespace API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class TicketController : ControllerBase
     {
         private readonly ITicketCommandFacade _ticketCommandFacade;
@@ -45,6 +49,8 @@ namespace API.Controller
         [HttpGet("GetAllTicketsByPage")]
         public PagedList<TicketDto> GetAllTicketsByPage([FromQuery] PageParametr parameters)
         {
+
+            var identity = User.Identity as ClaimsIdentity;
             return _ticketQueryFacade.GetAllTicketsByPage(pageParametrs: parameters);
         }
         [HttpGet("GetTicketById")]

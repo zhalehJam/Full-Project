@@ -16,6 +16,9 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\API.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -24,6 +27,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.EntityFrame
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -44,6 +48,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.VisualStudi
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\NuGet.Frameworks.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\PagedList.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Scrutor.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -134,7 +139,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\runtimes\win\lib\netc
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.ApplicationService.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.AssemblyHelper.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Core.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\framework.DependencyInjection.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.DependencyInjection.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Domain.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Facade.dll
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Persistence.dll
@@ -170,7 +175,7 @@ C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Resourc
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\TicketContext.Configuration.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.ApplicationService.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Core.pdb
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\framework.DependencyInjection.pdb
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.DependencyInjection.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Domain.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Facade.pdb
 C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Framework.Persistence.pdb
@@ -182,6 +187,11 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.AssemblyInfo.cs
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets\msbuild.build.API.props
+C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.API.props
+C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\scopedcss\bundle\API.styles.css
@@ -191,8 +201,7 @@ C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\refint\API.dll
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.pdb
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\970086\source\repos\Tiketing\API\obj\Debug\net6.0\ref\API.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Contracts.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Scrutor.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\IdentityServer4.AccessTokenValidation.dll
+C:\Users\970086\source\repos\Tiketing\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
