@@ -32,11 +32,11 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                 PersonName = n.Name,
                 PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                .Select(m => m.PartName)
-                                               .FirstOrDefault()
+                                               .First()
                                                .ToString(),
                 CenterName = _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
                                                    .Select(m => m.CenterName)
-                                                   .FirstOrDefault()
+                                                   .First()
                                                    .ToString()
             }).ToList();
             return personDtos;
@@ -61,15 +61,28 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                              PersonName = n.Name,
                              PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                             .Select(m => m.PartName)
-                                                            .FirstOrDefault()
+                                                            .First()
                                                             .ToString(),
                              CenterName = _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
                                                                 .Select(m => m.CenterName)
-                                                                .FirstOrDefault()
+                                                                .First()
                                                                 .ToString()
-                         }).FirstOrDefault();
+                         }).FirstOrDefault()?? new PersonDto();
 
             return personDtos;
+        }
+
+        public PersonDto GetPersonInfoByPersonelCode(int personnelCode)
+        {
+            return _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => new PersonDto()
+            {
+                Id = n.Id,
+                PersonID = n.PersonID,
+                PartId = n.PartId,
+                CenterName = _ticketContext.Centers.Single(c => c.Id == (_ticketContext.Parts.Single(p => p.Id == n.PartId).Center)).CenterName,
+                PartName = _ticketContext.Parts.Single(p => p.Id == n.PartId).PartName,
+                PersonName = n.Name
+            }).First();
         }
     }
 }

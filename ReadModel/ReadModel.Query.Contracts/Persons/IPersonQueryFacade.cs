@@ -10,6 +10,7 @@ namespace TicketContext.ReadModel.Query.Contracts.Persons
         List<PersonDto> GetAllPersons();
         PersonDto GetPersonById(Guid Id);
         PagedList<PersonDto> GetAllPersonsByPage(PageParametr centerQueryParameter);
+        PersonDto GetPersonInfoByPersonelCode(int personnelCode);
 
     }
 }

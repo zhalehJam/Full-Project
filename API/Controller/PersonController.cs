@@ -61,5 +61,10 @@ namespace API.Controller
         {
             return _personQueryFacade.GetAllPersonsByPage(pageParametr);
         }
+        [HttpGet("GetPersonInfoByPersonelCode")]
+        public PersonDto GetPersonInfoByPersonelCode(int personnelCode)
+        {
+            return _personQueryFacade.GetPersonInfoByPersonelCode(personnelCode);
+        }
     }
 }
