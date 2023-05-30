@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TicketContext.ApplicationService.Contract.Program;
 using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.Programs;
@@ -8,6 +9,8 @@ namespace API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class ProgramController : ControllerBase
     {
         private readonly IProgramCommandFacade _programCommandFacade;
@@ -55,6 +58,10 @@ namespace API.Controller
         public ProgramDto GetProgramById([FromQuery] Guid Id)
         {
             return _programQueryFacade.GetProgramById(Id);
+        }
+        [HttpGet("GetSupporterProgramsList")]
+        public List<ProgramDto> GetSupporterProgramsList(int supporterCode) {
+            return _programQueryFacade.GetSupporterProgramsList(supporterCode);
         }
     }
 }

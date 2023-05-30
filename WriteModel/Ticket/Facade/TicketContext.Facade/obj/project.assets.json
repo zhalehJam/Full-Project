@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "MediatR/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -46,7 +46,7 @@
       },
       "Framework.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "MediatR": "11.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
@@ -60,7 +60,7 @@
       },
       "Framework.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/Framework.Domain.dll": {}
         },
@@ -70,7 +70,7 @@
       },
       "Framework.Facade/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0"
         },
@@ -83,7 +83,7 @@
       },
       "TicketContext.ApplicationService.Contract/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "MediatR": "11.1.0",
@@ -108,7 +108,7 @@
       },
       "TicketContext.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "Framework.Domain": "1.0.0",
@@ -124,7 +124,7 @@
       },
       "TicketContext.Facade.Contract/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "TicketContext.ApplicationService.Contract": "1.0.0"
         },
@@ -137,7 +137,7 @@
       },
       "TicketContext.Resource/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Domain": "1.0.0"
         },
@@ -243,7 +243,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Framework.Facade >= 1.0.0",
       "TicketContext.Facade.Contract >= 1.0.0"
     ]
@@ -255,11 +255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
       "projectName": "TicketContext.Facade",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -269,7 +269,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -277,14 +277,14 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
             }
           }
         }
@@ -296,8 +296,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",

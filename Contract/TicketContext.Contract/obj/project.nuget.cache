@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKFr7bbiSnYdWR78Y57qQToy2nwcqVEvS98j1DifDSaGObPMH2H4gvNPQEIXTxm3iM3nca2GgQsq50hJF0SNOQ==",
+  "dgSpecHash": "25tZarbwJ/BBTYFDY0imhkns+DDkHUlK1PPwLru0edNcgHQPllXwQRxr2ZgF7VuqDcirhVTvSqbrqzF1bTAwNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

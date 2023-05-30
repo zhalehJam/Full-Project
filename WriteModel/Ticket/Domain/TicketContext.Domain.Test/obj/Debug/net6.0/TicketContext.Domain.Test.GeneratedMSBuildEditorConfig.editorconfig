@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TicketContext.Domain.Test
-build_property.ProjectDir = C:\Users\970086\Source\Repos\Ticketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\
+build_property.ProjectDir = C:\Users\970086\source\repos\Ticketing\WriteModel\Ticket\Domain\TicketContext.Domain.Test\

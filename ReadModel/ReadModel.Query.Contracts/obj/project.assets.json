@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "MediatR/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -44,22 +44,9 @@
           }
         }
       },
-      "PagedList/1.17.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/PagedList.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40/PagedList.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Framework.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "MediatR": "11.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
@@ -69,6 +56,16 @@
         },
         "runtime": {
           "bin/placeholder/Framework.Core.dll": {}
+        }
+      },
+      "ReadModel.Pagination/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ReadModel.Pagination.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ReadModel.Pagination.dll": {}
         }
       },
       "TicketContext.Contract/1.0.0": {
@@ -134,23 +131,15 @@
         "version.txt"
       ]
     },
-    "PagedList/1.17.0": {
-      "sha512": "Ou6F3WKXh49hOo0TxWM+SkIGuKllYPuPPvnSYOlQ1sTrtuEyuDUhYbSJd5Sdb06i/sWUJZTjiUecEs3Ht/Hx3g==",
-      "type": "package",
-      "path": "pagedlist/1.17.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/PagedList.dll",
-        "lib/net40/PagedList.xml",
-        "pagedlist.1.17.0.nupkg.sha512",
-        "pagedlist.nuspec"
-      ]
-    },
     "Framework.Core/1.0.0": {
       "type": "project",
       "path": "../../Framework/Framework.Core/Framework.Core.csproj",
       "msbuildProject": "../../Framework/Framework.Core/Framework.Core.csproj"
+    },
+    "ReadModel.Pagination/1.0.0": {
+      "type": "project",
+      "path": "../ReadModel.Pagination/ReadModel.Pagination.csproj",
+      "msbuildProject": "../ReadModel.Pagination/ReadModel.Pagination.csproj"
     },
     "TicketContext.Contract/1.0.0": {
       "type": "project",
@@ -159,9 +148,9 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Framework.Core >= 1.0.0",
-      "PagedList >= 1.17.0",
+      "ReadModel.Pagination >= 1.0.0",
       "TicketContext.Contract >= 1.0.0"
     ]
   },
@@ -172,11 +161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
       "projectName": "TicketContext.ReadModel.Query.Contracts",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -186,7 +175,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -194,14 +183,17 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            },
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj"
             }
           }
         }
@@ -213,14 +205,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
-        "dependencies": {
-          "PagedList": {
-            "target": "Package",
-            "version": "[1.17.0, )"
-          }
-        },
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
@@ -240,17 +226,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "PagedList",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

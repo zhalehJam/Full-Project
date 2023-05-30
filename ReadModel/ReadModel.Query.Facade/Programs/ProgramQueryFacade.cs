@@ -12,11 +12,11 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
 {
     public class ProgramQueryFacade : IProgramQueryFacade
     {
-        private readonly TicketingContext _ticketContext; 
+        private readonly TicketingContext _ticketContext;
 
-        public ProgramQueryFacade(TicketingContext ticketContext )
+        public ProgramQueryFacade(TicketingContext ticketContext)
         {
-            _ticketContext = ticketContext; 
+            _ticketContext = ticketContext;
         }
         public List<ProgramDto> GetAllPrograms()
         {
@@ -34,7 +34,7 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
                     SupporterpersonID = m.SupporterpersonID,
                     SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterpersonID)
                                                           .Select(p => p.Name)
-                                                          .FirstOrDefault()
+                                                          .First()
                 }).ToList()
             }).ToList();
             return programDtos;
@@ -57,10 +57,29 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
                         SupporterpersonID = m.SupporterpersonID,
                         SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterpersonID)
                                                               .Select(p => p.Name)
-                                                              .FirstOrDefault()
+                                                              .First()
                     }).ToList()
-                }).FirstOrDefault();
+                }).First();
             return programDtos;
+        }
+
+        public List<ProgramDto> GetSupporterProgramsList(int supporterCode)
+        {
+            return _ticketContext.Programs.Where(p => p.Supporters.Any(s => s.SupporterpersonID == supporterCode)).Select(p => new ProgramDto()
+            {
+                Id = p.Id,
+                Supporters = p.Supporters.Select(s => new ProgramSupporterDto()
+                {
+                    Id = s.Id,
+                    ProgramId = s.Program,
+                    ProgramName = p.ProgramName,
+                    SupporterName = _ticketContext.Persons.Single(pr => pr.PersonID == s.SupporterpersonID).Name,
+                    SupporterpersonID = s.SupporterpersonID
+                }).ToList(),
+                ProgamName = p.ProgramName,
+                ProgramLink = p.ProgramLink
+
+            }).ToList();
         }
     }
 }

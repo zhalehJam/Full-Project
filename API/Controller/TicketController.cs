@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PagedList;
+using ReadModel.Pagination;
 using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Tickets;
 using TicketContext.Facade.Contract;

@@ -1,6 +1,6 @@
 ﻿//using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PagedList;
+using ReadModel.Pagination;
 using ReadModel.Query.Contracts.Centers;
 using ReadModel.Query.Contracts.Centers.DataContracts;
 using System.Security.Claims;

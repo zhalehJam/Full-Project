@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "spq9pGFY4pCo33Mv3UjnClJKapcFg3oRf4Lp0JL/9xiVgi64EwoL417THMRGuguQZozqNT8fJXWK1pm3d89ECg==",
+  "dgSpecHash": "8Camzd0D2x7TEgiiT3XlmLYBGiAoGexZovT92O7UXvYnhoUb8rZbtblXOHh64VwMzAwYjKKSjBw9SuZK4CMAQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

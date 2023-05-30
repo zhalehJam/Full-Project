@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "MediatR/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -194,7 +194,7 @@
       },
       "Framework.ApplicationService/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "MediatR": "11.1.0"
@@ -208,7 +208,7 @@
       },
       "Framework.AssemblyHelper/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0"
         },
@@ -221,7 +221,7 @@
       },
       "Framework.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "MediatR": "11.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
@@ -235,7 +235,7 @@
       },
       "Framework.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/Framework.Domain.dll": {}
         },
@@ -245,7 +245,7 @@
       },
       "TicketContext.ApplicationService.Contract/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "MediatR": "11.1.0",
@@ -270,7 +270,7 @@
       },
       "TicketContext.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Core": "1.0.0",
           "Framework.Domain": "1.0.0",
@@ -286,7 +286,7 @@
       },
       "TicketContext.Resource/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Framework.Domain": "1.0.0"
         },
@@ -636,7 +636,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Framework.ApplicationService >= 1.0.0",
       "Framework.AssemblyHelper >= 1.0.0",
       "Framework.Core >= 1.0.0",
@@ -653,11 +653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
       "projectName": "Framework.DependencyInjection",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\framework.DependencyInjection\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\framework.DependencyInjection\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -667,7 +667,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -675,20 +675,20 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.ApplicationService\\Framework.ApplicationService.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             },
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj"
             }
           }
         }
@@ -700,8 +700,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",

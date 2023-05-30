@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using PagedList;
 using ReadModel.Context.Model;
+using ReadModel.Pagination;
 using ReadModel.Query.Contracts.Centers;
 using ReadModel.Query.Contracts.Centers.DataContracts;
 using System;
@@ -118,9 +118,9 @@ namespace TicketContext.ReadModel.Query.Facade.Centers
 
         public PagedList<CenterDto> GetCentersByPage(PageParametr centerQueryParameter)
         {
-            PagedList<CenterDto> centerDtos = new PagedList<CenterDto>(GetCenters(), centerQueryParameter.PageNumber, centerQueryParameter.PageSize);
+           return PagedList<CenterDto>.ToPagedList(GetCenters(), centerQueryParameter.PageNumber, centerQueryParameter.PageSize);
 
-            return centerDtos;
+            
             //throw new NotImplementedException();
         }
     }
