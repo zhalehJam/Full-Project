@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SLeh6CinFCJDOpi9Y+H7fS+ntAAR2b/LlCUkutdXhwMQbgvU90clqR52apD9++T5lvhiET7984MN+asAtDlMlQ==",
+  "dgSpecHash": "BCiP9FMXU6WvrGYxoNSGu3bn6WkE24Qcaut1ms7mzI+tO7TDH+Iwcn4vZ0znzAKUGcwY9c7wLhur7mXAYkawFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
@@ -32,7 +32,6 @@
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
@@ -48,16 +47,5 @@
     "C:\\Users\\970086\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "PagedList",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

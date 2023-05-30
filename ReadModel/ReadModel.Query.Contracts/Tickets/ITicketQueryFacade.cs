@@ -1,10 +1,5 @@
 ﻿using Framework.Core.Facade;
-using PagedList;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ReadModel.Pagination;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Tickets.DataContracts;
 

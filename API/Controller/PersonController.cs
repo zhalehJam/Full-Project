@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PagedList;
+using ReadModel.Pagination;
 using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Persons;
 using TicketContext.Facade.Contract;
@@ -43,9 +43,8 @@ namespace API.Controller
         }
 
         [HttpGet("GetAllPersons")]
-        public IList<PersonDto> GetAllPersons()
+        public List<PersonDto> GetAllPersons()
         {
-
             var identity = User.Identity as ClaimsIdentity;
             return _personQueryFacade.GetAllPersons();
         }

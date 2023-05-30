@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Que
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Query.Facade", "ReadModel\ReadModel.Query.Facade\TicketContext.ReadModel.Query.Facade.csproj", "{057FD828-F659-48E4-A877-CAD419386050}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadModel.Pagination", "ReadModel\ReadModel.Pagination\ReadModel.Pagination.csproj", "{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,6 +171,10 @@ Global
 		{057FD828-F659-48E4-A877-CAD419386050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{057FD828-F659-48E4-A877-CAD419386050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{057FD828-F659-48E4-A877-CAD419386050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +209,7 @@ Global
 		{8FA2650B-F94D-49B7-8666-30AAFA3096EB} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
 		{63C222BB-CA50-48E4-B374-9C0403F75D56} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
 		{057FD828-F659-48E4-A877-CAD419386050} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
+		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC} = {69434057-E4CA-4430-8F16-DA5DD3BB8CB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A3EAE68-FEC1-4675-B297-B05334E0070D}

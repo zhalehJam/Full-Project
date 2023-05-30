@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BXTw2Lfotzvafwttk0Jznw5rzHrHkgbagMtCdGjRI4v7SYgn4MpSnTlXDJe3GbKT47L9eXVShmk9t7p1/eKWLQ==",
+  "dgSpecHash": "3ZxdgwFfpn+gVODX7ZAOty3tcqFsszv6fivf2/BFXvCfrrc85c6NNAFL4jX07bkdzopVRWXlxSB46WTqsyt6uQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

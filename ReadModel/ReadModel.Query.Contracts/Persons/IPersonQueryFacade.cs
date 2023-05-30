@@ -1,5 +1,5 @@
 ﻿using Framework.Core.Facade;
-using PagedList;
+using ReadModel.Pagination;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
 

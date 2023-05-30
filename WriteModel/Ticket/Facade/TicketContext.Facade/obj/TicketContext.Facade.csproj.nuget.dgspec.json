@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj": {}
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "projectName": "TicketContext.Contract",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "projectName": "Framework.Core",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -80,7 +80,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -88,8 +88,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -100,8 +100,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "MediatR": {
               "target": "Package",
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
         "projectName": "Framework.Domain",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -149,7 +149,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -157,8 +157,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -169,8 +169,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -191,14 +191,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj",
         "projectName": "Framework.Facade",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -208,7 +208,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -216,11 +216,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               }
             }
           }
@@ -232,8 +232,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -254,14 +254,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
         "projectName": "TicketContext.ApplicationService.Contract",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -271,7 +271,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -279,14 +279,14 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
               }
             }
           }
@@ -298,8 +298,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "MediatR": {
               "target": "Package",
@@ -326,14 +326,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
         "projectName": "TicketContext.Domain",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -343,7 +343,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -351,20 +351,20 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               },
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               },
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
               }
             }
           }
@@ -376,8 +376,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -398,14 +398,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
         "projectName": "TicketContext.Facade.Contract",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -415,7 +415,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -423,11 +423,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj"
               }
             }
           }
@@ -439,8 +439,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -461,14 +461,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
         "projectName": "TicketContext.Facade",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\TicketContext.Facade.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.Facade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -478,7 +478,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -486,14 +486,14 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Facade\\Framework.Facade.csproj"
               },
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Facade\\TicketContext.CenterCommandFacade.Contract\\TicketContext.Facade.Contract.csproj"
               }
             }
           }
@@ -505,8 +505,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -527,14 +527,14 @@
         }
       }
     },
-    "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
         "projectName": "TicketContext.Resource",
-        "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -544,7 +544,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -552,11 +552,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               }
             }
           }
@@ -568,8 +568,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",

@@ -1,24 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RUGwkF7NGcM9t80DScs7cj5HLLbvlRQu90G0r8ZqCXJcIGykSiYGb42aWUSMvMocXL6AsAVkYAWJhVvqO2T3hQ==",
+  "dgSpecHash": "fkt5P8OFZidS77J6K8Y0D+QJZzI6i27y7XRV3hvsFMSbP+JL1UWDlzX8q9FkgE6INYflpJPXWqYrG47xgO64LQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512"
+    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "PagedList",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

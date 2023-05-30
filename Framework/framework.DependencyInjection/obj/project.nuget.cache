@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bb05RLaTKkdGXXWPzjaqJDlV17zFp4DRSY3G5GNXhg5xy+odAPJXKPPu7CGO8kjnKe0KkzCznAP4xtZRnWlbgA==",
+  "dgSpecHash": "j+W6ScK9MobPSMZuKn8fRDuxXKQjpre/V4z+kE1MRJk98sA/Kf1Hou1QmYNR8AhkiW8w4vokO0Grt9WM2tenXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
+  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\framework.DependencyInjection\\Framework.DependencyInjection.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

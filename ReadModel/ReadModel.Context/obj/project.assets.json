@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1920,7 +1920,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
       "TicketContext.Contract >= 1.0.0"
@@ -1933,11 +1933,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
       "projectName": "TicketContext.ReadModel.Context",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1947,7 +1947,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1955,11 +1955,11 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
             }
           }
         }
@@ -1971,8 +1971,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

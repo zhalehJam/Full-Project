@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using PagedList;
 using ReadModel.Context.Model;
+using ReadModel.Pagination;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,8 +44,8 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 
         public PagedList<PersonDto> GetAllPersonsByPage(PageParametr pageparameters)
         {
-            PagedList<PersonDto> personDtos = new PagedList<PersonDto>(GetAllPersons(), pageparameters.PageNumber, pageparameters.PageSize);
-            return personDtos;
+            return PagedList<PersonDto>.ToPagedList(GetAllPersons().OrderBy(p=>p.PersonName), pageparameters.PageNumber, pageparameters.PageSize);
+          
         }
         public PersonDto GetPersonById(Guid Id)
         {

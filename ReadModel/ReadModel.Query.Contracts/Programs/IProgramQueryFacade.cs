@@ -12,6 +12,6 @@ namespace TicketContext.ReadModel.Query.Contracts.Programs
     {
         List<ProgramDto> GetAllPrograms();
         ProgramDto GetProgramById(Guid id);
-
+        List<ProgramDto> GetSupporterProgramsList(int supporterCode);
     }
 }

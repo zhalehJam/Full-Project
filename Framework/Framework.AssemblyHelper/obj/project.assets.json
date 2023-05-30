@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "MediatR/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -46,7 +46,7 @@
       },
       "Framework.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "MediatR": "11.1.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
@@ -118,7 +118,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Framework.Core >= 1.0.0"
     ]
   },
@@ -129,11 +129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
+      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
       "projectName": "Framework.AssemblyHelper",
-      "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
+      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\Framework.AssemblyHelper.csproj",
       "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\obj\\",
+      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.AssemblyHelper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -143,7 +143,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -151,11 +151,11 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-              "projectPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
             }
           }
         }
@@ -167,8 +167,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",

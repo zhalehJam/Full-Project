@@ -1,5 +1,6 @@
 ﻿using Framework.Core.Facade;
-using PagedList;
+
+using ReadModel.Pagination;
 using ReadModel.Query.Contracts.Centers.DataContracts;
 using System;
 using System.Collections.Generic;
