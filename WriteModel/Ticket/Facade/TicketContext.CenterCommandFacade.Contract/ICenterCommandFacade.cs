@@ -5,9 +5,9 @@ namespace TicketContext.Facade.Contract
     public interface ICenterCommandFacade
     {
         Task<Guid> CreateCenter(CreateCenterCommand createCenterCommand);
-        void AddPart(AddPartCommand addPartCommand);
-        void DeletePart(DeletePartCommand deletePartCommand);
-        void DeleteCenter(DeleteCenterCommand deleteCenterCommand); 
-        void EditCenter(EditCenterCommand editCenterCommand);
+        Task AddPart(AddPartCommand addPartCommand);
+        Task DeletePart(DeletePartCommand deletePartCommand);
+        Task DeleteCenter(DeleteCenterCommand deleteCenterCommand);
+        Task EditCenter(EditCenterCommand editCenterCommand);
     }
 }
