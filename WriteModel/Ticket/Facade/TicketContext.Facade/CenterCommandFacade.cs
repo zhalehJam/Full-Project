@@ -16,10 +16,12 @@ namespace TicketContext.Facade
         //{
         //}
 
-        public async void AddPart(AddPartCommand addPartCommand)
+        public async Task AddPart(AddPartCommand addPartCommand)
         {
             //_commandBus.Dispatch(addPartCommand);
-           // var e = await _mediator.Send(addPartCommand);
+            // var e = await _mediator.Send(addPartCommand);
+            var t =  await _mediatorCommand.Send<AddPartCommand,Guid>(addPartCommand);
+
         }
 
         public async Task<Guid> CreateCenter(CreateCenterCommand createCenterCommand) 
@@ -27,18 +29,17 @@ namespace TicketContext.Facade
             return await _mediatorCommand.Send<CreateCenterCommand,Guid>(createCenterCommand); 
         }
 
-        public void DeleteCenter(DeleteCenterCommand deleteCenterCommand)
+        public async Task DeleteCenter(DeleteCenterCommand deleteCenterCommand)
         {
             //_commandBus.Dispatch(deleteCenterCommand);
         }
 
-        public void DeletePart(DeletePartCommand deletePartCommand)
+        public async Task DeletePart(DeletePartCommand deletePartCommand)
         {
-            //_commandBus.Dispatch(deletePartCommand);
-
+            var t = await _mediatorCommand.Send<DeletePartCommand, Guid>(deletePartCommand);  
         }
 
-        public void EditCenter(EditCenterCommand editCenterCommand)
+        public async Task EditCenter(EditCenterCommand editCenterCommand)
         {
             //_commandBus.Dispatch(editCenterCommand);
         }
