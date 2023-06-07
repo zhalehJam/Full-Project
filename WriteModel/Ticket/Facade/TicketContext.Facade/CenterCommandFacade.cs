@@ -31,7 +31,8 @@ namespace TicketContext.Facade
 
         public async Task DeleteCenter(DeleteCenterCommand deleteCenterCommand)
         {
-            //_commandBus.Dispatch(deleteCenterCommand);
+            var t = await _mediatorCommand.Send<DeleteCenterCommand, Guid>(deleteCenterCommand);
+
         }
 
         public async Task DeletePart(DeletePartCommand deletePartCommand)
