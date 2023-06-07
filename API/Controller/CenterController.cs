@@ -1,4 +1,5 @@
 ﻿//using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ReadModel.Pagination;
 using ReadModel.Query.Contracts.Centers;
@@ -13,6 +14,8 @@ namespace API.Controller
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+
     public class CenterController : ControllerBase
     {
         private readonly ICenterCommandFacade _centerCommandFacade;
@@ -36,15 +39,15 @@ namespace API.Controller
             return await _centerCommandFacade.CreateCenter(createCenterCommand);
         }
         [HttpPut("AddPart")]
-        public void AddPart(AddPartCommand addPartCommand)
+        public async Task AddPart(AddPartCommand addPartCommand)
         {
-            _centerCommandFacade.AddPart(addPartCommand);
+            await _centerCommandFacade.AddPart(addPartCommand);
         }
 
         [HttpPut("DeletePart")]
-        public void DeletePart(DeletePartCommand deletePartCommand)
+        public async Task DeletePart(DeletePartCommand deletePartCommand)
         {
-            _centerCommandFacade.DeletePart(deletePartCommand);
+           await _centerCommandFacade.DeletePart(deletePartCommand);
         }
 
         [HttpGet("GetAllCenters")]
@@ -70,15 +73,15 @@ namespace API.Controller
         }
 
         [HttpDelete]
-        public void DeletCenter(DeleteCenterCommand deleteCenterCommand)
+        public async Task DeletCenter(DeleteCenterCommand deleteCenterCommand)
         {
-            _centerCommandFacade.DeleteCenter(deleteCenterCommand);
+           await _centerCommandFacade.DeleteCenter(deleteCenterCommand);
         }
 
         [HttpPut("EditCenterName")]
-        public void EditCenter(EditCenterCommand editCenterCommand)
+        public async Task EditCenter(EditCenterCommand editCenterCommand)
         {
-            _centerCommandFacade.EditCenter(editCenterCommand);
+           await _centerCommandFacade.EditCenter(editCenterCommand);
         }
 
     }
