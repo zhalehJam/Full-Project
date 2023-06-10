@@ -58,5 +58,12 @@ namespace API.Controller
         {
             return _ticketQueryFacade.GetTicketById(Id);
         }
+
+        [HttpGet("GetUserTicketsByDateRage")]
+        public List<TicketDto> GetUserTicketsByDateRage(DateTime fromDate, DateTime toDate)
+        {
+            var identity = User.Identity as ClaimsIdentity;
+            return _ticketQueryFacade.GetUserTicketsByDateRage(Convert.ToInt32(identity.Name), fromDate, toDate);
+        }
     }
 }

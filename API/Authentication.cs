@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using IdentityModel;
+using Microsoft.IdentityModel.Tokens;
 
 namespace API
 {
@@ -13,7 +14,7 @@ namespace API
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateAudience = false,
-                        NameClaimType = "name"
+                        NameClaimType = JwtClaimTypes.Name,
                     };
                     options.RequireHttpsMetadata = false;
                 });
@@ -22,7 +23,7 @@ namespace API
                 options.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", "Ticketing.API", "Ticketing_Identity_Resource");
+                    policy.RequireClaim("scope", "Ticketing.API", "Ticketing_Identity_Resource" , "Ticketing_API_Resource");
                 });
             });
         }
