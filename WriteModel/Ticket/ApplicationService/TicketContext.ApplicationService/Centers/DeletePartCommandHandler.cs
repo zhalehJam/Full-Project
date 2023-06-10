@@ -16,14 +16,7 @@ namespace TicketContext.ApplicationService.Centers
         {
             _centerRepository = centerRepository;
             _partIDUsedChecker = partIDUsedChecker;
-        }
-        public void Execute(DeletePartCommand command)
-        {
-            Center center = _centerRepository.GetByID(command.CenterId);
-            center.DeletePart(_partIDUsedChecker,command.PartID);
-            _centerRepository.Update(center);
-        }
-
+        }  
         public Task<Guid> Handle(DeletePartCommand request, CancellationToken cancellationToken)
         {
             Center center = _centerRepository.GetByID(request.CenterId);

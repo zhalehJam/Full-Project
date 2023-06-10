@@ -30,14 +30,14 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                 PartId = n.PartId,
                 PersonID = n.PersonID,
                 PersonName = n.Name,
-                PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
+                PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count()>0? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                .Select(m => m.PartName)
                                                .First()
-                                               .ToString(),
-                CenterName = _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
+                                               .ToString() : "",
+                CenterName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count() > 0 ? _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
                                                    .Select(m => m.CenterName)
                                                    .First()
-                                                   .ToString()
+                                                   .ToString() : ""
             }).ToList();
             return personDtos;
         }

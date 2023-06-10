@@ -21,7 +21,7 @@ namespace TicketContext.Domain.Services
             List<Guid> partids = new List<Guid>();
             partids = _centerRepository.GetByID(Id).Parts.Select(x => x.Id).ToList();
             //var t = _ticketRepository.IsExist(n => partids.Contains(n.PersonPartId));
-            return _personRepository.IsExist(n => partids.Contains(n.Id))
+            return _personRepository.IsExist(n => partids.Contains(n.PartId))
             ||
                 _ticketRepository.IsExist(n => partids.Contains(n.PersonPartId));
         }
