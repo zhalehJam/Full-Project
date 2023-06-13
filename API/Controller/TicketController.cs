@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ReadModel.Pagination;
 using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Tickets;
@@ -57,6 +58,16 @@ namespace API.Controller
         public TicketDto GetTicketById([FromQuery] Guid Id)
         {
             return _ticketQueryFacade.GetTicketById(Id);
+        }
+
+        [HttpGet("GetUserTicketsByDateRage")]
+        public IActionResult GetUserTicketsByDateRage([FromQuery] TicketQueryParameters parameters)
+        {
+            var identity = User.Identity as ClaimsIdentity;
+            var tickets = _ticketQueryFacade.GetUserTicketsByDateRage(Convert.ToInt32(identity.Name), parameters);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(tickets.MetaData));
+            return Ok(tickets);
+
         }
     }
 }

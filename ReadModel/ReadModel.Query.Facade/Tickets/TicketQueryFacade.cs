@@ -1,4 +1,4 @@
-﻿  
+﻿
 using ReadModel.Context.Model;
 using ReadModel.Pagination;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
@@ -9,7 +9,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
 {
     public class TicketQueryFacade : ITicketQueryFacade
     {
-        private readonly TicketingContext? _ticketContext;
+        private readonly TicketingContext _ticketContext;
 
         public TicketQueryFacade(TicketingContext ticketContext)
         {
@@ -144,6 +144,52 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
 
             }).First();
             return ticketDtos;
+        }
+
+        public PagedList<TicketDto> GetUserTicketsByDateRage(int personID, TicketQueryParameters parameters)
+        {
+            var tickets=  _ticketContext.Ticket.Where(t =>
+            t.SupporterPersonID == personID &&
+            t.TicketTime.Date >= parameters.fromDate && t.TicketTime <= parameters.toDate).
+                Select(n => new TicketDto()
+                {
+                    Id = n.Id,
+                    PersonID = n.PersonID,
+                    PersonName = _ticketContext.Persons.Where(m => m.PersonID == n.PersonID)
+                                                  .Select(m => m.Name)
+                                                  .First(),
+                    PersonPartId = n.PersonPartId,
+                    PersonPartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PersonPartId))
+                                                   .Select(m => m.PartName)
+                                                   .First(),
+                    PersonCenterId = _ticketContext.Parts.Where(m => m.Id.Equals(n.PersonPartId))
+                                                  .Select(m => m.Center)
+                                                  .FirstOrDefault(),
+                    PersonCenterName = _ticketContext.Centers.Where(m => m.Id.Equals(_ticketContext.Parts.Where(m => m.Id.Equals(n.PersonPartId))
+                                                                                                         .Select(m => m.Center)
+                                                                                                         .First()))
+                                                      .Select(m => m.CenterName)
+                                                      .First(),
+                    ProgramId = n.ProgramId,
+                    ProgramName = _ticketContext.Programs.Where(m => m.Id.Equals(n.ProgramId))
+                                                    .Select(m => m.ProgramName)
+                                                    .First(),
+                    ErrorTypeid = Convert.ToInt16(n.ErrorType),
+                    ErrorTypeName = n.ErrorType.ToString(),
+                    ErrorDescription = n.ErrorDiscription,
+                    SolutionDescription = n.SolutionDiscription,
+                    Typeid = Convert.ToInt16(n.Type),
+                    TicketTypeName = n.Type.ToString(),
+                    TicketTime = n.TicketTime,
+                    TicketConditionid = Convert.ToInt16(n.TicketCondition),
+                    TicketConditionTypeName = n.TicketCondition.ToString(),
+                    SupporterPersonID = n.SupporterPersonID,
+                    SupporterPersonName = _ticketContext.Persons.Where(m => m.PersonID == n.SupporterPersonID)
+                                                         .Select(m => m.Name)
+                                                         .First()
+
+                }).ToList();
+           return PagedList<TicketDto>.ToPagedList(tickets.OrderBy(t => t.TicketTime), parameters.PageNumber, parameters.PageSize);
         }
     }
 }

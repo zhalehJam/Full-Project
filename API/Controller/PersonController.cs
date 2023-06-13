@@ -7,6 +7,7 @@ using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Persons;
 using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
+using TicketContext.ReadModel.Query.Contracts.Programs.DataContracts;
 
 namespace API.Controller
 {
@@ -65,5 +66,6 @@ namespace API.Controller
         {
             return _personQueryFacade.GetPersonInfoByPersonelCode(personnelCode);
         }
+         
     }
 }

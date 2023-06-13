@@ -78,7 +78,8 @@ namespace API
                     .AllowAnyMethod()
                     .AllowCredentials()
                     .SetIsOriginAllowed((host) => true)
-                    .AllowAnyHeader());
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("X-Pagination"));
             });
 
 

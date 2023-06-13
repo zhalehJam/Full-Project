@@ -10,5 +10,6 @@ namespace TicketContext.ReadModel.Query.Contracts.Tickets
         List<TicketDto> GetAllTickets();
         TicketDto GetTicketById(Guid Id);
         PagedList<TicketDto> GetAllTicketsByPage(PageParametr pageParametrs);
+        PagedList<TicketDto> GetUserTicketsByDateRage(int personID, TicketQueryParameters parameters);
     }
 }
