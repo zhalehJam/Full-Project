@@ -146,11 +146,11 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
             return ticketDtos;
         }
 
-        public List<TicketDto> GetUserTicketsByDateRage(int personID, DateTime fromDate, DateTime toDate)
+        public PagedList<TicketDto> GetUserTicketsByDateRage(int personID, TicketQueryParameters parameters)
         {
-            return _ticketContext.Ticket.Where(t =>
+            var tickets=  _ticketContext.Ticket.Where(t =>
             t.SupporterPersonID == personID &&
-            t.TicketTime.Date >= fromDate && t.TicketTime <= toDate).
+            t.TicketTime.Date >= parameters.fromDate && t.TicketTime <= parameters.toDate).
                 Select(n => new TicketDto()
                 {
                     Id = n.Id,
@@ -189,6 +189,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
                                                          .First()
 
                 }).ToList();
+           return PagedList<TicketDto>.ToPagedList(tickets.OrderBy(t => t.TicketTime), parameters.PageNumber, parameters.PageSize);
         }
     }
 }
