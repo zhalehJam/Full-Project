@@ -123,6 +123,9 @@
   <data name="InvalidPersonIDException" xml:space="preserve">
     <value>کد پرسنلی نامعتبر است.</value>
   </data>
+  <data name="InvalidRoleTypeException" xml:space="preserve">
+    <value>نقش پرسنل صحیح نمباشد.</value>
+  </data>
   <data name="NullOrWhitePersonNameException" xml:space="preserve">
     <value>نام پرسنل نمیتواند خالی یا سفید باشد.</value>
   </data>
