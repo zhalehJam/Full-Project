@@ -19,8 +19,10 @@ namespace TicketContext.ApplicationService.Persons
         public void Execute(UpdatePersonCommand command)
         {
             Person person = _personRepository.GetByID(command.Id);
-            person.UpdatePersonInfo(command.Name, 
-                                    command.PartId, _partIDIsValidChecker);
+            person.UpdatePersonInfo(command.Name,
+                                    command.PartId,
+                                    command.PersonRole,
+                                    _partIDIsValidChecker);
             _personRepository.Update(person);
         }
     }

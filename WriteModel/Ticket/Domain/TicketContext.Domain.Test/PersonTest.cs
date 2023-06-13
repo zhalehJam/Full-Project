@@ -145,10 +145,28 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("PersonRole")]
-        public void SetPersonRole()
+        public void SetPersonRole_retreive()
         {
-            var person = Init(roleType:RoleType.User);
+            var person = Init(roleType: RoleType.User);
             Assert.AreEqual(person.PersonRole, RoleType.User);
+        }
+
+        [TestMethod, TestCategory("UpdatePersonRole")]
+        [ExpectedException(typeof(InvalidRoleTypeException))]
+        public void UpdateUserRole_Exception()
+        {
+            var person = Init(roleType: RoleType.User);
+            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object);
+        }
+
+        [TestMethod, TestCategory("UpdatePersonRole")]
+        public void UpdateUserRole_retreive()
+        {
+            var person = Init(roleType: RoleType.User);
+            person.UpdatePersonInfo(person.Name, person.PartId, RoleType.Admin, _partIDIsValidChecker.Object);
+            Assert.AreEqual(person.PersonRole, RoleType.Admin);
+
+
         }
     }
 }

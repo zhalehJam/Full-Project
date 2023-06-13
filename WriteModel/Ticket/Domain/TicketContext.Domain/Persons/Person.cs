@@ -36,7 +36,7 @@ namespace TicketContext.Domain.Persons
 
         private void SetPerosnRole(RoleType roleType)
         {
-              if(!Enum.IsDefined(typeof(RoleType), roleType))
+            if(!Enum.IsDefined(typeof(RoleType), roleType))
             {
                 throw new InvalidRoleTypeException();
             }
@@ -78,13 +78,14 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName, Guid partId, IPartIDIsValidChecker partIDIsValidChecker)
+        public void UpdatePersonInfo(string personName, Guid partId, RoleType PersonRole, IPartIDIsValidChecker partIDIsValidChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(partId);
-            //SetPersonID(personId);
+            SetPerosnRole(PersonRole);
         }
+
         public void CheckPersonCanDelete(IPersonIDUsedChecker personIDUsedChecker)
         {
             _personIDUsedChecker = personIDUsedChecker;
@@ -95,7 +96,7 @@ namespace TicketContext.Domain.Persons
         public string Name { get; private set; }
         public Int32 PersonID { get; private set; }
         public Guid PartId { get; private set; }
-        public RoleType PersonRole { get; private set; } 
+        public RoleType PersonRole { get; private set; }
 
         public readonly IPersonIDValidationChecker _personIDValidationChecker;
         public IPartIDIsValidChecker _partIDIsValidChecker;
