@@ -59,6 +59,7 @@ namespace ReadModel.Context.Model
                 entity.Property(n => n.PersonID);
                 entity.Property(n => n. Name);
                 entity.Property(n => n.PartId);
+                entity.Property(n => n.PersonRole);
             });
 
             modelBuilder.Entity<Program>(entity =>

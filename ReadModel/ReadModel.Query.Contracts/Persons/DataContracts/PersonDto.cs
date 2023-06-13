@@ -1,4 +1,6 @@
-﻿namespace TicketContext.ReadModel.Query.Contracts.Persons.DataContracts
+﻿using TicketContext.Contract.Persons;
+
+namespace TicketContext.ReadModel.Query.Contracts.Persons.DataContracts
 {
     public class PersonDto
     {
@@ -8,5 +10,6 @@
         public Guid PartId { get; set; }
         public string? PartName { get; set; }
         public string? CenterName { get; set; }
+        public RoleType PersonRole{ get; set; }
     }
 }
