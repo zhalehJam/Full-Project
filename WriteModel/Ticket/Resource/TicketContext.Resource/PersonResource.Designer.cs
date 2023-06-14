@@ -79,6 +79,15 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to نقش پرسنل صحیح نمباشد..
+        /// </summary>
+        public static string InvalidRoleTypeException {
+            get {
+                return ResourceManager.GetString("InvalidRoleTypeException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام پرسنل نمیتواند خالی یا سفید باشد..
         /// </summary>
         public static string NullOrWhitePersonNameException {
@@ -120,6 +129,15 @@ namespace TicketContext.Resource {
         public static string PersonIDIsUsedException {
             get {
                 return ResourceManager.GetString("PersonIDIsUsedException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to پرسنل پشتیبان یک برنامه است..
+        /// </summary>
+        public static string PersonIsProgramSupporterException {
+            get {
+                return ResourceManager.GetString("PersonIsProgramSupporterException", resourceCulture);
             }
         }
     }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketContext.Contract.Persons;
+using TicketContext.Contract.Tickets;
 using TicketContext.Domain.Persons.DomainServices;
 using TicketContext.Domain.Persons.Exceptions;
 
@@ -14,8 +16,8 @@ namespace TicketContext.Domain.Persons
     {
         public Person(string name,
                       Int32 personID,
-                      //Guid centerId,
                       Guid partId,
+                      RoleType roleType,
                       IPersonIDValidationChecker personIDValidationChecker,
                       IPartIDIsValidChecker partIDIsValidChecker,
                       IPersonIDDuplicateChecker persoIDDuplicateChecker,
@@ -29,6 +31,19 @@ namespace TicketContext.Domain.Persons
             SetName(name);
             SetPersonID(personID);
             SetPartID(partId);
+            SetPerosnRole(roleType);
+        }
+
+        private void SetPerosnRole(RoleType roleType)
+        {
+            if(!Enum.IsDefined(typeof(RoleType), roleType))
+            {
+                throw new InvalidRoleTypeException();
+            }
+            if(PersonRole != roleType)
+            {
+            }
+            PersonRole = roleType;
         }
 
         protected Person()
@@ -66,15 +81,20 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName,  Guid partId, IPartIDIsValidChecker partIDIsValidChecker)
+        public void UpdatePersonInfo(string personName, Guid partId, RoleType personRole, IPartIDIsValidChecker partIDIsValidChecker, IPersonIsProgramSuppoerterChecker personIsProgramSuppoerterChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(partId);
-            //SetPersonID(personId);
+            if(personIsProgramSuppoerterChecker.IsSupprter(PersonID) && (personRole!=RoleType.Supporter&&personRole!=RoleType.Admin ))
+            {
+                throw new PersonIsProgramSupporterException();
+            }
+            SetPerosnRole(personRole);
         }
+
         public void CheckPersonCanDelete(IPersonIDUsedChecker personIDUsedChecker)
-        {           
+        {
             _personIDUsedChecker = personIDUsedChecker;
             if(_personIDUsedChecker.IsUsed(PersonID))
                 throw new PersonIDIsUsedException();
@@ -83,11 +103,11 @@ namespace TicketContext.Domain.Persons
         public string Name { get; private set; }
         public Int32 PersonID { get; private set; }
         public Guid PartId { get; private set; }
-        //public Guid CenterId { get; set; }
+        public RoleType PersonRole { get; private set; }
 
         public readonly IPersonIDValidationChecker _personIDValidationChecker;
         public IPartIDIsValidChecker _partIDIsValidChecker;
         private readonly IPersonIDDuplicateChecker _persoIDDuplicateChecker;
-        private  IPersonIDUsedChecker _personIDUsedChecker;
+        private IPersonIDUsedChecker _personIDUsedChecker;
     }
 }

@@ -29,8 +29,8 @@ namespace TicketContext.ApplicationService.Persons
         {
             Person person = new Person(command.Name,
                                        command.PersonID,
-                                       //command.CenterId,
                                        command.PartId,
+                                       command.PersonRoleType,
                                        _personIDValidationChecker,
                                        _partIDIsValidChecker,
                                        _persoIDDuplicateChecker,

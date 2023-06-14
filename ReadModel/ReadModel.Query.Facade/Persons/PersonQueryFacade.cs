@@ -30,22 +30,24 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                 PartId = n.PartId,
                 PersonID = n.PersonID,
                 PersonName = n.Name,
-                PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count()>0? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
+                PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count() > 0 ? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                .Select(m => m.PartName)
                                                .First()
                                                .ToString() : "",
-                CenterName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count() > 0 ? _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
-                                                   .Select(m => m.CenterName)
-                                                   .First()
-                                                   .ToString() : ""
+                CenterName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
+                                                 .Count() > 0 ? _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
+                                                                                      .Select(m => m.CenterName)
+                                                                                      .First()
+                                                                                      .ToString() : "",
+                PersonRole= n.PersonRole
             }).ToList();
             return personDtos;
         }
 
         public PagedList<PersonDto> GetAllPersonsByPage(PageParametr pageparameters)
         {
-            return PagedList<PersonDto>.ToPagedList(GetAllPersons().OrderBy(p=>p.PersonName), pageparameters.PageNumber, pageparameters.PageSize);
-          
+            return PagedList<PersonDto>.ToPagedList(GetAllPersons().OrderBy(p => p.PersonName), pageparameters.PageNumber, pageparameters.PageSize);
+
         }
         public PersonDto GetPersonById(Guid Id)
         {
@@ -66,8 +68,9 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                              CenterName = _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
                                                                 .Select(m => m.CenterName)
                                                                 .First()
-                                                                .ToString()
-                         }).FirstOrDefault()?? new PersonDto();
+                                                                .ToString(),
+                             PersonRole= n.PersonRole
+                         }).FirstOrDefault() ?? new PersonDto();
 
             return personDtos;
         }
@@ -81,7 +84,8 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                 PartId = n.PartId,
                 CenterName = _ticketContext.Centers.Single(c => c.Id == (_ticketContext.Parts.Single(p => p.Id == n.PartId).Center)).CenterName,
                 PartName = _ticketContext.Parts.Single(p => p.Id == n.PartId).PartName,
-                PersonName = n.Name
+                PersonName = n.Name,
+                PersonRole= n.PersonRole
             }).First();
         }
     }

@@ -106,7 +106,7 @@ namespace TicketContext.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to کدپرسنلی پشتیبان نادرست است..
+        ///   Looks up a localized string similar to پشتیبانی با این کدپرسنلی تعریف نشده است..
         /// </summary>
         public static string SupporterIdIsNotValidException {
             get {
