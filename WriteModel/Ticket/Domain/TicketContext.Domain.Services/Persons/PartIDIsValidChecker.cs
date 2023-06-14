@@ -1,4 +1,6 @@
 ﻿
+using System.Linq;
+using System.Security.AccessControl;
 using TicketContext.Domain.Centers.DomainServices;
 using TicketContext.Domain.Persons.DomainServices;
 
@@ -11,7 +13,7 @@ namespace TicketContext.Domain.Services.Persons
         {
             _centerRepository = centerRepository;
         }
-        public bool Isvalid(  Guid partId)
+        public bool Isvalid(Guid partId)
         {
             return _centerRepository.IsExist(c => c.Parts.Any(s => s.Id == partId));
         }

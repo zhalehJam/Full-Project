@@ -133,6 +133,6 @@
     <value>نام برنامه تکراری است.</value>
   </data>
   <data name="SupporterIdIsNotValidException" xml:space="preserve">
-    <value>کدپرسنلی پشتیبان نادرست است.</value>
+    <value>پشتیبانی با این کدپرسنلی تعریف نشده است.</value>
   </data>
 </root>

@@ -19,6 +19,7 @@ namespace TicketContext.Infrastructure.Persons.Mapping
             builder.Property(x => x.Name).HasMaxLength(200).IsRequired();
             builder.Property(x => x.PersonID).HasColumnType(nameof(SqlDbType.Int)).IsRequired();
             builder.Property(x=>x.PartId).HasColumnType(nameof(SqlDbType.UniqueIdentifier)).IsRequired();
+            builder.Property(x=>x.PersonRole).IsRequired();
         }
     }
 }
