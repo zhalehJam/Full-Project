@@ -1,4 +1,5 @@
-﻿using TicketContext.Domain.Persons.DomainServices;
+﻿using TicketContext.Contract.Persons;
+using TicketContext.Domain.Persons.DomainServices;
 using TicketContext.Domain.Programs.DomainServices;
 
 namespace TicketContext.Domain.Services.Programs
@@ -14,7 +15,7 @@ namespace TicketContext.Domain.Services.Programs
         public bool Isvalid(int personID)
         {
             bool valid = false;
-            if(_personRepository.IsExist(n => n.PersonID == personID))
+            if(_personRepository.IsExist(n => n.PersonID == personID && (n.PersonRole == RoleType.Supporter || n.PersonRole == RoleType.Admin)))
                 valid = true;
             return valid;
         }

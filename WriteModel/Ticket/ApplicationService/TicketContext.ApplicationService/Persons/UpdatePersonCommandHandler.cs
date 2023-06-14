@@ -9,12 +9,15 @@ namespace TicketContext.ApplicationService.Persons
     {
         private readonly IPersonRepository _personRepository;
         private readonly IPartIDIsValidChecker _partIDIsValidChecker;
+        private readonly IPersonIsProgramSuppoerterChecker _personIsProgramSuppoerterChecker;
 
         public UpdatePersonCommandHandler(IPersonRepository personRepository,
-                                          IPartIDIsValidChecker partIDIsValidChecker)
+                                          IPartIDIsValidChecker partIDIsValidChecker,
+                                          IPersonIsProgramSuppoerterChecker personIsProgramSuppoerterChecker)
         {
             _personRepository = personRepository;
             _partIDIsValidChecker = partIDIsValidChecker;
+            _personIsProgramSuppoerterChecker = personIsProgramSuppoerterChecker;
         }
         public void Execute(UpdatePersonCommand command)
         {
@@ -22,7 +25,8 @@ namespace TicketContext.ApplicationService.Persons
             person.UpdatePersonInfo(command.Name,
                                     command.PartId,
                                     command.PersonRole,
-                                    _partIDIsValidChecker);
+                                    _partIDIsValidChecker,
+                                    _personIsProgramSuppoerterChecker);
             _personRepository.Update(person);
         }
     }

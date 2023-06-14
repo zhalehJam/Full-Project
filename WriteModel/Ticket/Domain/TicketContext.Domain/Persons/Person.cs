@@ -40,6 +40,9 @@ namespace TicketContext.Domain.Persons
             {
                 throw new InvalidRoleTypeException();
             }
+            if(PersonRole != roleType)
+            {
+            }
             PersonRole = roleType;
         }
 
@@ -78,12 +81,16 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName, Guid partId, RoleType PersonRole, IPartIDIsValidChecker partIDIsValidChecker)
+        public void UpdatePersonInfo(string personName, Guid partId, RoleType personRole, IPartIDIsValidChecker partIDIsValidChecker, IPersonIsProgramSuppoerterChecker personIsProgramSuppoerterChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(partId);
-            SetPerosnRole(PersonRole);
+            if(personIsProgramSuppoerterChecker.IsSupprter(PersonID) && (personRole!=RoleType.Supporter&&personRole!=RoleType.Admin ))
+            {
+                throw new PersonIsProgramSupporterException();
+            }
+            SetPerosnRole(personRole);
         }
 
         public void CheckPersonCanDelete(IPersonIDUsedChecker personIDUsedChecker)

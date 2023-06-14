@@ -141,4 +141,7 @@
   <data name="PersonIDIsUsedException" xml:space="preserve">
     <value>کدپرسنلی استفاده شده است.</value>
   </data>
+  <data name="PersonIsProgramSupporterException" xml:space="preserve">
+    <value>پرسنل پشتیبان یک برنامه است.</value>
+  </data>
 </root>

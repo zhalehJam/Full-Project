@@ -12,12 +12,14 @@ namespace TicketContext.Domain.Test
     {
         private readonly Mock<IPersonIDValidationChecker> _personIDValidationChecker = new Mock<IPersonIDValidationChecker>();
         private readonly Mock<IPartIDIsValidChecker> _partIDIsValidChecker = new Mock<IPartIDIsValidChecker>();
+        private readonly Mock<IPersonIsProgramSuppoerterChecker> _personIsProgramSuppoerterChecker = new Mock<IPersonIsProgramSuppoerterChecker>();
         private readonly Mock<IPersonIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersonIDDuplicateChecker>();
         private readonly Mock<IPersonIDUsedChecker> _personIDUsedChecker = new Mock<IPersonIDUsedChecker>();
 
         private Guid centerId;
         private Guid partId;
 
+        private Guid supporterpersonId = new Guid();
         [TestInitialize]
         public void Setup()
         {
@@ -25,6 +27,7 @@ namespace TicketContext.Domain.Test
             partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
             _personIDValidationChecker.Setup(c => c.IsValid(It.Is<Int32>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
             _partIDIsValidChecker.Setup(c => c.Isvalid(partId)).Returns(true);
+            _personIsProgramSuppoerterChecker.Setup(c => c.IsSupprter(It.IsAny<int>())).Returns(false);
             _persoIDDuplicateChecker.Setup(c => c.IsDuplicate(It.Is<Int32>(n => n.Equals(970086)))).Returns(true);
             _personIDUsedChecker.Setup(c => c.IsUsed(It.Is<Int32>(n => n.Equals(970087)))).Returns(true);
 
@@ -156,17 +159,25 @@ namespace TicketContext.Domain.Test
         public void UpdateUserRole_Exception()
         {
             var person = Init(roleType: RoleType.User);
-            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object);
+            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
+        }
+
+        [TestMethod, TestCategory("UpdatePersonRole")]
+        [ExpectedException(typeof(PersonIsProgramSupporterException))]
+        public void PersonIsProgramSupporter_Exception()
+        {
+            var person = Init(roleType: RoleType.User);
+            _personIsProgramSuppoerterChecker.Setup(c => c.IsSupprter(It.IsAny<int>())).Returns(true);
+
+            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
         }
 
         [TestMethod, TestCategory("UpdatePersonRole")]
         public void UpdateUserRole_retreive()
         {
             var person = Init(roleType: RoleType.User);
-            person.UpdatePersonInfo(person.Name, person.PartId, RoleType.Admin, _partIDIsValidChecker.Object);
+            person.UpdatePersonInfo(person.Name, person.PartId, RoleType.Admin, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
             Assert.AreEqual(person.PersonRole, RoleType.Admin);
-
-
         }
     }
 }

@@ -131,5 +131,14 @@ namespace TicketContext.Resource {
                 return ResourceManager.GetString("PersonIDIsUsedException", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to پرسنل پشتیبان یک برنامه است..
+        /// </summary>
+        public static string PersonIsProgramSupporterException {
+            get {
+                return ResourceManager.GetString("PersonIsProgramSupporterException", resourceCulture);
+            }
+        }
     }
 }
