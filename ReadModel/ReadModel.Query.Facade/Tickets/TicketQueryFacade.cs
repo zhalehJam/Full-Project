@@ -15,10 +15,10 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
         {
             _ticketContext = ticketContext;
         }
-        public List<TicketDto> GetAllTickets()
+        public List<TicketDto> GetUserAllTickets(int personID, DateTime fromDate, DateTime toDate)
         {
             List<TicketDto>? ticketDtos = new List<TicketDto>();
-            ticketDtos = _ticketContext.Ticket.Select(n => new TicketDto()
+            ticketDtos = _ticketContext.Ticket.Where(t=>t.SupporterPersonID==personID && t.TicketTime>=fromDate && t.TicketTime<=toDate).Select(n => new TicketDto()
             {
                 Id = n.Id,
                 PersonID = n.PersonID,

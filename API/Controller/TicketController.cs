@@ -42,10 +42,11 @@ namespace API.Controller
             _ticketCommandFacade.DeleteTicket(deleteTicketCommand);
         }
 
-        [HttpGet("GetAllTickets")]
-        public List<TicketDto> GetAllTickets()
+        [HttpGet("GetUserAllTickets")]
+        public List<TicketDto> GetAllTicketsByPersonId(DateTime fromDate, DateTime toDate)
         {
-            return _ticketQueryFacade.GetAllTickets();
+            var identity = User.Identity as ClaimsIdentity;
+            return _ticketQueryFacade.GetUserAllTickets(Convert.ToInt32(identity.Name),  fromDate,  toDate);
         }
         [HttpGet("GetAllTicketsByPage")]
         public PagedList<TicketDto> GetAllTicketsByPage([FromQuery] PageParametr parameters)
