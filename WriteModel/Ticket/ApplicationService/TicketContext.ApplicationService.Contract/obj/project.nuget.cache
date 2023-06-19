@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3ZxdgwFfpn+gVODX7ZAOty3tcqFsszv6fivf2/BFXvCfrrc85c6NNAFL4jX07bkdzopVRWXlxSB46WTqsyt6uQ==",
+  "dgSpecHash": "C+cYTZbz8gFagHeFiZRl3f/ZtfyN4K1dioZvRHQHfGGNnMFXQGD6D+jfD1lYwxl1w4/xJ8jIxGRahLpymZ5v1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\ApplicationService\\TicketContext.ApplicationService.Contract\\TicketContext.ApplicationService.Contract.csproj",
   "expectedPackageFiles": [

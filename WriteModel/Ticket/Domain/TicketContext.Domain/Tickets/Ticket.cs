@@ -165,6 +165,9 @@ namespace TicketContext.Domain.Tickets
         {
             if(SupporterPersonID != supporterPersonID)
                 throw new TicketCannotDeletetException();
+            if(TicketCondition.Equals(TicketCondition.Finish))
+                throw new TicketCannotDeletetException();
+
             return true;
         }
     }

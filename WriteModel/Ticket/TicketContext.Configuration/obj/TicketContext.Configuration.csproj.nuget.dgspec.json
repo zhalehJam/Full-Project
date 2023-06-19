@@ -11,7 +11,7 @@
         "projectName": "TicketContext.Contract",
         "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\Source\\Repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
+        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
