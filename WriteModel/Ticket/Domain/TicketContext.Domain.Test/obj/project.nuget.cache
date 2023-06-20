@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0FD6qJWGjA04XDXtYdEmiW4prFf82Ah/gSQ7+0rTWjJocNbsdfwratOyRrodRRSZN3TUSSgxIvVxnaTVVRRdSg==",
+  "dgSpecHash": "I+DjzPaJTQE++LhZHVKK20wNNIsD6dm6peMK0MlBId4aDAeTU4CfVc5oig2NUEeImdsObvd4yeVUxgiFmoKwFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Test\\TicketContext.Domain.Test.csproj",
   "expectedPackageFiles": [

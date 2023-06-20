@@ -39,7 +39,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                                                                                       .Select(m => m.CenterName)
                                                                                       .First()
                                                                                       .ToString() : "",
-                PersonRole= n.PersonRole
+                PersonRole = n.PersonRole
             }).ToList();
             return personDtos;
         }
@@ -69,7 +69,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                                                                 .Select(m => m.CenterName)
                                                                 .First()
                                                                 .ToString(),
-                             PersonRole= n.PersonRole
+                             PersonRole = n.PersonRole
                          }).FirstOrDefault() ?? new PersonDto();
 
             return personDtos;
@@ -77,16 +77,19 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 
         public PersonDto GetPersonInfoByPersonelCode(int personnelCode)
         {
-            return _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => new PersonDto()
-            {
-                Id = n.Id,
-                PersonID = n.PersonID,
-                PartId = n.PartId,
-                CenterName = _ticketContext.Centers.Single(c => c.Id == (_ticketContext.Parts.Single(p => p.Id == n.PartId).Center)).CenterName,
-                PartName = _ticketContext.Parts.Single(p => p.Id == n.PartId).PartName,
-                PersonName = n.Name,
-                PersonRole= n.PersonRole
-            }).First();
+            var person = _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n=>n);
+            if(person.Count() == 0) { return new PersonDto(); }
+            else
+                return _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => new PersonDto()
+                {
+                    Id = n.Id,
+                    PersonID = n.PersonID,
+                    PartId = n.PartId,
+                    CenterName = _ticketContext.Centers.Single(c => c.Id == (_ticketContext.Parts.Single(p => p.Id == n.PartId).Center)).CenterName,
+                    PartName = _ticketContext.Parts.Single(p => p.Id == n.PartId).PartName,
+                    PersonName = n.Name,
+                    PersonRole = n.PersonRole
+                }).First();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using ReadModel.Pagination;
 using System.Security.Claims;
 using TicketContext.ApplicationService.Contract.Persons;
@@ -66,6 +67,30 @@ namespace API.Controller
         {
             return _personQueryFacade.GetPersonInfoByPersonelCode(personnelCode);
         }
-         
+
+        [HttpGet("GetUserPhoto")]
+        public async Task<IActionResult> GetUserPhoto(int personnelCode)
+        {
+
+            using(var client = new HttpClient())
+            {
+                try
+                {
+                    client.BaseAddress = new Uri("http://apihrms.shonizcloud.ir");
+                    var response =
+                        await client.GetAsync($"/HR/api/GetEmployeeInfoWithPhoto?employeeId={personnelCode}");
+                    response.EnsureSuccessStatusCode();
+                    var result = await response.Content.ReadAsStringAsync();
+                    var deserializedData = JObject.Parse(result)["image"].ToString();
+                    //return File(Convert.FromBase64String(deserializedData), "image/jpeg");
+                    return Ok(deserializedData); 
+                }
+                catch(HttpRequestException httpRequestException)
+                {
+                    return BadRequest($"Error : {httpRequestException.Message}");
+                }
+            }
+        }
+
     }
 }
