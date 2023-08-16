@@ -67,7 +67,7 @@ namespace API.Controller
         }
 
         [HttpGet("GetCentersByPage")]
-        public PagedList<CenterDto> GetCentersByPage([FromQuery] PageParametr parameters)
+        public PagedList<CenterDto> GetCentersByPage([FromQuery] PageParameter parameters)
         {
             return _centerQueryFacade.GetCentersByPage(centerQueryParameter: parameters);
         }

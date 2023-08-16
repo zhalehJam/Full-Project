@@ -64,7 +64,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
             return ticketDtos;
         }
 
-        public PagedList<TicketDto> GetAllTicketsByPage(PageParametr pageParametrs)
+        public PagedList<TicketDto> GetAllTicketsByPage(PageParameter pageParametrs)
         {
 
             var ticketDtos = _ticketContext.Ticket.Select(n => new TicketDto()
@@ -198,5 +198,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
                                                }).ToList();
             return PagedList<TicketDto>.ToPagedList(tickets.OrderBy(t => t.TicketTime), parameters.PageNumber, parameters.PageSize);
         }
+
+       
     }
 }

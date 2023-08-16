@@ -73,6 +73,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketContext.ReadModel.Que
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadModel.Pagination", "ReadModel\ReadModel.Pagination\ReadModel.Pagination.csproj", "{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0ABD933E-207C-459A-A837-AC937097BE2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +177,10 @@ Global
 		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7ACAAC7-41BB-42C6-9C85-BB907443DCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABD933E-207C-459A-A837-AC937097BE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABD933E-207C-459A-A837-AC937097BE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABD933E-207C-459A-A837-AC937097BE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABD933E-207C-459A-A837-AC937097BE2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

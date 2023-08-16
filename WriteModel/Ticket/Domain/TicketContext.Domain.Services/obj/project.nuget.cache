@@ -1,12 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "6tJjYY7a6X6oSAJktNp3qYrIj6Tv/yyNr5GDfoa22Ri1mTnl4cAl2Zyi8xyXHjW+yRYEYQ7Ro18xZvi5KRCflA==",
+  "dgSpecHash": "ZsaJNRuT6YrP3YYkRI1qNBO1CCTa9aXgSu80OMyRbLT8uelXzszUeOHa/xkoKsF1YcNrQmoThtGqI5bXE7HI+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Services\\TicketContext.Domain.Services.csproj",
+  "projectFilePath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Services\\TicketContext.Domain.Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain.Services\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

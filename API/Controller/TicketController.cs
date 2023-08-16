@@ -49,7 +49,7 @@ namespace API.Controller
             return _ticketQueryFacade.GetUserAllTickets(Convert.ToInt32(identity.Name),  fromDate,  toDate);
         }
         [HttpGet("GetAllTicketsByPage")]
-        public PagedList<TicketDto> GetAllTicketsByPage([FromQuery] PageParametr parameters)
+        public PagedList<TicketDto> GetAllTicketsByPage([FromQuery] PageParameter parameters)
         {
 
             var identity = User.Identity as ClaimsIdentity;

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj": {}
+    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "projectName": "TicketContext.Contract",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,20 +62,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "projectName": "Framework.Core",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +83,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,20 +130,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
         "projectName": "TicketContext.ReadModel.Context",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,15 +151,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               }
             }
           }
@@ -205,20 +202,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj",
         "projectName": "ReadModel.Pagination",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -226,7 +223,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -264,20 +260,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
         "projectName": "TicketContext.ReadModel.Query.Contracts",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -285,21 +281,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Pagination\\ReadModel.Pagination.csproj"
               }
             }
           }
@@ -333,20 +328,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
         "projectName": "TicketContext.ReadModel.Query.Facade",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\TicketContext.ReadModel.Query.Facade.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Facade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -354,18 +349,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj"
               }
             }
           }

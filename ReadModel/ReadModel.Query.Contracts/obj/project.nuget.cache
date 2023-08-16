@@ -1,12 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "uPAKCApkFQSAt5jKBYX8CFwMrLcjTOGnVlo+vsn1nD8ZkJvRf3zo2FLv1kscs1ExHnkvrb5nXUrEJXovDtkjhw==",
+  "dgSpecHash": "G67LRoaifGqrjzpeGdJPiji2Oyv8aTNKjIdXc+oBYyC5pMagcKYA6Bt1ckganILxqjq7yKbrH3cja1iCo/FSug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
+  "projectFilePath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\TicketContext.ReadModel.Query.Contracts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\970086\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\970086\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\5\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\5\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Query.Contracts\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

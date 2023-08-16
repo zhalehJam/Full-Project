@@ -665,23 +665,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\970086\\.nuget\\packages\\": {},
+    "C:\\Users\\5\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
+      "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
       "projectName": "TicketContext.Configuration",
-      "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
-      "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\obj\\",
+      "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\TicketContext.Configuration.csproj",
+      "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -689,15 +689,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj": {
-              "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj"
+            "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj": {
+              "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.DependencyInjection\\Framework.DependencyInjection.csproj"
             }
           }
         }
@@ -730,5 +729,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\TicketContext.Configuration\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

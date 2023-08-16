@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "CyEe6k9fvOvuOWpJKYX0iJTBjzT1bKNBfWXbhlxMSfNxWS1MoBT2/+suLcRcCVs48M5ap1aj6pTEM3sasw59UQ==",
+  "dgSpecHash": "cY4jvRWthyEN/xXDY7zfr4Xb04TswdbRCtFpRrclxCOCvKvKADUWs6u3AJM8tcTLFSscap3AVpt70itj9/LTkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+  "projectFilePath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

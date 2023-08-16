@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {}
+    "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "projectName": "TicketContext.Contract",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,20 +62,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
         "projectName": "Framework.Core",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +83,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,20 +130,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
         "projectName": "Framework.Domain",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,7 +151,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -191,20 +188,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
         "projectName": "Framework.Persistence",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -212,18 +209,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               }
             }
           }
@@ -267,20 +263,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
         "projectName": "TicketContext.Domain",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -288,24 +284,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Core\\Framework.Core.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj"
               }
             }
           }
@@ -339,20 +334,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
         "projectName": "TicketContext.Infrastructure",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\TicketContext.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Infrastructure\\TicketContext.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -360,18 +355,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Persistence\\Framework.Persistence.csproj"
               },
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Domain\\TicketContext.Domain\\TicketContext.Domain.csproj"
               }
             }
           }
@@ -405,20 +399,20 @@
         }
       }
     },
-    "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
+    "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
         "projectName": "TicketContext.Resource",
-        "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
-        "packagesPath": "C:\\Users\\970086\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
+        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\TicketContext.Resource.csproj",
+        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\WriteModel\\Ticket\\Resource\\TicketContext.Resource\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\970086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -426,15 +420,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Blazor\\20.4.0.48\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
-                "projectPath": "C:\\Users\\970086\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
+              "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj": {
+                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Framework\\Framework.Domain\\Framework.Domain.csproj"
               }
             }
           }

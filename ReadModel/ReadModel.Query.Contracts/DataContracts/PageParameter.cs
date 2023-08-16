@@ -2,6 +2,6 @@
 
 namespace TicketContext.ReadModel.Query.Contracts.DataContracts
 {
-    public class PageParametr: PaginationQueryParameters
+    public class PageParameter: PaginationQueryParameters
     { }
 }
