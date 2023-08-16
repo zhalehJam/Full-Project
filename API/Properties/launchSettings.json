@@ -33,6 +33,9 @@
         "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5002"
       },
       "distributionName": ""
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
   },

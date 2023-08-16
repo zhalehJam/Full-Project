@@ -36,16 +36,14 @@ namespace API
             }
             services.AddDbContext<IDbContext, TicketingDbContext>(op =>
             {
- 
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
- 
             });
+
+
             services.AddDbContext<TicketingContext>(op =>
             {
                 op.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
- 
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
- 
             });
             services.AddSwaggerGen(c =>
             {
