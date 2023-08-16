@@ -36,21 +36,16 @@ namespace API
             }
             services.AddDbContext<IDbContext, TicketingDbContext>(op =>
             {
-<<<<<<< Updated upstream
-                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123qaz!@#; ");
-
-=======
+ 
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
->>>>>>> Stashed changes
+ 
             });
             services.AddDbContext<TicketingContext>(op =>
             {
                 op.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-<<<<<<< Updated upstream
-                op.UseSqlServer("Server =.,1433; Database = TicketingDeveloper; user id=sa;password=123qaz!@#; ");
-=======
+ 
                 op.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
->>>>>>> Stashed changes
+ 
             });
             services.AddSwaggerGen(c =>
             {
