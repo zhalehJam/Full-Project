@@ -77,7 +77,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             return personDtos;
         }
 
-        public   PagedList<PersonDto>  GetPersonInfoByFilters(GetPersonInfoByFiltersQuery parameters)
+        public PagedList<PersonDto> GetPersonInfoByFilters(GetPersonInfoByFiltersQuery parameters)
         {
             List<PersonDto> personDtos = new List<PersonDto>();
             var persosInfo = _ticketContext.Persons.AsQueryable();
@@ -89,8 +89,8 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             if (parameters.CenterId != Guid.Empty)
             {
                 var ddt = _ticketContext.Parts.Where(r => r.Center == parameters.CenterId).AsQueryable();
- 
-                 persosInfo = persosInfo.Where(p => ddt.Any(r=>r.Id == p.PartId));
+
+                persosInfo = persosInfo.Where(p => ddt.Any(r => r.Id == p.PartId));
 
             }
             if (parameters.PartId != Guid.Empty)
@@ -100,7 +100,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             }
             if (parameters.PersonName != string.Empty)
             {
-                persosInfo = persosInfo.Where(p => p.Name == parameters.PersonName);
+                persosInfo = persosInfo.Where(p => p.Name.Contains(parameters.PersonName));
 
             }
             if (parameters.userRole != 0)
@@ -126,7 +126,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                                                                 .ToString(),
                              PersonRole = n.PersonRole
                          }).ToList();
-            return   PagedList<PersonDto>.ToPagedList(personDtos, parameters.PageNumber, parameters.PageSize);
+            return PagedList<PersonDto>.ToPagedList(personDtos, parameters.PageNumber, parameters.PageSize);
         }
 
         public PersonDto GetPersonInfoByPersonelCode(int personnelCode)

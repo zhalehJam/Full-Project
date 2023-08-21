@@ -155,7 +155,8 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
         public PagedList<TicketDto> GetUserTicketsByDateRage(int personID, TicketQueryParameters parameters)
         {
             var userinfo = _ticketContext.Persons.Single(p => p.PersonID == personID);
-            var tickets = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin ? true : t.SupporterPersonID == personID)
+            var supporterterprograms = _ticketContext.ProgramSupporters.Where(ps => ps.SupporterpersonID == userinfo.PersonID).Select(t => t.Program).ToList();
+            var tickets = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin ? true : supporterterprograms.Contains(t.ProgramId))
                                                            && t.TicketTime.Date >= parameters.fromDate
                                                            && t.TicketTime <= parameters.toDate)
                                                .Select(n => new TicketDto()
@@ -199,6 +200,6 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
             return PagedList<TicketDto>.ToPagedList(tickets.OrderBy(t => t.TicketTime), parameters.PageNumber, parameters.PageSize);
         }
 
-       
+
     }
 }
