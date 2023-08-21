@@ -59,65 +59,66 @@ namespace TicketContext.Domain.Tickets
 
         private void SetTicketCondition(TicketCondition ticketCondition)
         {
-            if(!Enum.IsDefined(typeof(TicketCondition), ticketCondition))
+            if (!Enum.IsDefined(typeof(TicketCondition), ticketCondition))
                 throw new InvalidTicketConditionExcption();
             TicketCondition = ticketCondition;
         }
 
         private void SetSupporterPersonID(int supporterPersonID)
         {
-            if(!_supporterPersonIDIsValidChecker.IsValid(supporterPersonID))
+            if (!_supporterPersonIDIsValidChecker.IsValid(supporterPersonID))
                 throw new InvalidSupporterPersonIDException();
             SupporterPersonID = supporterPersonID;
         }
 
         private void SetErrorType(ErrorType errorType)
         {
-            if(!Enum.IsDefined(typeof(ErrorType), errorType))
+            if (!Enum.IsDefined(typeof(ErrorType), errorType))
                 throw new InvalidErrorTypeExcption();
             ErrorType = errorType;
         }
 
         private void SetTicketType(TicketType type)
         {
-            if(!Enum.IsDefined(typeof(TicketType), type))
+            if (!Enum.IsDefined(typeof(TicketType), type))
                 throw new InvalidTicketTypeExcption();
             Type = type;
         }
 
         private void SetTicketDateTime(DateTime ticketTime)
         {
-            if(ticketTime > DateTime.Now)
+            if (ticketTime > DateTime.Now)
                 throw new TicketDateTimeIsNotValidException();
             TicketTime = ticketTime;
         }
 
         private void SetSolutionDescription(string solutionDiscription)
         {
-            if(string.IsNullOrWhiteSpace(solutionDiscription))
-                throw new SolutionDisctionIsnullOrEmptyException();
+            if (string.IsNullOrWhiteSpace(solutionDiscription))
+                //throw new SolutionDisctionIsnullOrEmptyException();
+                solutionDiscription = "";
             SolutionDiscription = solutionDiscription;
         }
 
         private void SetErrorDiscription(string errorDiscription)
         {
-            if(string.IsNullOrWhiteSpace(errorDiscription))
+            if (string.IsNullOrWhiteSpace(errorDiscription))
                 throw new ErrorDisctionIsnullOrEmptyException();
             ErrorDiscription = errorDiscription;
         }
 
         private void SetProgramId(Guid programID)
         {
-            if(!_programIDIsValidChecker.IsValid(programID))
+            if (!_programIDIsValidChecker.IsValid(programID))
                 throw new InvalidProgramIDException();
             ProgramId = programID;
         }
 
         private void SetPersonInfo(int personID)
         {
-            if(personID == 0)
+            if (personID == 0)
                 throw new NullOrZiroPersonIDException();
-            if(!_personIDIsValidChecker.IsValid(personID))
+            if (!_personIDIsValidChecker.IsValid(personID))
                 throw new InvalidPersonIDException();
             PersonPartId = _personInfo.GetpersonInfo(personID);
             PersonID = personID;
@@ -155,17 +156,17 @@ namespace TicketContext.Domain.Tickets
         private void CheckTicketCanUpdate(int supporterThatEditPersonID)
         {
 
-            if(TicketCondition.Equals(TicketCondition.Finish))
+            if (TicketCondition.Equals(TicketCondition.Finish))
                 throw new TheCompetedTicketCannotUpdateEception();
-            if(SupporterPersonID != supporterThatEditPersonID)
+            if (SupporterPersonID != supporterThatEditPersonID)
                 throw new TicketDidNotCeateByCurrentSupporerException();
         }
 
         public bool CheckTicketCanDelete(int supporterPersonID)
         {
-            if(SupporterPersonID != supporterPersonID)
+            if (SupporterPersonID != supporterPersonID)
                 throw new TicketCannotDeletetException();
-            if(TicketCondition.Equals(TicketCondition.Finish))
+            if (TicketCondition.Equals(TicketCondition.Finish))
                 throw new TicketCannotDeletetException();
 
             return true;

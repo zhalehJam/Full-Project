@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ReadModel.Pagination;
 using System.Security.Claims;
@@ -8,6 +9,7 @@ using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Persons;
 using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
+using TicketContext.ReadModel.Query.Contracts.Persons.Queries;
 using TicketContext.ReadModel.Query.Contracts.Programs.DataContracts;
 
 namespace API.Controller
@@ -58,7 +60,7 @@ namespace API.Controller
         }
 
         [HttpGet("GetAllPersonsByPage")]
-        public PagedList<PersonDto> GetAllPersonsByPage([FromQuery]PageParametr pageParametr)
+        public PagedList<PersonDto> GetAllPersonsByPage([FromQuery]PageParameter pageParametr)
         {
             return _personQueryFacade.GetAllPersonsByPage(pageParametr);
         }
@@ -90,6 +92,14 @@ namespace API.Controller
                     return BadRequest($"Error : {httpRequestException.Message}");
                 }
             }
+        }
+
+        [HttpGet("GetPersonInfoByFilters")]
+        public async Task<IActionResult> GetPersonInfoByFilters([FromQuery] GetPersonInfoByFiltersQuery pageParametr)
+        {
+            var persons  =   _personQueryFacade.GetPersonInfoByFilters(pageParametr);
+            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(persons.MetaData));
+            return Ok(persons);
         }
 
     }

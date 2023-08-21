@@ -116,7 +116,7 @@ namespace TicketContext.ReadModel.Query.Facade.Centers
             return centerDtos;
         }
 
-        public PagedList<CenterDto> GetCentersByPage(PageParametr centerQueryParameter)
+        public PagedList<CenterDto> GetCentersByPage(PageParameter centerQueryParameter)
         {
            return PagedList<CenterDto>.ToPagedList(GetCenters(), centerQueryParameter.PageNumber, centerQueryParameter.PageSize);
 

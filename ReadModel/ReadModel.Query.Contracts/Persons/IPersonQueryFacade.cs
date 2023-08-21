@@ -2,6 +2,7 @@
 using ReadModel.Pagination;
 using TicketContext.ReadModel.Query.Contracts.DataContracts;
 using TicketContext.ReadModel.Query.Contracts.Persons.DataContracts;
+using TicketContext.ReadModel.Query.Contracts.Persons.Queries;
 
 namespace TicketContext.ReadModel.Query.Contracts.Persons
 {
@@ -9,8 +10,9 @@ namespace TicketContext.ReadModel.Query.Contracts.Persons
     {
         List<PersonDto> GetAllPersons();
         PersonDto GetPersonById(Guid Id);
-        PagedList<PersonDto> GetAllPersonsByPage(PageParametr centerQueryParameter);
+        PagedList<PersonDto> GetAllPersonsByPage(PageParameter centerQueryParameter);
         PersonDto GetPersonInfoByPersonelCode(int personnelCode);
+        PagedList<PersonDto>  GetPersonInfoByFilters(GetPersonInfoByFiltersQuery getPersonInfoByFiltersQuery );
 
     }
 }
