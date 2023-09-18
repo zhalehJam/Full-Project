@@ -18,11 +18,7 @@ namespace TicketContext.Domain.Services.Tickets
         }
         public bool IsValid(int personID)
         {
-            bool isValid = false;
-          if(_personRepository.IsExist(n=>n.PersonID==personID))
-            {
-                isValid = true;
-            }
+            bool isValid = _personRepository.IsExist(n => n.PersonID == personID);
           return isValid;
         }
     }

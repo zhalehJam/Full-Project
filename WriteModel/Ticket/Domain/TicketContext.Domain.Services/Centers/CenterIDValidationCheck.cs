@@ -1,6 +1,6 @@
 ﻿using TicketContext.Domain.Centers.DomainServices;
 
-namespace TicketContext.Domain.Services
+namespace TicketContext.Domain.Services.Centers
 {
     public class CenterIDValidationCheck : ICenterIDValidationCheck
     {

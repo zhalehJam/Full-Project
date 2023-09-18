@@ -7,27 +7,27 @@ namespace TicketContext.ApplicationService.Tickets
 {
     public class UpdateTicketCommandHandler : ICommandHandler<UpdateTicketCommand>
     {
-        private readonly IPersonIDIsValidChecker _personIDIsValidChecker;
+        private readonly IPersonIDIsValidChecker _personIdIsValidChecker;
         private readonly IPersonInfo _personInfo;
-        private readonly IProgramIDValidationChecker _programIDIsValidChecker;
+        private readonly IProgramIDValidationChecker _programIdIsValidChecker;
         private readonly ITicketRepository _ticketRepository;
 
-        public UpdateTicketCommandHandler(IPersonIDIsValidChecker personIDIsValidChecker,
+        public UpdateTicketCommandHandler(IPersonIDIsValidChecker personIdIsValidChecker,
                                           IPersonInfo personInfo,
-                                          IProgramIDValidationChecker programIDIsValidChecker,
+                                          IProgramIDValidationChecker programIdIsValidChecker,
                                           ITicketRepository ticketRepository)
         {
-            _personIDIsValidChecker = personIDIsValidChecker;
+            _personIdIsValidChecker = personIdIsValidChecker;
             _personInfo = personInfo;
-            _programIDIsValidChecker = programIDIsValidChecker;
+            _programIdIsValidChecker = programIdIsValidChecker;
             _ticketRepository = ticketRepository;
         }
         public void Execute(UpdateTicketCommand command)
         {
             Ticket ticket = _ticketRepository.GetByID(command.Id);
-            ticket.UpdateTicketInfo(_personIDIsValidChecker,
+            ticket.UpdateTicketInfo(_personIdIsValidChecker,
                                    _personInfo,
-                                   _programIDIsValidChecker,
+                                   _programIdIsValidChecker,
                                    command.EditorPersonID,
                                    command.PersonID,
                                    command.ProgramId,

@@ -5,6 +5,6 @@ namespace TicketContext.Domain.Tickets.DomainServices
 {
     public interface IPersonInfo:IDomainService
     {
-        Guid GetpersonInfo(int personID);
+        Guid GetPersonInfo(int personID);
     }
 }

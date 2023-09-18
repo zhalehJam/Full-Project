@@ -13,9 +13,7 @@ namespace TicketContext.Domain.Services.Tickets
         }
         public bool IsValid(Guid programId)
         {
-            bool isValid = false;
-            if(_programRepository.IsExist(n => n.Id.Equals(programId)))
-                isValid = true;
+            bool isValid = _programRepository.IsExist(n => n.Id.Equals(programId));
             return isValid;
         }
     }

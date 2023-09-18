@@ -1,4 +1,4 @@
-﻿//using MediatR;
+﻿
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ReadModel.Pagination;
@@ -61,7 +61,7 @@ namespace API.Controller
             return _centerQueryFacade.GetCenters(centerName: centerName);
         }
         [HttpGet("GetCenterByOtherFilters")]
-        public IList<CenterDto> GetCencterByOtherFilters([FromQuery] CenterQueryParameter parameters)
+        public IList<CenterDto> GetCenterByOtherFilters([FromQuery] CenterQueryParameter parameters)
         {
             return _centerQueryFacade.GetCentersByfilter(centerQueryParameter: parameters);
         }
@@ -73,7 +73,7 @@ namespace API.Controller
         }
 
         [HttpDelete]
-        public async Task DeletCenter(DeleteCenterCommand deleteCenterCommand)
+        public async Task DeleteCenter(DeleteCenterCommand deleteCenterCommand)
         {
            await _centerCommandFacade.DeleteCenter(deleteCenterCommand);
         }

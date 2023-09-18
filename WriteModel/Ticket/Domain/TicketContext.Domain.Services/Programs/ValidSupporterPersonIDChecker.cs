@@ -14,9 +14,7 @@ namespace TicketContext.Domain.Services.Programs
         }
         public bool Isvalid(int personID)
         {
-            bool valid = false;
-            if(_personRepository.IsExist(n => n.PersonID == personID && (n.PersonRole == RoleType.Supporter || n.PersonRole == RoleType.Admin)))
-                valid = true;
+            bool valid = _personRepository.IsExist(n => n.PersonID == personID && (n.PersonRole == RoleType.Supporter || n.PersonRole == RoleType.Admin));
             return valid;
         }
     }

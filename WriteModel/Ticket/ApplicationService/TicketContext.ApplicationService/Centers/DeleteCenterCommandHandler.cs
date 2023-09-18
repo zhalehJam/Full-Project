@@ -6,18 +6,17 @@ using TicketContext.Domain.Centers.DomainServices;
 
 namespace TicketContext.ApplicationService.Centers
 {
-    public class DeleteCenterCommandHandler : IHandler, IRequestHandler<DeleteCenterCommand, Guid>//ICommandHandler<DeleteCenterCommand>
+    public class DeleteCenterCommandHandler : IHandler, IRequestHandler<DeleteCenterCommand, Guid>
     {
         private readonly ICenterRepository _centerRepository;
-        private readonly ICenterIsUsedCheker _centerIsUsedCheker;
+        private readonly ICenterIsUsedChecker _centerIsUsedCheker;
 
-        public DeleteCenterCommandHandler(ICenterRepository centerRepository,ICenterIsUsedCheker centerIsUsedCheker)
+        public DeleteCenterCommandHandler(ICenterRepository centerRepository,ICenterIsUsedChecker centerIsUsedCheker)
         {
             _centerRepository = centerRepository;
             _centerIsUsedCheker = centerIsUsedCheker;
         }
         
-
         public Task<Guid> Handle(DeleteCenterCommand request, CancellationToken cancellationToken)
         {
             Center center = _centerRepository.GetByID(request.Id);

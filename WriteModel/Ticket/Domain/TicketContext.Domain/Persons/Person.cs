@@ -51,7 +51,7 @@ namespace TicketContext.Domain.Persons
 
         private void SetPartID(Guid partId)
         {
-            if(!_partIDIsValidChecker.Isvalid(partId))
+            if(!_partIDIsValidChecker.IsValid(partId))
                 throw new PartIDIsNotValidException();
             PartId = partId;
         }
@@ -81,12 +81,12 @@ namespace TicketContext.Domain.Persons
             Name = name;
         }
 
-        public void UpdatePersonInfo(string personName, Guid partId, RoleType personRole, IPartIDIsValidChecker partIDIsValidChecker, IPersonIsProgramSuppoerterChecker personIsProgramSuppoerterChecker)
+        public void UpdatePersonInfo(string personName, Guid partId, RoleType personRole, IPartIDIsValidChecker partIDIsValidChecker, IPersonIsProgramSupporterChecker personIsProgramSuppoerterChecker)
         {
             _partIDIsValidChecker = partIDIsValidChecker;
             SetName(personName);
             SetPartID(partId);
-            if(personIsProgramSuppoerterChecker.IsSupprter(PersonID) && (personRole!=RoleType.Supporter&&personRole!=RoleType.Admin ))
+            if(personIsProgramSuppoerterChecker.IsSupporter(PersonID) && (personRole!=RoleType.Supporter&&personRole!=RoleType.Admin ))
             {
                 throw new PersonIsProgramSupporterException();
             }

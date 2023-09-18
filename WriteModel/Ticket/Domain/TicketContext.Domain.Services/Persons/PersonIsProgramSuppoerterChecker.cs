@@ -3,16 +3,16 @@ using TicketContext.Domain.Programs.DomainServices;
 
 namespace TicketContext.Domain.Services.Persons
 {
-    public class PersonIsProgramSuppoerterChecker : IPersonIsProgramSuppoerterChecker
+    public class PersonIsProgramSupporterChecker : IPersonIsProgramSupporterChecker
     {
-        IProgramRepository _programRepository;
-        public PersonIsProgramSuppoerterChecker(IProgramRepository programRepository)
+        readonly IProgramRepository _programRepository;
+        public PersonIsProgramSupporterChecker(IProgramRepository programRepository)
         {
             _programRepository = programRepository;
         }
-        public bool IsSupprter(int perosnId)
+        public bool IsSupporter(int personId)
         {
-            return _programRepository.IsExist(p => p.ProgramSupporters.Any(s => s.SupporterPersonID == perosnId));
+            return _programRepository.IsExist(p => p.ProgramSupporters.Any(s => s.SupporterPersonID == personId));
         }
     }
 }

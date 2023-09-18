@@ -23,7 +23,7 @@ namespace TicketContext.Domain.Services.Persons
                                               .FirstOrDefault() != null) ||
                     _ticketRepository.IsExist(n => n.SupporterPersonID.Equals(personID) || n.PersonID.Equals(personID)));
 
-            
+
         }
     }
 }

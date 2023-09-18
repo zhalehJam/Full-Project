@@ -2,9 +2,9 @@
 
 namespace TicketContext.Domain.Persons.DomainServices
 {
-    public interface IPersonIsProgramSuppoerterChecker : IDomainService
+    public interface IPersonIsProgramSupporterChecker : IDomainService
     {
-        bool IsSupprter( int perosnd );
+        bool IsSupporter( int personId );
     }
     
 }

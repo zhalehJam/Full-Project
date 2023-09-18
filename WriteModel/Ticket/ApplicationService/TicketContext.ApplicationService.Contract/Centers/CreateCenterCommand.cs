@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace TicketContext.ApplicationService.Contract.Centers
 {
-    //public record CreateCenterCommand(string CenterName, int CenterID) : IRequest<Guid>;
     public class CreateCenterCommand : Command, IRequest<Guid>
     {
         public string? CenterName { get; set; }

@@ -2,17 +2,14 @@
 using Framework.Core.DependencyInjection;
 using MediatR;
 using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Framework.ApplicationService
 {
-    public class MediatorTransactionCommandHandler<TCommand, TResponse> :IRequest<TResponse>
-        where TCommand : Command
+    public class MediatorTransactionCommandHandler<TCommand, TResponse> : IRequest<TResponse> where TCommand : Command
     {
-        //private readonly IMediatorCommandHandler<TCommand, TResponse> _commandHandler;
+
         private readonly IDIContainer _dIContainer;
         private readonly IMediator _mediator;
 
@@ -24,8 +21,7 @@ namespace Framework.ApplicationService
             _dIContainer = diContainer;
             _mediator = mediator;
         }
-
-
+         
         public async Task<TResponse> Handle(TCommand command)
         {
             var unitOfWork = _dIContainer.Resolve<IUnitOfWork>();

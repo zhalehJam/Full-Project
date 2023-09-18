@@ -32,17 +32,19 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                 PartId = n.PartId,
                 PersonID = n.PersonID,
                 PersonName = n.Name,
-                PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId)).Count() > 0 ? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
-                                               .Select(m => m.PartName)
-                                               .First()
-                                               .ToString() : "",
-                CenterName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
-                                                 .Count() > 0 ? _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
-                                                                                      .Select(m => m.CenterName)
-                                                                                      .First()
-                                                                                      .ToString() : "",
+                PartName = _ticketContext.Parts.Any(m => m.Id.Equals(n.PartId)) ? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
+                              .Select(m => m.PartName)
+                              .First()
+                              .ToString() : "",
+                CenterName = _ticketContext.Parts.Any(m => m.Id.Equals(n.PartId))
+                                 ? _ticketContext.Centers.Where(m => m.Parts.Any(q => q.Id.Equals(n.PartId)))
+                                                 .Select(m => m.CenterName)
+                                                 .First()
+                                                 .ToString()
+                                 : "",
                 PersonRole = n.PersonRole
-            }).ToList();
+            })
+.ToList();
             return personDtos;
         }
 
@@ -95,18 +97,15 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             }
             if (parameters.PartId != Guid.Empty)
             {
-                persosInfo = persosInfo.Where(p => p.PartId == parameters.PartId);
-
+                persosInfo = persosInfo.Where(p => p.PartId == parameters.PartId); 
             }
             if (parameters.PersonName != string.Empty)
             {
-                persosInfo = persosInfo.Where(p => p.Name.Contains(parameters.PersonName));
-
+                persosInfo = persosInfo.Where(p => p.Name.Contains(parameters.PersonName)); 
             }
             if (parameters.userRole != 0)
             {
-                persosInfo = persosInfo.Where(p => p.PersonRole == parameters.userRole);
-
+                persosInfo = persosInfo.Where(p => p.PersonRole == parameters.userRole); 
             }
 
             personDtos = persosInfo.
@@ -131,8 +130,8 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 
         public PersonDto GetPersonInfoByPersonelCode(int personnelCode)
         {
-            var person = _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => n);
-            if (person.Count() == 0) { return new PersonDto(); }
+            var person = _ticketContext.Persons.Where(p => p.PersonId == personnelCode).Select(n => n);
+            if (!person.Any()) { return new PersonDto(); }
             else
                 return _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => new PersonDto()
                 {

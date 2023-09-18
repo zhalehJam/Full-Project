@@ -1,7 +1,7 @@
 ﻿using TicketContext.Domain.Centers.DomainServices;
 using TicketContext.Domain.Persons.DomainServices;
 
-namespace TicketContext.Domain.Services
+namespace TicketContext.Domain.Services.Centers
 {
     public class PartIDUsedChecker : IPartIDUsedChecker
     {

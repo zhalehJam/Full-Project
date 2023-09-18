@@ -10,26 +10,23 @@ namespace TicketContext.Domain.Test
     [TestClass]
     public class PersonTest
     {
-        private readonly Mock<IPersonIDValidationChecker> _personIDValidationChecker = new Mock<IPersonIDValidationChecker>();
-        private readonly Mock<IPartIDIsValidChecker> _partIDIsValidChecker = new Mock<IPartIDIsValidChecker>();
-        private readonly Mock<IPersonIsProgramSuppoerterChecker> _personIsProgramSuppoerterChecker = new Mock<IPersonIsProgramSuppoerterChecker>();
-        private readonly Mock<IPersonIDDuplicateChecker> _persoIDDuplicateChecker = new Mock<IPersonIDDuplicateChecker>();
-        private readonly Mock<IPersonIDUsedChecker> _personIDUsedChecker = new Mock<IPersonIDUsedChecker>();
-
-        private Guid centerId;
-        private Guid partId;
-
-        private Guid supporterpersonId = new Guid();
+        private readonly Mock<IPersonIDValidationChecker> _personIdValidationChecker = new();
+        private readonly Mock<IPartIDIsValidChecker> _partIdIsValidChecker = new();
+        private readonly Mock<IPersonIsProgramSupporterChecker> _personIsProgramSupporterChecker = new();
+        private readonly Mock<IPersonIDDuplicateChecker> _persoIdDuplicateChecker = new();
+        private readonly Mock<IPersonIDUsedChecker> _personIdUsedChecker = new();
+         
+        private Guid _partId;
+         
         [TestInitialize]
         public void Setup()
-        {
-            centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
-            partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
-            _personIDValidationChecker.Setup(c => c.IsValid(It.Is<Int32>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
-            _partIDIsValidChecker.Setup(c => c.Isvalid(partId)).Returns(true);
-            _personIsProgramSuppoerterChecker.Setup(c => c.IsSupprter(It.IsAny<int>())).Returns(false);
-            _persoIDDuplicateChecker.Setup(c => c.IsDuplicate(It.Is<Int32>(n => n.Equals(970086)))).Returns(true);
-            _personIDUsedChecker.Setup(c => c.IsUsed(It.Is<Int32>(n => n.Equals(970087)))).Returns(true);
+        { 
+            _partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
+            _personIdValidationChecker.Setup(c => c.IsValid(It.Is<Int32>(n => !(n.Equals(0) || n.ToString().Length > 7)))).Returns(true);
+            _partIdIsValidChecker.Setup(c => c.IsValid(_partId)).Returns(true);
+            _personIsProgramSupporterChecker.Setup(c => c.IsSupporter(It.IsAny<int>())).Returns(false);
+            _persoIdDuplicateChecker.Setup(c => c.IsDuplicate(It.Is<Int32>(n => n.Equals(970086)))).Returns(true);
+            _personIdUsedChecker.Setup(c => c.IsUsed(It.Is<Int32>(n => n.Equals(970087)))).Returns(true);
 
         }
         private Person Init(string personName = "ژاله جمالیوند",
@@ -38,12 +35,12 @@ namespace TicketContext.Domain.Test
         {
             Person person = new Person(personName,
                                        personID,
-                                       partId,
+                                       _partId,
                                        roleType,
-                                       _personIDValidationChecker.Object,
-                                       _partIDIsValidChecker.Object,
-                                       _persoIDDuplicateChecker.Object,
-                                       _personIDUsedChecker.Object);
+                                       _personIdValidationChecker.Object,
+                                       _partIdIsValidChecker.Object,
+                                       _persoIdDuplicateChecker.Object,
+                                       _personIdUsedChecker.Object);
 
             return person;
         }
@@ -61,7 +58,7 @@ namespace TicketContext.Domain.Test
         [TestMethod, TestCategory("CreatePerson")]
         [DataRow("ژاله جمالیوند")]
 
-        public void PersonName_Retrive(string personName)
+        public void PersonName_Retrieve(string personName)
         {
             Person person = Init(personName: personName);
             Assert.AreEqual(person.Name, personName);
@@ -86,7 +83,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("CreatePerson")]
         [DataRow(970428)]
-        public void PersonID_Retrive(Int32 personID)
+        public void PersonID_Retrieve(Int32 personID)
         {
             Person person = Init(personID: personID);
             Assert.AreEqual(person.PersonID, personID);
@@ -98,19 +95,17 @@ namespace TicketContext.Domain.Test
         [DataRow("dd076d63-9546-4123-85e0-e193f6c2cd22", "dd076d63-9546-4123-85e0-e193f6c2cd22")]
 
         public void PartIDIsNotValid_throw_PartIDIsNotValidException(string centerGId, string partGId)
-        {
-            centerId = new Guid(centerGId);
-            partId = new Guid(partGId);
+        { 
+            _partId = new Guid(partGId);
             Init();
         }
 
         [TestMethod, TestCategory("PersonPart")]
-        public void PersonPartID_Retrive()
+        public void PersonPartID_Retreive()
         {
-            centerId = new Guid("dd076d63-9546-4123-85e0-e193f6c2cd22");
-            partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
+            _partId = new Guid("c8363f00-4b86-4cd1-9a68-40818197861a");
             Person person = Init();
-            Assert.AreEqual(person.PartId, partId);
+            Assert.AreEqual(person.PartId, _partId);
         }
 
         [TestMethod, TestCategory("CreatePerson")]
@@ -125,19 +120,19 @@ namespace TicketContext.Domain.Test
         [ExpectedException(typeof(PersonIDIsUsedException))]
         public void PersonIDIsUsed_throw_PersonIDIsUsedException()
         {
-            _personIDUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(true);
+            _personIdUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(true);
 
             Person person = Init();
-            person.CheckPersonCanDelete(_personIDUsedChecker.Object);
+            person.CheckPersonCanDelete(_personIdUsedChecker.Object);
         }
 
         [TestMethod, TestCategory("DeletePerson")]
         [DataRow(970428)]
-        public void Retrive_DeletePerson(Int32 PersonID)
+        public void Retrieve_DeletePerson(Int32 PersonID)
         {
-            _personIDUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(false);
+            _personIdUsedChecker.Setup(c => c.IsUsed(It.IsAny<int>())).Returns(false);
             Person person = Init(personID: PersonID);
-            person.CheckPersonCanDelete(_personIDUsedChecker.Object);
+            person.CheckPersonCanDelete(_personIdUsedChecker.Object);
         }
 
         [TestMethod, TestCategory("PersonRole")]
@@ -148,7 +143,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("PersonRole")]
-        public void SetPersonRole_retreive()
+        public void SetPersonRole_retrieve()
         {
             var person = Init(roleType: RoleType.User);
             Assert.AreEqual(person.PersonRole, RoleType.User);
@@ -159,7 +154,7 @@ namespace TicketContext.Domain.Test
         public void UpdateUserRole_Exception()
         {
             var person = Init(roleType: RoleType.User);
-            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
+            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIdIsValidChecker.Object, _personIsProgramSupporterChecker.Object);
         }
 
         [TestMethod, TestCategory("UpdatePersonRole")]
@@ -167,16 +162,16 @@ namespace TicketContext.Domain.Test
         public void PersonIsProgramSupporter_Exception()
         {
             var person = Init(roleType: RoleType.User);
-            _personIsProgramSuppoerterChecker.Setup(c => c.IsSupprter(It.IsAny<int>())).Returns(true);
+            _personIsProgramSupporterChecker.Setup(c => c.IsSupporter(It.IsAny<int>())).Returns(true);
 
-            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
+            person.UpdatePersonInfo(person.Name, person.PartId, (RoleType)0, _partIdIsValidChecker.Object, _personIsProgramSupporterChecker.Object);
         }
 
         [TestMethod, TestCategory("UpdatePersonRole")]
-        public void UpdateUserRole_retreive()
+        public void UpdateUserRole_retrieve()
         {
             var person = Init(roleType: RoleType.User);
-            person.UpdatePersonInfo(person.Name, person.PartId, RoleType.Admin, _partIDIsValidChecker.Object, _personIsProgramSuppoerterChecker.Object);
+            person.UpdatePersonInfo(person.Name, person.PartId, RoleType.Admin, _partIdIsValidChecker.Object, _personIsProgramSupporterChecker.Object);
             Assert.AreEqual(person.PersonRole, RoleType.Admin);
         }
     }

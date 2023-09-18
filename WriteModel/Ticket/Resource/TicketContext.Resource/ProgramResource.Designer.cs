@@ -99,9 +99,9 @@ namespace TicketContext.Resource {
         /// <summary>
         ///   Looks up a localized string similar to نام برنامه تکراری است..
         /// </summary>
-        public static string ProgramNameIsDupliateException {
+        public static string ProgramNameIsDuplicateException {
             get {
-                return ResourceManager.GetString("ProgramNameIsDupliateException", resourceCulture);
+                return ResourceManager.GetString("ProgramNameIsDuplicateException", resourceCulture);
             }
         }
         

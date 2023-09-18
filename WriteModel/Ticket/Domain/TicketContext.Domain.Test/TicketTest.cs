@@ -11,18 +11,18 @@ namespace TicketContext.Domain.Test
     [TestClass]
     public class TicketTest
     {
-        private readonly Mock<IPersonIDIsValidChecker> _personIDIsValidChecker = new Mock<IPersonIDIsValidChecker>();
-        private readonly Mock<IPersonInfo> _personInfo = new Mock<IPersonInfo>();
-        private readonly Mock<IProgramIDValidationChecker> _programIDValidationChecker = new Mock<IProgramIDValidationChecker>();
-        private readonly Mock<ISupporterPersonIDIsValidChecker> _supporterPersonIDvalidationCheker = new Mock<ISupporterPersonIDIsValidChecker>();
+        private readonly Mock<IPersonIDIsValidChecker> _personIDIsValidChecker = new();
+        private readonly Mock<IPersonInfo> _personInfo = new();
+        private readonly Mock<IProgramIDValidationChecker> _programIDValidationChecker = new();
+        private readonly Mock<ISupporterPersonIDIsValidChecker> _supporterPersonIDvalidationChecker = new();
 
         [TestInitialize]
         public void Setup()
         {
             _personIDIsValidChecker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(true);
-            _personInfo.Setup(n => n.GetpersonInfo(It.IsAny<int>())).Returns(new Guid());
+            _personInfo.Setup(n => n.GetPersonInfo(It.IsAny<int>())).Returns(new Guid());
             _programIDValidationChecker.Setup(n => n.IsValid(It.IsAny<Guid>())).Returns(true);
-            _supporterPersonIDvalidationCheker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(true);
+            _supporterPersonIDvalidationChecker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(true);
 
         }
         private Ticket Init(int supporterPersonID = 4010019,
@@ -39,7 +39,7 @@ namespace TicketContext.Domain.Test
             Ticket ticket = new Ticket(_personIDIsValidChecker.Object,
                                        _personInfo.Object,
                                        _programIDValidationChecker.Object,
-                                       _supporterPersonIDvalidationCheker.Object,
+                                       _supporterPersonIDvalidationChecker.Object,
                                        supporterPersonID,
                                        personID,
                                        programId,
@@ -112,7 +112,7 @@ namespace TicketContext.Domain.Test
         [DataRow(921454)]
         public void InvalidSupporterPersonID_throw_InvalidSupporterPersonIDException(int supporterPersonID)
         {
-            _supporterPersonIDvalidationCheker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(false);
+            _supporterPersonIDvalidationChecker.Setup(n => n.IsValid(It.IsAny<int>())).Returns(false);
 
             Init(supporterPersonID: supporterPersonID);
         }
@@ -148,7 +148,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(InvalidTicketTypeExcption))]
-        public void InvalidTicketType_throw_InvalidTicketTypeExcption()
+        public void InvalidTicketType_throw_InvalidTicketTypeException()
         {
             TicketType ticketType = new TicketType();
             Init(type: ticketType);
@@ -156,7 +156,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(InvalidTicketConditionExcption))]
-        public void InvalidTicketCondition_throw_InvalidTicketConditionExcption()
+        public void InvalidTicketCondition_throw_InvalidTicketConditionException()
         {
             TicketCondition ticketCondition = new TicketCondition();
             Init(ticketCondition: ticketCondition);
@@ -164,7 +164,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(InvalidErrorTypeExcption))]
-        public void InvalidErrorType_throw_InvalidErrorTypeExcption()
+        public void InvalidErrorType_throw_InvalidErrorTypeException()
         {
             ErrorType errorType = new ErrorType();
             Init(errorType: errorType);
@@ -172,22 +172,22 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket")]
         [DataRow(970428)]
-        public void TicketPersonID_Retrive(int personID)
+        public void TicketPersonID_Retrieve(int personID)
         {
             Ticket ticket = Init(personID: personID);
             Assert.AreEqual(ticket.PersonID, personID);
         }
         [TestMethod, TestCategory("Ticket")]
-        public void TicketPersonPartId_Retrive()
+        public void TicketPersonPartId_Retrieve()
         {
             Guid guid = Guid.NewGuid();
-            _personInfo.Setup(n => n.GetpersonInfo(It.IsAny<int>())).Returns(guid);
+            _personInfo.Setup(n => n.GetPersonInfo(It.IsAny<int>())).Returns(guid);
             Ticket ticket = Init();
             Assert.AreEqual(ticket.PersonPartId, guid);
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketProgramId_Retrive()
+        public void TicketProgramId_Retrieve()
         {
             Guid guid = Guid.NewGuid();
             Ticket ticket = Init(programId: guid);
@@ -196,7 +196,7 @@ namespace TicketContext.Domain.Test
 
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketType_Retrive()
+        public void TicketType_Retrieve()
         {
             TicketType ticketType = (TicketType)1;
             Ticket ticket = Init(type: ticketType);
@@ -204,7 +204,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketErrorType_Retrive()
+        public void TicketErrorType_Retrieve()
         {
             ErrorType errorType = (ErrorType)2;
             Ticket ticket = Init(errorType: errorType);
@@ -212,7 +212,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketErrorDescription_Retrive()
+        public void TicketErrorDescription_Retrieve()
         {
             string description = "Describe";
             Ticket ticket = Init(errorDiscription: description);
@@ -220,7 +220,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketSolutionDescription_Retrive()
+        public void TicketSolutionDescription_Retrieve()
         {
             string description = "SolutionDescribe";
             Ticket ticket = Init(solutionDiscription: description);
@@ -228,7 +228,7 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketDateTime_Retrive()
+        public void TicketDateTime_Retrieve()
         {
             DateTime dateTime = DateTime.Now;
             Ticket ticket = Init(ticketTime: dateTime);
@@ -236,19 +236,13 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketCondition_Retrive()
+        public void TicketCondition_Retrieve()
         {
             TicketCondition ticketCondition = (TicketCondition)2;
             Ticket ticket = Init(ticketCondition: ticketCondition);
             Assert.AreEqual(ticket.TicketCondition, ticketCondition);
         }
-
-        //[TestMethod,TestCategory("Ticket Update")]
-        //[ExpectedException (typeof(InvalidTicketIDException))]
-        //public void InvalidTicketID_throw_InvalidTicketIDException()
-        //{
-        //    Init();
-        //}
+         
         [TestMethod, TestCategory("Ticket Update")]
         [ExpectedException(typeof(TheCompetedTicketCannotUpdateEception))]
         public void TheCompetedTicketCannotUpdate_throw_TheCompetedTicketCannotUpdateEception()
@@ -260,14 +254,14 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket Update")]
         [ExpectedException(typeof(TicketDidNotCeateByCurrentSupporerException))]
-        public void TicketDidNotCeateByCurrentSupporer_Throw_TicketDidNotCeateByCurrentSupporerException()
+        public void TicketDidNotCreateByCurrentSupporter_Throw()
         {
             Ticket ticket = Init();
             Update(ticket, supporterPersonID: ticket.SupporterPersonID + 1);
         }
 
         [TestMethod, TestCategory("Ticket Update")]
-        public void TicketUpdate_retrive()
+        public void TicketUpdate_retrieve()
         {
             Ticket ticket = Init();
             Ticket ticket1 = Update(ticket);
@@ -276,14 +270,14 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Delete Ticket")]
         [ExpectedException(typeof(TicketCannotDeletetException))]
-        public void TicketCannotDeletet_Throw_TicketCannotDeletetException()
+        public void TicketCannotDeleted_Throw_TicketCannotDeletedException()
         {
             Ticket ticket = Init();
             ticket.CheckTicketCanDelete(ticket.SupporterPersonID + 1);
         }
 
         [TestMethod, TestCategory("Delete Ticket")]
-        public void DeleteTicket_Retrive()
+        public void DeleteTicket_Retrieve()
         {
             Ticket ticket = Init();
             ticket.CheckTicketCanDelete(ticket.SupporterPersonID);

@@ -30,7 +30,7 @@ namespace TicketContext.Domain.Programs
             if(string.IsNullOrWhiteSpace(programName))
                 throw new NullOrWhiteProgramNameException();
             if(_programNameDuplicateChecker.IsDuplicated(programName))
-                throw new ProgramNameIsDupliateException();
+                throw new ProgramNameIsDuplicateException();
 
             ProgramName = programName;
         }

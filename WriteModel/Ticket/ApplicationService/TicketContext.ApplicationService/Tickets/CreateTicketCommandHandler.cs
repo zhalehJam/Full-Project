@@ -12,30 +12,30 @@ namespace TicketContext.ApplicationService.Tickets
 {
     public class CreateTicketCommandHandler : ICommandHandler<CreateTicketCommand>
     {
-        private readonly ISupporterPersonIDIsValidChecker _supporterPersonIDIsValidChecker;
-        private readonly IPersonIDIsValidChecker _personIDIsValidChecker;
+        private readonly ISupporterPersonIDIsValidChecker _supporterPersonIdIsValidChecker;
+        private readonly IPersonIDIsValidChecker _personIdIsValidChecker;
         private readonly IPersonInfo _personInfo;
-        private readonly IProgramIDValidationChecker _programIDIsValidChecker;
+        private readonly IProgramIDValidationChecker _programIdIsValidChecker;
         private readonly ITicketRepository _ticketRepository;
 
-        public CreateTicketCommandHandler(ISupporterPersonIDIsValidChecker supporterPersonIDIsValidChecker,
-                                          IPersonIDIsValidChecker personIDIsValidChecker,
+        public CreateTicketCommandHandler(ISupporterPersonIDIsValidChecker supporterPersonIdIsValidChecker,
+                                          IPersonIDIsValidChecker personIdIsValidChecker,
                                           IPersonInfo personInfo,
-                                          IProgramIDValidationChecker programIDIsValidChecker,
+                                          IProgramIDValidationChecker programIdIsValidChecker,
                                           ITicketRepository ticketRepository)
         {
-            _supporterPersonIDIsValidChecker = supporterPersonIDIsValidChecker;
-            _personIDIsValidChecker = personIDIsValidChecker;
+            _supporterPersonIdIsValidChecker = supporterPersonIdIsValidChecker;
+            _personIdIsValidChecker = personIdIsValidChecker;
             _personInfo = personInfo;
-            _programIDIsValidChecker = programIDIsValidChecker;
+            _programIdIsValidChecker = programIdIsValidChecker;
             _ticketRepository = ticketRepository;
         }
         public void Execute(CreateTicketCommand command)
         {
-            Ticket ticket = new Ticket(_personIDIsValidChecker,
+            Ticket ticket = new Ticket(_personIdIsValidChecker,
                                        _personInfo,
-                                       _programIDIsValidChecker,
-                                       _supporterPersonIDIsValidChecker,
+                                       _programIdIsValidChecker,
+                                       _supporterPersonIdIsValidChecker,
                                        command.SupporterPersonID,
                                        command.PersonID,
                                        command.ProgramId,

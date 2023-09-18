@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Threading;
-using System.Threading.Tasks;
-using Framework.Core.ApplicationService;
+﻿using Framework.Core.ApplicationService;
 using Framework.Core.DependencyInjection;
 using MediatR;
+using System.Threading.Tasks;
 
 namespace Framework.ApplicationService
 {

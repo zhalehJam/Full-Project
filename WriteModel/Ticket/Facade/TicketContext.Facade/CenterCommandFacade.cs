@@ -11,17 +11,10 @@ namespace TicketContext.Facade
         public CenterCommandFacade(IMediatorCommand mediator) : base(mediator)
         {
         }
-
-        //public CenterCommandFacade(ICommandBus commandBus) : base(commandBus)
-        //{
-        //}
-
+        
         public async Task AddPart(AddPartCommand addPartCommand)
         {
-            //_commandBus.Dispatch(addPartCommand);
-            // var e = await _mediator.Send(addPartCommand);
             var t =  await _mediatorCommand.Send<AddPartCommand,Guid>(addPartCommand);
-
         }
 
         public async Task<Guid> CreateCenter(CreateCenterCommand createCenterCommand) 
