@@ -1,23 +1,21 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System.Linq;
+﻿using API.Jobs;
+using API.Jobs.Scheduler;
 using Framework.AssemblyHelper;
 using Framework.Core.DependencyInjection;
 using Framework.Core.Persistence;
-
+using Hangfire;
+using Hangfire.SqlServer;
+using HangfireBasicAuthenticationFilter;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.SignalR;
+using Microsoft.OpenApi.Models;
 using Persistence;
 using ReadModel.Context.Model;
-using Microsoft.OpenApi.Models;
 
 namespace API
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; } 
+        public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
         {
@@ -30,6 +28,23 @@ namespace API
             services.AddControllers();
             var assemblyDiscovery = new AssemblyDiscovery("Ticket*.dll");
             var registrars = assemblyDiscovery.DiscoverInstances<IRegistrar>("Ticket").ToList();
+
+            //------------- Hangfire-------------------
+            services.AddHangfire(configuration => configuration
+                                                         .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                                                         .UseSimpleAssemblyNameTypeSerializer()
+                                                         .UseRecommendedSerializerSettings()
+                                                         .UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection"), new SqlServerStorageOptions
+                                                         {
+                                                             CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                                                             SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                                                             QueuePollInterval = TimeSpan.Zero,
+                                                             UseRecommendedIsolationLevel = true,
+                                                             DisableGlobalLocks = true
+                                                         }));
+
+            services.AddHangfireServer();
+
             foreach (var registrar in registrars)
             {
                 registrar.Register(services, assemblyDiscovery);
@@ -82,6 +97,10 @@ namespace API
             });
 
 
+            services.AddScoped<PersonCreatorService>();
+            services.AddScoped<PersonCreatorJobScheduler>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -104,9 +123,25 @@ namespace API
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+
+            app.UseHangfireDashboard("/JobsDashboard", new DashboardOptions
+            {
+                DashboardTitle = "Ticketing Jobs Dashboard",
+                Authorization = new[]
+                {
+                    new HangfireCustomBasicAuthenticationFilter{
+                        User = Configuration.GetSection("HangfireSettings:UserName").Value,
+                         Pass = Configuration.GetSection("HangfireSettings:Password").Value
+                        }
+                }
+            });
+
+            app.UseHangfireDashboard();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+              endpoints.MapControllers();
             });
         }
     }

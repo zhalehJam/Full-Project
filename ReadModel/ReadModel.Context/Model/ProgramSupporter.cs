@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         public Guid Program { get; set; }
-        public int SupporterpersonID { get; set; }
+        public int SupporterPersonId { get; set; }
         public virtual Program Programs { get; set; }
     }
 }
