@@ -30,8 +30,8 @@ namespace TicketContext.Domain.Test
                             Guid programId = new Guid(),
                             TicketType type = TicketType.Supporting,
                             ErrorType errorType = ErrorType.UserError,
-                            string errorDiscription = "description",
-                            string solutionDiscription = "Solutiondescription",
+                            string ErrorDiscription = "description",
+                            string solutionDiscription = "SolutionDiscription",
                             DateTime ticketTime = new DateTime(),
                             TicketCondition ticketCondition = TicketCondition.OnGoing)
         {
@@ -45,7 +45,7 @@ namespace TicketContext.Domain.Test
                                        programId,
                                        type,
                                        errorType,
-                                       errorDiscription,
+                                       ErrorDiscription,
                                        solutionDiscription,
                                        ticketTime,
                                        ticketCondition);
@@ -58,8 +58,8 @@ namespace TicketContext.Domain.Test
                             Guid programId = new Guid(),
                             TicketType type = TicketType.Developing,
                             ErrorType errorType = ErrorType.SystemError,
-                            string errorDiscription = "description2",
-                            string solutionDiscription = "Solutiondescription2",
+                            string ErrorDiscription = "description2",
+                            string solutionDiscription = "SolutionDiscription2",
                             DateTime ticketTime = new DateTime(),
                             TicketCondition ticketCondition = TicketCondition.Finish)
         {
@@ -72,7 +72,7 @@ namespace TicketContext.Domain.Test
                                     programId,
                                     type,
                                     errorType,
-                                    errorDiscription,
+                                    ErrorDiscription,
                                     solutionDiscription,
                                     ticketTime,
                                     ticketCondition);
@@ -122,9 +122,9 @@ namespace TicketContext.Domain.Test
         [DataRow(null)]
         [DataRow("")]
         [DataRow("    ")]
-        public void ErrorDisctionIsnullOrEmpty_throw_ErrorDisctionIsnullOrEmptyException(string errorDiscription)
+        public void ErrorDisctionIsnullOrEmpty_throw_ErrorDisctionIsnullOrEmptyException(string ErrorDiscription)
         {
-            Init(errorDiscription: errorDiscription);
+            Init(ErrorDiscription: ErrorDiscription);
         }
 
         [TestMethod, TestCategory("Ticket")]
@@ -212,15 +212,15 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketErrorDescription_Retrive()
+        public void TicketErrorDiscription_Retrive()
         {
             string description = "Describe";
-            Ticket ticket = Init(errorDiscription: description);
+            Ticket ticket = Init(ErrorDiscription: description);
             Assert.AreEqual(ticket.ErrorDiscription, description);
         }
 
         [TestMethod, TestCategory("Ticket")]
-        public void TicketSolutionDescription_Retrive()
+        public void TicketSolutionDiscription_Retrive()
         {
             string description = "SolutionDescribe";
             Ticket ticket = Init(solutionDiscription: description);
