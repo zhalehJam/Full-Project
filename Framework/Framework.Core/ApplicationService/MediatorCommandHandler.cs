@@ -15,10 +15,5 @@ namespace Framework.Core.ApplicationService
         {
             throw new System.NotImplementedException();
         }
-
-        protected MediatorCommandHandler()
-        {
-
-        }
     }
 }

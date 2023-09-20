@@ -32,29 +32,12 @@ namespace Framework.AssemblyHelper
 
         public IEnumerable<Type> DiscoverTypes<TInterface>(string searchNamespace)
         {
-
-            var q =  _loadedAssemblies
-                .Where(a => a.FullName.StartsWith(searchNamespace))
-            .SelectMany(a => a.GetTypes())
-                .Where(t => t.IsClass && !t.IsAbstract)
-            .Where(t => t.GetInterface(typeof(TInterface).Name) != null)
-            .Select(t => t);
+            var q = _loadedAssemblies?.Where(a => a.FullName.StartsWith(searchNamespace))
+                                       .SelectMany(a => a.GetTypes())
+                                       .Where(t => t.IsClass && !t.IsAbstract)
+                                       .Where(t => t.GetInterface(typeof(TInterface).Name) != null)
+                                       .Select(t => t);
             return q;
-        }
-
-        public IEnumerable<Type> GetTypes(Type type)
-        {
-            var baseClassName = type.Name;
-
-            return GetAllAssemblies().SelectMany(a => a.GetTypes()).Where(a =>
-        a.BaseType != null && a.BaseType.Name == baseClassName && a.IsClass && !a.IsAbstract).ToList();
-        }
-
-        private IEnumerable<Assembly> GetAllAssemblies()
-        {
-            var result = _loadedAssemblies
-                    .Where(a => a.FullName!.Contains(_assemblySearchPattern)).ToList();
-            return result;
         }
 
         private void LoadAssemblies(string assemblySearchPattern)
@@ -63,7 +46,7 @@ namespace Framework.AssemblyHelper
             {
                 var directory = AppDomain.CurrentDomain.BaseDirectory;
                 _loadedAssemblies = Directory.GetFiles(directory, assemblySearchPattern).Select(Assembly.LoadFrom)
-                    .ToList();
+                                             .ToList();
             }
         }
     }

@@ -47,7 +47,7 @@ namespace ReadModel.Context.Model
                 n.Property(n => n.Id).ValueGeneratedNever();
                 n.Property<string>(n => n.PartName);
                 n.Property<int>(n => n.PartID);
-                n.HasOne<Center>(d => d.centers)
+                n.HasOne<Center>(d => d.Centers)
                   .WithMany(d => d.Parts)
                   .HasForeignKey(d => d.Center);
             });
@@ -56,7 +56,7 @@ namespace ReadModel.Context.Model
             {
                 entity.ToTable("Person", "TicketContext");
                 entity.Property(n => n.Id).ValueGeneratedNever();
-                entity.Property(n => n.PersonID);
+                entity.Property(n => n.PersonId);
                 entity.Property(n => n. Name);
                 entity.Property(n => n.PartId);
                 entity.Property(n => n.PersonRole);
@@ -73,7 +73,7 @@ namespace ReadModel.Context.Model
             {
                 entity.ToTable("ProgramSupporter", "TicketContext");
                 entity.Property(n => n.Id).ValueGeneratedNever();
-                entity.Property(n => n.SupporterpersonID);
+                entity.Property(n => n.SupporterPersonId);
                 entity.HasOne<Program>(n => n.Programs)
                 .WithMany(n => n.Supporters)
                 .HasForeignKey(n => n.Program);
@@ -87,19 +87,11 @@ namespace ReadModel.Context.Model
                 entity.Property(n => n.ProgramId);
                 entity.Property(n => n.ErrorType);
                 entity.Property(n => n.Type);
-                entity.Property(n => n.ErrorDiscription);
-                entity.Property(n => n.SolutionDiscription);
+                entity.Property(n => n.ErrorDescription);
+                entity.Property(n => n.SolutionDescription);
                 entity.Property(n => n.TicketTime);
                 entity.Property(n => n.TicketCondition);
-                entity.Property(n => n.SupporterPersonID);
-
-
-
-
-
-
-
-
+                entity.Property(n => n.SupporterPersonId); 
             });
             //modelBuilder.HasSequence
             OnModelCreatingPartial(modelBuilder);

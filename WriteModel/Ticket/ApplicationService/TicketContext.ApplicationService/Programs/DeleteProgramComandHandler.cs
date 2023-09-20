@@ -1,5 +1,5 @@
 ﻿using Framework.Core.ApplicationService;
-using TicketContext.ApplicationService.Contract.Program;
+using TicketContext.ApplicationService.Contract.Programs;
 using TicketContext.Domain.Programs;
 using TicketContext.Domain.Programs.DomainServices;
 

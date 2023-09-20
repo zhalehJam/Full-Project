@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Framework.Domain
 {
-   public class DomainException:ApplicationException
+    public class DomainException:ApplicationException
     {
     }
 }

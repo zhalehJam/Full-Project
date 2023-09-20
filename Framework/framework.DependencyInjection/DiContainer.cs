@@ -15,7 +15,6 @@ namespace Framework.DependencyInjection
         public T Resolve<T>()
         {
           return  _serviceProvider.GetRequiredService<T>();
-       
         }
     }
 }

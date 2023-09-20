@@ -23,14 +23,10 @@ namespace Framework.ApplicationService
         {
             var commandHandler1 = _dIContainer.Resolve<IMediator>();
             var unitOfWork = _dIContainer.Resolve<IUnitOfWork>();
-            //var hnd = _dIContainer.Resolve<IMediatorCommandHandler<TCommand, TResponse>>();
-            //var w = hnd.Handle(command);
 
             var e = await _mediator.Send(command);
             unitOfWork.Commit();
             return (TResponse)e;
-            //var transactionCommandHandler = new MediatorTransactionCommandHandler<TCommand, TResponse>(commandHandler, _dIContainer, _mediator);
-            //return await transactionCommandHandler.Send(command);
         }
     }
 }

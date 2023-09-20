@@ -9,18 +9,16 @@ using System.Threading.Tasks;
 
 namespace Framework.ApplicationService
 {
-    public class MediatorTransactionCommandHandler<TCommand, TResponse> :IRequest<TResponse>
+    public class MediatorTransactionCommandHandler<TCommand, TResponse> : IRequest<TResponse>
         where TCommand : Command
     {
         //private readonly IMediatorCommandHandler<TCommand, TResponse> _commandHandler;
         private readonly IDIContainer _dIContainer;
         private readonly IMediator _mediator;
 
-        public MediatorTransactionCommandHandler(//IMediatorCommandHandler<TCommand, TResponse> commandHandler,
-                                                 IDIContainer diContainer,
+        public MediatorTransactionCommandHandler(IDIContainer diContainer,
                                                  IMediator mediator)
         {
-            //_commandHandler = commandHandler;
             _dIContainer = diContainer;
             _mediator = mediator;
         }
@@ -32,13 +30,9 @@ namespace Framework.ApplicationService
             try
             {
                 var commandHandler = _dIContainer.Resolve<IMediator>();
-               //var commandHandler2 = _dIContainer.Resolve<IMediatorCommandHandler<TCommand, TResponse>>();
 
                 return await _mediator.Send((IRequest<TResponse>)command);
-                //_mediator.Send(createCenterCommand);
-                //var e= await _mediator.Send<TResponse>(command< TResponse> )
                 unitOfWork.Commit();
-                //return _commandHandler.Handle(command);
             }
             catch
             {
