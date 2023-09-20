@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TicketContext.ApplicationService.Contract.Program;
+using TicketContext.ApplicationService.Contract.Programs; 
 using TicketContext.Facade.Contract;
 using TicketContext.ReadModel.Query.Contracts.Programs;
 using TicketContext.ReadModel.Query.Contracts.Programs.DataContracts;

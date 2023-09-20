@@ -131,8 +131,8 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 
         public PersonDto GetPersonInfoByPersonelCode(int personnelCode)
         {
-            var person = _ticketContext.Persons.Where(p => p.PersonId == personnelCode).Select(n => n);
-            if (person.Count() == 0) { return new PersonDto(); }
+            var person = _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => n);
+            if (!person.Any()) { return new PersonDto(); }
             else
                 return _ticketContext.Persons.Where(p => p.PersonId == personnelCode).Select(n => new PersonDto()
                 {

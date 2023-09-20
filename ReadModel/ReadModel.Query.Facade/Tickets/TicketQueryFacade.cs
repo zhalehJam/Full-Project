@@ -21,7 +21,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
             List<TicketDto>? ticketDtos = new List<TicketDto>();
             var userinfo = _ticketContext.Persons.Single(p => p.PersonId == personID);
 
-            ticketDtos = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin ? true : t.SupporterPersonId == personID)
+            ticketDtos = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin || t.SupporterPersonID == personID)
                                                           && t.TicketTime >= fromDate
                                                           && t.TicketTime <= toDate).Select(n => new TicketDto()
                                                           {
@@ -154,9 +154,9 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
 
         public PagedList<TicketDto> GetUserTicketsByDateRage(int personID, TicketQueryParameters parameters)
         {
-            var userinfo = _ticketContext.Persons.Single(p => p.PersonId == personID);
-            var supporterterprograms = _ticketContext.ProgramSupporters.Where(ps => ps.SupporterPersonId == userinfo.PersonId).Select(t => t.Program).ToList();
-            var tickets = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin ? true : supporterterprograms.Contains(t.ProgramId))
+            var userinfo = _ticketContext.Persons.Single(p => p.PersonID == personID);
+            var supporterterprograms = _ticketContext.ProgramSupporters.Where(ps => ps.SupporterpersonID == userinfo.PersonID).Select(t => t.Program).ToList();
+            var tickets = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin || supporterterprograms.Contains(t.ProgramId))
                                                            && t.TicketTime.Date >= parameters.fromDate
                                                            && t.TicketTime <= parameters.toDate)
                                                .Select(n => new TicketDto()
