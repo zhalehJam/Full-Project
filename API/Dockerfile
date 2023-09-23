@@ -29,7 +29,7 @@ COPY ["WriteModel/Ticket/Facade/TicketContext.CenterCommandFacade.Contract/Ticke
 COPY ["WriteModel/Ticket/Facade/TicketContext.Facade/TicketContext.Facade.csproj", "WriteModel/Ticket/Facade/TicketContext.Facade/"]
 COPY ["Framework/Framework.Facade/Framework.Facade.csproj", "Framework/Framework.Facade/"]
 COPY ["WriteModel/Ticket/TicketContext.Configuration/TicketContext.Configuration.csproj", "WriteModel/Ticket/TicketContext.Configuration/"]
-COPY ["Framework/Framework.DependencyInjection/Framework.DependencyInjection.csproj", "Framework/Framework.DependencyInjection/"]
+COPY ["Framework/framework.DependencyInjection/Framework.DependencyInjection.csproj", "Framework/framework.DependencyInjection/"]
 COPY ["Framework/Framework.ApplicationService/Framework.ApplicationService.csproj", "Framework/Framework.ApplicationService/"]
 RUN dotnet restore "API/API.csproj"
 COPY . .
