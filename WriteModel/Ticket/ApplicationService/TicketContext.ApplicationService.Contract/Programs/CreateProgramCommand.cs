@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TicketContext.ApplicationService.Contract.Program
+namespace TicketContext.ApplicationService.Contract.Programs
 {
     public class CreateProgramCommand : Command
     {

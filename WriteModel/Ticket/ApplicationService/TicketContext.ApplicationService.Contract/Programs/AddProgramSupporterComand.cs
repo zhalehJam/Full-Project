@@ -1,6 +1,6 @@
 ﻿using Framework.Core.ApplicationService;
 
-namespace TicketContext.ApplicationService.Contract.Program
+namespace TicketContext.ApplicationService.Contract.Programs
 {
     public class AddProgramSupporterCommand:Command
     {

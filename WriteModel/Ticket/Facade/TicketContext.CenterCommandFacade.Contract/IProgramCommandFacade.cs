@@ -1,4 +1,4 @@
-﻿using TicketContext.ApplicationService.Contract.Program;
+﻿using TicketContext.ApplicationService.Contract.Programs;
 
 namespace TicketContext.Facade.Contract
 {

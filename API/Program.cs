@@ -1,7 +1,12 @@
 using API;
+using API.Jobs.Scheduler;
+using API.Jobs;
 using Framework.AssemblyHelper;
 using Framework.Core.DependencyInjection;
 using Framework.Core.Persistence;
+using Hangfire;
+using Hangfire.SqlServer;
+using HangfireBasicAuthenticationFilter;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -56,6 +61,7 @@ builder.Services.AddSwaggerGen(c =>
         In = ParameterLocation.Header,
     });
 });
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
@@ -66,6 +72,23 @@ builder.Services.AddCors(options =>
                             .WithExposedHeaders("X-Pagination"));
 });
 
+//------------- Hangfire-------------------
+builder.Services.AddHangfire(configuration => configuration
+                                             .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                                             .UseSimpleAssemblyNameTypeSerializer()
+                                             .UseRecommendedSerializerSettings()
+                                             .UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection"), new SqlServerStorageOptions
+                                                                      {
+                                                                          CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                                                                          SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                                                                          QueuePollInterval = TimeSpan.Zero,
+                                                                          UseRecommendedIsolationLevel = true,
+                                                                          DisableGlobalLocks = true
+                                                                      }));
+
+builder.Services.AddHangfireServer();
+builder.Services.AddScoped<PersonCreatorService>();
+builder.Services.AddScoped<PersonCreatorJobScheduler>();
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
@@ -84,6 +107,20 @@ app.UseCors("CorsPolicy");
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseHangfireDashboard("/JobsDashboard", new DashboardOptions
+                                           {
+                                               DashboardTitle = "Ticketing Jobs Dashboard",
+                                               Authorization = new[]
+                                                               {
+                                                                   new HangfireCustomBasicAuthenticationFilter{
+                                                                       User = builder.Configuration.GetSection("HangfireSettings:UserName").Value,
+                                                                       Pass =builder.Configuration.GetSection("HangfireSettings:Password").Value
+                                                                   }
+                                                               }
+                                           });
+
+app.UseHangfireDashboard();
 app.UseEndpoints(endpoints =>
                  {
                      endpoints.MapControllers();
