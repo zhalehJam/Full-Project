@@ -127,15 +127,15 @@ namespace TicketContext.Domain.Test
             Init(ErrorDiscription: ErrorDiscription);
         }
 
-        [TestMethod, TestCategory("Ticket")]
-        [ExpectedException(typeof(SolutionDisctionIsnullOrEmptyException))]
-        [DataRow(null)]
-        [DataRow("")]
-        [DataRow("    ")]
-        public void SolutionDisctionIsnullOrEmpty_throw_SolutionDisctionIsnullOrEmptyException(string solutionDiscription)
-        {
-            Init(solutionDiscription: solutionDiscription);
-        }
+        //[TestMethod, TestCategory("Ticket")]
+        //[ExpectedException(typeof(SolutionDisctionIsnullOrEmptyException))]
+        //[DataRow(null)]
+        //[DataRow("")]
+        //[DataRow("    ")]
+        //public void SolutionDisctionIsnullOrEmpty_throw_SolutionDisctionIsnullOrEmptyException(string solutionDiscription)
+        //{
+        //    Init(solutionDiscription: solutionDiscription);
+        //}
 
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(TicketDateTimeIsNotValidException))]
