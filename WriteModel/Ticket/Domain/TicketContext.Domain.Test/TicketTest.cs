@@ -106,8 +106,7 @@ namespace TicketContext.Domain.Test
 
         [TestMethod, TestCategory("Ticket")]
         [ExpectedException(typeof(InvalidSupporterPersonIDException))]
-        [DataRow(null)]
-        [DataRow("")]
+       
         [DataRow(0)]
         [DataRow(921454)]
         public void InvalidSupporterPersonID_throw_InvalidSupporterPersonIDException(int supporterPersonID)
