@@ -41,13 +41,20 @@ namespace API.Controller
         {
             _ticketCommandFacade.DeleteTicket(deleteTicketCommand);
         }
+        [HttpGet("GetAllTickets")]
+        public List<TicketDto> GetAllTickets(DateTime fromDate, DateTime toDate)
+        {
+            var identity = User.Identity as ClaimsIdentity;
+            return _ticketQueryFacade.GetAllTickets();
+        }
 
         [HttpGet("GetUserAllTickets")]
         public List<TicketDto> GetAllTicketsByPersonId(DateTime fromDate, DateTime toDate)
         {
             var identity = User.Identity as ClaimsIdentity;
-            return _ticketQueryFacade.GetUserAllTickets(Convert.ToInt32(identity.Name),  fromDate,  toDate);
+            return _ticketQueryFacade.GetUserAllTickets(Convert.ToInt32(identity.Name), fromDate, toDate);
         }
+
         [HttpGet("GetAllTicketsByPage")]
         public PagedList<TicketDto> GetAllTicketsByPage([FromQuery] PageParameter parameters)
         {
@@ -55,6 +62,7 @@ namespace API.Controller
             var identity = User.Identity as ClaimsIdentity;
             return _ticketQueryFacade.GetAllTicketsByPage(pageParametrs: parameters);
         }
+
         [HttpGet("GetTicketById")]
         public TicketDto GetTicketById([FromQuery] Guid Id)
         {
