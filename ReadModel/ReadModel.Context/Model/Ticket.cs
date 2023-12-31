@@ -10,10 +10,10 @@ namespace ReadModel.Context.Model
         public Guid ProgramId { get; set; }
         public ErrorType ErrorType { get; set; }
         public TicketType Type { get; set; }
-        public string? ErrorDescription { get; set; }
-        public string? SolutionDescription { get; set; }
+        public string? ErrorDiscription { get; set; }
+        public string? SolutionDiscription { get; set; }
         public DateTime TicketTime { get; set; }
         public TicketCondition TicketCondition { get; set; }
-        public int SupporterPersonId { get; set; }
+        public int SupporterPersonID { get; set; }
     }
 }

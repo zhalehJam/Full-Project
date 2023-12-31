@@ -30,7 +30,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             {
                 Id = n.Id,
                 PartId = n.PartId,
-                PersonID = n.PersonId,
+                PersonID = n.PersonID,
                 PersonName = n.Name,
                 PartName = _ticketContext.Parts.Any(m => m.Id.Equals(n.PartId)) ? _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                               .Select(m => m.PartName)
@@ -63,7 +63,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                          {
                              Id = n.Id,
                              PartId = n.PartId,
-                             PersonID = n.PersonId,
+                             PersonID = n.PersonID,
                              PersonName = n.Name,
                              PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                             .Select(m => m.PartName)
@@ -86,7 +86,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
 
             if (parameters.PersonCode != 0)
             {
-                persosInfo = persosInfo.Where(p => p.PersonId == parameters.PersonCode);
+                persosInfo = persosInfo.Where(p => p.PersonID == parameters.PersonCode);
             }
             if (parameters.CenterId != Guid.Empty)
             {
@@ -113,7 +113,7 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
                          {
                              Id = n.Id,
                              PartId = n.PartId,
-                             PersonID = n.PersonId,
+                             PersonID = n.PersonID,
                              PersonName = n.Name,
                              PartName = _ticketContext.Parts.Where(m => m.Id.Equals(n.PartId))
                                                             .Select(m => m.PartName)
@@ -133,10 +133,10 @@ namespace TicketContext.ReadModel.Query.Facade.Persons
             var person = _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => n);
             if (!person.Any()) { return new PersonDto(); }
             else
-                return _ticketContext.Persons.Where(p => p.PersonId == personnelCode).Select(n => new PersonDto()
+                return _ticketContext.Persons.Where(p => p.PersonID == personnelCode).Select(n => new PersonDto()
                 {
                     Id = n.Id,
-                    PersonID = n.PersonId,
+                    PersonID = n.PersonID,
                     PartId = n.PartId,
                     CenterName = _ticketContext.Centers.Single(c => c.Id == (_ticketContext.Parts.Single(p => p.Id == n.PartId).Center)).CenterName,
                     PartName = _ticketContext.Parts.Single(p => p.Id == n.PartId).PartName,

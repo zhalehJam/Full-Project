@@ -33,7 +33,7 @@ namespace TicketContext.Domain.Tickets
                       Guid programId,
                       TicketType type,
                       ErrorType errorType,
-                      string errorDiscription,
+                      string ErrorDiscription,
                       string solutionDiscription,
                       DateTime ticketTime,
                       TicketCondition ticketCondition
@@ -47,8 +47,8 @@ namespace TicketContext.Domain.Tickets
             SetTicketType(type);
             SetErrorType(errorType);
             SetTicketCondition(ticketCondition);
-            SetErrorDiscription(errorDiscription);
-            SetSolutionDescription(solutionDiscription);
+            SetErrorDiscription(ErrorDiscription);
+            SetSolutionDiscription(solutionDiscription);
             SetTicketDateTime(ticketTime);
             SetProgramId(programId);
             SetPersonInfo(personID);
@@ -92,7 +92,7 @@ namespace TicketContext.Domain.Tickets
             TicketTime = ticketTime;
         }
 
-        private void SetSolutionDescription(string solutionDiscription)
+        private void SetSolutionDiscription(string solutionDiscription)
         {
             if (string.IsNullOrWhiteSpace(solutionDiscription))
                 //throw new SolutionDisctionIsnullOrEmptyException();
@@ -146,7 +146,7 @@ namespace TicketContext.Domain.Tickets
             SetErrorType(errorType);
             SetTicketCondition(ticketCondition);
             SetErrorDiscription(errorDiscription);
-            SetSolutionDescription(solutionDiscription);
+            SetSolutionDiscription(solutionDiscription);
             SetTicketDateTime(ticketTime);
             SetProgramId(programId);
             SetPersonInfo(personID);

@@ -22,8 +22,8 @@ namespace TicketContext.ReadModel.Query.Contracts.Tickets.DataContracts
         public string ErrorTypeName { get; set; }
         public int Typeid { get; set; }
         public string TicketTypeName { get; set; }
-        public string? ErrorDescription { get; set; }
-        public string? SolutionDescription { get; set; }
+        public string? ErrorDiscription { get; set; }
+        public string? SolutionDiscription { get; set; }
         public DateTime TicketTime { get; set; }
         public int TicketConditionid { get; set; }
         public string TicketConditionTypeName { get; set; }
