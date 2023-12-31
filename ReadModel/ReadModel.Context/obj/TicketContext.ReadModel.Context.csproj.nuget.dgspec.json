@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {}
+    "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {}
   },
   "projects": {
-    "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+    "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "projectUniqueName": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
         "projectName": "TicketContext.Contract",
-        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
-        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
+        "projectPath": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,24 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
+    "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+        "projectUniqueName": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
         "projectName": "TicketContext.ReadModel.Context",
-        "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
-        "packagesPath": "C:\\Users\\5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\5\\source\\repos\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
+        "projectPath": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\ReadModel\\ReadModel.Context\\TicketContext.ReadModel.Context.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\ReadModel\\ReadModel.Context\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
-                "projectPath": "C:\\Users\\5\\source\\repos\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
+              "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj": {
+                "projectPath": "E:\\Repositories\\Srcs\\TicketingUI (1)\\Ticketing\\Contract\\TicketContext.Contract\\TicketContext.Contract.csproj"
               }
             }
           }
@@ -125,12 +119,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
