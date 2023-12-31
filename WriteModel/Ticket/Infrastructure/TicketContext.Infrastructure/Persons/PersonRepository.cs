@@ -1,11 +1,6 @@
 ﻿using Framework.Core.Persistence;
 using Framework.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using TicketContext.Domain.Persons;
 using TicketContext.Domain.Persons.DomainServices;
 
@@ -44,7 +39,7 @@ namespace TicketContext.Infrastructure.Persons
 
         protected override IEnumerable<Expression<Func<Person, object>>> GetAggregateExpression()
         {
-            return null;//throw new NotImplementedException();
+            return null; 
         }
     }
 }

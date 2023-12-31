@@ -3,8 +3,8 @@ using TicketContext.Resource;
 
 namespace TicketContext.Domain.Programs.Exceptions
 {
-    public class ProgramNameIsDupliateException:DomainException
+    public class ProgramNameIsDuplicateException:DomainException
     {
-        public override string Message => ProgramResource.ProgramNameIsDupliateException;
+        public override string Message => ProgramResource.ProgramNameIsDuplicateException;
     }
 }

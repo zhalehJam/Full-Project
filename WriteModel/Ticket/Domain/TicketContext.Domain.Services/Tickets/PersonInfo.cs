@@ -12,7 +12,7 @@ namespace TicketContext.Domain.Services.Tickets
         {
             _personRepository = personRepository;
         }
-        public Guid GetpersonInfo(int personID)
+        public Guid GetPersonInfo(int personID)
         {
             return _personRepository.GetByPersonID(n => n.PersonID == personID).PartId;
         }

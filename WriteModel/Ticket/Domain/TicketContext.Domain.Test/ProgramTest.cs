@@ -10,15 +10,15 @@ namespace TicketContext.Domain.Test
     [TestClass]
     public class ProgramTest
     {
-        private readonly Mock<IProgramNameDuplicateChecker> _programNameDuplicateChecker = new Mock<IProgramNameDuplicateChecker>();
-        private readonly Mock<IValidSupporterPersonIDChecker> _validSupporterPersonIDChecker = new Mock<IValidSupporterPersonIDChecker>();
-        private readonly Mock<IProgramHasTicketChecker> _programHasTicketChecker = new Mock<IProgramHasTicketChecker>();
+        private readonly Mock<IProgramNameDuplicateChecker> _programNameDuplicateChecker = new();
+        private readonly Mock<IValidSupporterPersonIDChecker> _validSupporterPersonIdChecker = new();
+        private readonly Mock<IProgramHasTicketChecker> _programHasTicketChecker = new();
 
         [TestInitialize]
         public void Setup()
         {
             _programNameDuplicateChecker.Setup(c => c.IsDuplicated(It.Is<string>(n => n.Equals("Ticketing")))).Returns(true);
-            _validSupporterPersonIDChecker.Setup(n => n.Isvalid(It.Is<Int32>(n => (n.Equals(970086) || n.Equals(970428))))).Returns(true);
+            _validSupporterPersonIdChecker.Setup(n => n.Isvalid(It.Is<Int32>(n => (n.Equals(970086) || n.Equals(970428))))).Returns(true);
             _programHasTicketChecker.Setup(n => n.HasTicket(It.IsAny<Guid>())).Returns(false);
 
         }
@@ -42,9 +42,9 @@ namespace TicketContext.Domain.Test
         }
 
         [TestMethod, TestCategory("Program")]
-        [ExpectedException(typeof(ProgramNameIsDupliateException))]
+        [ExpectedException(typeof(ProgramNameIsDuplicateException))]
         [DataRow("Ticketing")]
-        public void ProgramNameIsDupliate_throw_ProgramNameIsDupliateException(string programName)
+        public void ProgramNameIsDupliate_throw_ProgramNameIsDuplicateException(string programName)
         {
             Init(programName: programName);
         }
@@ -75,7 +75,7 @@ namespace TicketContext.Domain.Test
         public void SupporterIdIsNotValid_throw_SupporterIdIsNotValidException(Int32 supporterID)
         {
             Program program = Init();
-            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIDChecker.Object);
+            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIdChecker.Object);
             program.AddProgramSupporter(programSupporter);
         }
 
@@ -85,7 +85,7 @@ namespace TicketContext.Domain.Test
         public void DuplicateProgramSupporerID_throw_DuplicateProgramSupporerIDException(Int32 supporterID)
         {
             Program program = Init();
-            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIDChecker.Object);
+            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIdChecker.Object);
             program.AddProgramSupporter(programSupporter);
             program.AddProgramSupporter(programSupporter);
         }
@@ -95,7 +95,7 @@ namespace TicketContext.Domain.Test
         public void Retrive_ProgramSupporter(Int32 supporterID)
         {
             Program program = Init();
-            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIDChecker.Object);
+            ProgramSupporter programSupporter = new ProgramSupporter(supporterID, _validSupporterPersonIdChecker.Object);
             program.AddProgramSupporter(programSupporter);
             Assert.IsTrue(program.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID));
         }
@@ -105,8 +105,8 @@ namespace TicketContext.Domain.Test
         public void Retrive_ProgramtwoSupporter(Int32 supporterID1, Int32 supporterID2)
         {
             Program program = Init();
-            ProgramSupporter programSupporter1 = new ProgramSupporter(supporterID1, _validSupporterPersonIDChecker.Object);
-            ProgramSupporter programSupporter2 = new ProgramSupporter(supporterID2, _validSupporterPersonIDChecker.Object);
+            ProgramSupporter programSupporter1 = new ProgramSupporter(supporterID1, _validSupporterPersonIdChecker.Object);
+            ProgramSupporter programSupporter2 = new ProgramSupporter(supporterID2, _validSupporterPersonIdChecker.Object);
 
             program.AddProgramSupporter(programSupporter1);
             program.AddProgramSupporter(programSupporter2);
@@ -130,7 +130,7 @@ namespace TicketContext.Domain.Test
         {
             Program program = Init();
             ProgramSupporter programSupporter1 = new ProgramSupporter(supporterID,
-                                                                      _validSupporterPersonIDChecker.Object);
+                                                                      _validSupporterPersonIdChecker.Object);
             program.AddProgramSupporter(programSupporter1);
             program.DeleteProgramSupporter(supporterID);
             Assert.IsTrue(!program.ProgramSupporters.Any(n => n.SupporterPersonID == supporterID));
@@ -144,7 +144,7 @@ namespace TicketContext.Domain.Test
             Program program2 = Init();
 
             ProgramSupporter programSupporter = new ProgramSupporter(supporterID,
-                                                                      _validSupporterPersonIDChecker.Object);
+                                                                      _validSupporterPersonIdChecker.Object);
             program1.AddProgramSupporter(programSupporter);
             program2.AddProgramSupporter(programSupporter);
 

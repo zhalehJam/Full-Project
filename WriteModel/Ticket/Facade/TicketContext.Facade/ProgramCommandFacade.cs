@@ -1,6 +1,7 @@
 ﻿using Framework.Core.ApplicationService;
 using Framework.Facade;
-using TicketContext.ApplicationService.Contract.Program;
+using TicketContext.ApplicationService.Contract.Programs;
+using TicketContext.ApplicationService.Contract.Programs;
 using TicketContext.Facade.Contract;
 
 namespace TicketContext.Facade
@@ -31,7 +32,7 @@ namespace TicketContext.Facade
             _commandBus.Dispatch(deleteProgramSupporterCommand);
         }
 
-        public void UpdateProgramlink(UpdateProgramLinkCommand updateProgramLinkCommand)
+        public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
         {
             _commandBus.Dispatch(updateProgramLinkCommand);
         }

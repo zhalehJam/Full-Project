@@ -21,7 +21,7 @@ namespace TicketContext.ReadModel.Query.Facade.Tickets
             List<TicketDto>? ticketDtos = new List<TicketDto>();
             var userinfo = _ticketContext.Persons.Single(p => p.PersonId == personID);
 
-            ticketDtos = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin || t.SupporterPersonID == personID)
+            ticketDtos = _ticketContext.Ticket.Where(t => (userinfo.PersonRole == RoleType.Admin || t.SupporterPersonId == personID)
                                                           && t.TicketTime >= fromDate
                                                           && t.TicketTime <= toDate).Select(n => new TicketDto()
                                                           {

@@ -5,12 +5,12 @@ using TicketContext.Domain.Programs.DomainServices;
 
 namespace TicketContext.ApplicationService.Programs
 {
-    public class DeleteProgramComandHandler : ICommandHandler<DeleteProgramCommand>
+    public class DeleteProgramCommandHandler : ICommandHandler<DeleteProgramCommand>
     {
         private readonly IProgramRepository _programRepository;
         private readonly IProgramHasTicketChecker _programHasTicketChecker;
 
-        public DeleteProgramComandHandler(IProgramRepository programRepository,
+        public DeleteProgramCommandHandler(IProgramRepository programRepository,
             IProgramHasTicketChecker programHasTicketChecker)
         {
             _programRepository = programRepository;

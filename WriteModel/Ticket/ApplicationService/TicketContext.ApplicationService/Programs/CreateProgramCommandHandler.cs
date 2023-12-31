@@ -26,10 +26,10 @@ namespace TicketContext.ApplicationService.Programs
         }
         public void Execute(CreateProgramCommand command)
         {
-            Program program = new Program(command.ProgramName,
-                                          command.ProgramLink,
-                                          _programNameDuplicateChecker,
-                                          _programHasTicketChecker);
+            Program program = new(command.ProgramName,
+                                  command.ProgramLink,
+                                  _programNameDuplicateChecker,
+                                  _programHasTicketChecker);
 
             _programRepository.Add(program);
         }

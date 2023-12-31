@@ -3,7 +3,7 @@
 
 namespace TicketContext.Domain.Centers.DomainServices
 {
-    public interface ICenterIsUsedCheker:IDomainService
+    public interface ICenterIsUsedChecker : IDomainService
     {
         bool IsUsed(Guid Id);
     }

@@ -120,7 +120,7 @@ namespace TicketContext.Domain.Tickets
                 throw new NullOrZiroPersonIDException();
             if (!_personIDIsValidChecker.IsValid(personID))
                 throw new InvalidPersonIDException();
-            PersonPartId = _personInfo.GetpersonInfo(personID);
+            PersonPartId = _personInfo.GetPersonInfo(personID);
             PersonID = personID;
         }
 

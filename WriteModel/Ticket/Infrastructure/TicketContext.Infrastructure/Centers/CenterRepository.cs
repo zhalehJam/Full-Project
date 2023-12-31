@@ -1,11 +1,6 @@
 ﻿using Framework.Core.Persistence;
 using Framework.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using TicketContext.Domain.Centers;
 using TicketContext.Domain.Centers.DomainServices;
 

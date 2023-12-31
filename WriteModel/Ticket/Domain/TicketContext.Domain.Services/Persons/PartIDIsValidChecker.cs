@@ -6,16 +6,16 @@ using TicketContext.Domain.Persons.DomainServices;
 
 namespace TicketContext.Domain.Services.Persons
 {
-    public class PartIDIsValidChecker : IPartIDIsValidChecker
+    public class PartIdIsValidChecker : IPartIDIsValidChecker
     {
-        ICenterRepository _centerRepository;
-        public PartIDIsValidChecker(ICenterRepository centerRepository)
+        public readonly ICenterRepository CenterRepository;
+        public PartIdIsValidChecker(ICenterRepository centerRepository)
         {
-            _centerRepository = centerRepository;
+            CenterRepository = centerRepository;
         }
-        public bool Isvalid(Guid partId)
+        public bool IsValid(Guid partId)
         {
-            return _centerRepository.IsExist(c => c.Parts.Any(s => s.Id == partId));
+            return CenterRepository.IsExist(c => c.Parts.Any(s => s.Id == partId));
         }
     }
 }

@@ -17,11 +17,7 @@ namespace TicketContext.Domain.Services.Programs
         }
         public bool IsDuplicated(string programName)
         {
-            bool isDuplicated=false;
-            if(_programRepository.IsExist(n=>n.ProgramName == programName))
-            {
-                isDuplicated=true;
-            }
+            bool isDuplicated=_programRepository.IsExist(n=>n.ProgramName == programName);
             return isDuplicated;
         }
     }

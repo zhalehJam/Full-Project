@@ -5,21 +5,22 @@ using TicketContext.Domain.Programs.DomainServices;
 
 namespace TicketContext.ApplicationService.Programs
 {
-    public class AddProgramSupporterComandHandler : ICommandHandler<AddProgramSupporterCommand>
+    public class AddProgramSupporterCommandHandler : ICommandHandler<AddProgramSupporterCommand>
     {
         private readonly IProgramRepository _programRepository;
-        private readonly IValidSupporterPersonIDChecker _validSupporterPersonIDChecker;
+        private readonly IValidSupporterPersonIDChecker _validSupporterPersonIdChecker;
 
-        public AddProgramSupporterComandHandler(IProgramRepository programRepository, IValidSupporterPersonIDChecker validSupporterPersonIDChecker)
+        public AddProgramSupporterCommandHandler(IProgramRepository programRepository,
+                                                IValidSupporterPersonIDChecker validSupporterPersonIdChecker)
         {
             _programRepository = programRepository;
-            _validSupporterPersonIDChecker = validSupporterPersonIDChecker;
+            _validSupporterPersonIdChecker = validSupporterPersonIdChecker;
         }
         public void Execute(AddProgramSupporterCommand command)
         {
             Program program= _programRepository.GetById(command.ProgramId);
             ProgramSupporter programSupporter = new ProgramSupporter(command.SupporterID,
-                                                                     _validSupporterPersonIDChecker);
+                                                                     _validSupporterPersonIdChecker);
             program.AddProgramSupporter(programSupporter);
             _programRepository.Update(program);
         }

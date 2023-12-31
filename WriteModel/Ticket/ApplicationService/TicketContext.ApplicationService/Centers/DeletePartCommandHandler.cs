@@ -6,7 +6,7 @@ using TicketContext.Domain.Centers.DomainServices;
 
 namespace TicketContext.ApplicationService.Centers
 {
-    public class DeletePartCommandHandler : IHandler,  IRequestHandler<DeletePartCommand, Guid>//ICommandHandler<DeletePartCommand>
+    public class DeletePartCommandHandler : IHandler,  IRequestHandler<DeletePartCommand, Guid>
     {
         private readonly ICenterRepository _centerRepository;
         private readonly IPartIDUsedChecker _partIDUsedChecker;

@@ -29,7 +29,7 @@ namespace API.Controller
         [HttpPut("UpdateProgramLink")]
         public void UpdateProgramLink(UpdateProgramLinkCommand updateProgramLinkCommand)
         {
-            _programCommandFacade.UpdateProgramlink(updateProgramLinkCommand);
+            _programCommandFacade.UpdateProgramLink(updateProgramLinkCommand);
         }
 
         [HttpPut("AddPrgramSupporter")]
