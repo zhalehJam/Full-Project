@@ -1,7 +1,6 @@
 ﻿using Framework.Core.ApplicationService;
 using Framework.Facade;
 using TicketContext.ApplicationService.Contract.Programs;
-using TicketContext.ApplicationService.Contract.Programs;
 using TicketContext.Facade.Contract;
 
 namespace TicketContext.Facade

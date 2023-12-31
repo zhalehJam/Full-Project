@@ -7,6 +7,7 @@ namespace TicketContext.ReadModel.Query.Contracts.Tickets
 {
     public interface ITicketQueryFacade:IQueryFacade
     {
+        List<TicketDto> GetAllTickets();
         List<TicketDto> GetUserAllTickets(int personID, DateTime fromDate, DateTime toDate);
         TicketDto GetTicketById(Guid Id);
         PagedList<TicketDto> GetAllTicketsByPage(PageParameter pageParametrs);

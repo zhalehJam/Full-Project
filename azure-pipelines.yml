@@ -1,0 +1,91 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  - none
+
+variables:
+  tag: 1.0.$(Build.BuildId)
+  pool: 'PublishDockerAgent'
+
+jobs:
+
+
+- job: BuildAndPush
+  displayName: 'Build and Push'
+  pool:
+    name: $(pool)
+  steps:
+
+
+  ### SERVICE 1
+  - task: CopyFiles@2
+    displayName: 'Build and Push Ticketing API'
+    inputs:
+      SourceFolder: $(Build.SourcesDirectory)/API/
+      Contents: 'Dockerfile'
+      TargetFolder: $(Build.SourcesDirectory)/
+
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        #!/bin/bash
+        ## ّSTART CREATING Custom NuGet.Config
+          echo '<?xml version="1.0" encoding="utf-8"?>' > NuGet.Config
+          echo '<configuration>' >> NuGet.Config
+          echo '  <packageSources>' >> NuGet.Config
+          echo '    <add key="BulutTakin NuGet" value="https://registry.buluttakin.com/repository/nuget-group/index.json" />' >> NuGet.Config
+          echo '  </packageSources>' >> NuGet.Config
+          echo '</configuration>' >> NuGet.Config
+        ## ّFINISHED CREATING Custom NuGet.Config
+        ## START Injecting file inside Dockerfile
+          old_text="WORKDIR /src"
+          new_text="WORKDIR /src\nCOPY NuGet.Config /root/.nuget/NuGet/\n"
+          sed -i "s|$old_text|$new_text|g" Dockerfile
+        ## END Injecting file inside Dockerfile
+        ## START to correct image links inside Dockerfile
+          old_text=" mcr.microsoft.com"
+          new_text=" registry.buluttakin.com/mcr.microsoft.com"
+          sed -i "s|$old_text|$new_text|g" Dockerfile
+        ## END to correct image links inside Dockerfile
+      workingDirectory: '$(Build.SourcesDirectory)/'
+
+  - task: Docker@2
+    displayName: 'Build and Push'
+    inputs:
+      command: buildAndPush
+      containerRegistry: DockerReg
+      repository: 'ticketing/api'
+      dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+      tags: |
+        $(tag)
+        latest
+
+  - task: DeleteFiles@1
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)/'
+      Contents: 'Dockerfile'
+
+
+
+
+- job: Deploy
+  dependsOn: BuildAndPush
+  displayName: 'Deploy On Server'
+  pool:
+    name: $(pool)
+  steps:
+  - task: SSH@0
+    inputs:
+      sshEndpoint: '9610'
+      runOptions: 'commands'
+      commands: |
+        docker rmi -f dockerreg.shonizcloud.ir/ticketing/api:latest 2>/dev/null
+        #docker rmi -f dockerreg.shonizcloud.ir/ticketing/ticketing-ui:latest 2>/dev/null
+        docker pull dockerreg.shonizcloud.ir/ticketing/api:latest 2>/dev/null
+        #docker pull dockerreg.shonizcloud.ir/ticketing/ticketing-ui:latest 2>/dev/null
+        cd /var/projects/ticketing && docker compose up -d 2>/dev/null
+        # docker restart nginx
+      readyTimeout: '20000'

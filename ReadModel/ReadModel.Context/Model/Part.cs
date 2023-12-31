@@ -6,6 +6,6 @@
         public Guid Center { get; set; }
         public string PartName { get; set; }
         public int PartID { get; set; }
-        public virtual Center centers { get; set; }
+        public virtual Center Centers { get; set; }
     }
 }

@@ -31,8 +31,8 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
                     Id = m.Id,
                     ProgramId = m.Program,
                     ProgramName = n.ProgramName,
-                    SupporterpersonID = m.SupporterpersonID,
-                    SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterpersonID)
+                    SupporterpersonID = m.SupporterPersonID,
+                    SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterPersonID)
                                                           .Select(p => p.Name)
                                                           .First()
                 }).ToList()
@@ -54,8 +54,8 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
                         Id = m.Id,
                         ProgramId = m.Program,
                         ProgramName = n.ProgramName,
-                        SupporterpersonID = m.SupporterpersonID,
-                        SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterpersonID)
+                        SupporterpersonID = m.SupporterPersonID,
+                        SupporterName = _ticketContext.Persons.Where(p => p.PersonID == m.SupporterPersonID)
                                                               .Select(p => p.Name)
                                                               .First()
                     }).ToList()
@@ -65,7 +65,7 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
 
         public List<ProgramDto> GetSupporterProgramsList(int supporterCode)
         {
-            return _ticketContext.Programs.Where(p => p.Supporters.Any(s => s.SupporterpersonID == supporterCode)).Select(p => new ProgramDto()
+            return _ticketContext.Programs.Where(p => p.Supporters.Any(s => s.SupporterPersonID == supporterCode)).Select(p => new ProgramDto()
             {
                 Id = p.Id,
                 Supporters = p.Supporters.Select(s => new ProgramSupporterDto()
@@ -73,8 +73,8 @@ namespace TicketContext.ReadModel.Query.Facade.Programs
                     Id = s.Id,
                     ProgramId = s.Program,
                     ProgramName = p.ProgramName,
-                    SupporterName = _ticketContext.Persons.Single(pr => pr.PersonID == s.SupporterpersonID).Name,
-                    SupporterpersonID = s.SupporterpersonID
+                    SupporterName = _ticketContext.Persons.Single(pr => pr.PersonID == s.SupporterPersonID).Name,
+                    SupporterpersonID = s.SupporterPersonID
                 }).ToList(),
                 ProgamName = p.ProgramName,
                 ProgramLink = p.ProgramLink

@@ -58,7 +58,7 @@ namespace API.Controller
         [HttpGet("GetCenterByName")]
         public IList<CenterDto> GetCencterByName([FromQuery] string centerName)
         {
-            return _centerQueryFacade.GetCenters(centerName: centerName);
+            return _centerQueryFacade.GetCenters(centerName: centerName); 
         }
         [HttpGet("GetCenterByOtherFilters")]
         public IList<CenterDto> GetCenterByOtherFilters([FromQuery] CenterQueryParameter parameters)

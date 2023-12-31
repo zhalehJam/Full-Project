@@ -2,23 +2,10 @@ version: '3.4'
 
 services:
 
-  nginx:
-    image: nginx:alpine
-    container_name: Nginx
-    networks:
-      - nginx-net
-    volumes:
-      - './conf.d:/etc/nginx/conf.d'
-    ports:
-      - 8080:80
-      - 443:443
-    restart: always
-
-
   Ticketing_API:
-    image: dockerreg.shonizcloud.ir/ticketing/api:0.0.7
+    image: .../ticketing/api:0.0.11
     container_name: Ticketing_API
-    hostname: ticketingapi.shonizcloud.ir
+    hostname: ...
     build:
       context: .
       dockerfile: API/Dockerfile
@@ -26,10 +13,12 @@ services:
       - dbConnection
       - nginx-net
     restart: always
+    ports:
+      - 8444:443
     environment:
-      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_URLS=https://+:443
       - TZ=Asia/Tehran
-      - ServiceHost=ticketingapi.shonizcloud.ir
+      - ServiceHost=localhost
       - Scheme=https
       - ServicePort=443
     depends_on:
@@ -43,12 +32,18 @@ services:
     container_name: Ticketing_UI
     hostname: Ticketing_UI
     restart: always
-    image: dockerreg.shonizcloud.ir/ticketing/ticketing-ui:0.0.8
+    image: .../ticketing/ticketing-ui:0.0.11
     environment:
-      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_URLS=https://+:443
       - TZ=Asia/Tehran
+    build:
+      context: ../TicketingUI
+      dockerfile: ../TicketingUI/Ticketing_Client/Dockerfile
     networks:
       - nginx-net
+    ports:
+      - 8080:80
+      - 8443:443
     depends_on:
       - Ticketing_API
     volumes:
