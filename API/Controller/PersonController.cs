@@ -78,7 +78,7 @@ namespace API.Controller
             {
                 try
                 {
-                    client.BaseAddress = new Uri("http://apihrms.shonizcloud.ir");
+                    client.BaseAddress = new Uri("...");
                     var response =
                         await client.GetAsync($"/HR/api/GetEmployeeInfoWithPhoto?employeeId={personnelCode}");
                     response.EnsureSuccessStatusCode();
